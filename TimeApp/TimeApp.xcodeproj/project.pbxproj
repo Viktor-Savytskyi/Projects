@@ -1,0 +1,520 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4826836F275A7D8500DF42CB /* UIview+cornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4826836E275A7D8500DF42CB /* UIview+cornerRadius.swift */; };
+		483DAE0F26B3F55C002DC26E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483DAE0E26B3F55C002DC26E /* AppDelegate.swift */; };
+		483DAE1126B3F55C002DC26E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483DAE1026B3F55C002DC26E /* SceneDelegate.swift */; };
+		483DAE1326B3F55C002DC26E /* TimeChoiseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483DAE1226B3F55C002DC26E /* TimeChoiseViewController.swift */; };
+		483DAE1626B3F55C002DC26E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 483DAE1426B3F55C002DC26E /* Main.storyboard */; };
+		483DAE1826B3F55F002DC26E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 483DAE1726B3F55F002DC26E /* Assets.xcassets */; };
+		483DAE1B26B3F55F002DC26E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 483DAE1926B3F55F002DC26E /* LaunchScreen.storyboard */; };
+		483DAE2A26B40353002DC26E /* TimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483DAE2926B40353002DC26E /* TimeTableViewController.swift */; };
+		483DAE2D26B40656002DC26E /* TimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483DAE2C26B40656002DC26E /* TimeCell.swift */; };
+		48508D982740182400DE3A71 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48508D972740182400DE3A71 /* Element.swift */; };
+		48508D9D274019AC00DE3A71 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48508D9C274019AC00DE3A71 /* UserSettings.swift */; };
+		486AD93D27381F5A009C29AD /* EditingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486AD93C27381F5A009C29AD /* EditingViewController.swift */; };
+		48E6E9C7277B32B10025054B /* UIButton+Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E6E9C6277B32B10025054B /* UIButton+Space.swift */; };
+		48FAA6BE27578FEB0013E126 /* ElementListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAA6BD27578FEB0013E126 /* ElementListManager.swift */; };
+		48FAA6C02757BB310013E126 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48FAA6BF2757BB310013E126 /* GoogleService-Info.plist */; };
+		48FAA6C62757C2F40013E126 /* TimeTableViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAA6C52757C2F40013E126 /* TimeTableViewControllerDelegate.swift */; };
+		73FA53AEF5F201844B3436A1 /* Pods_TimeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D93701B1FDE0366E466B96F /* Pods_TimeApp.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4826836E275A7D8500DF42CB /* UIview+cornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIview+cornerRadius.swift"; sourceTree = "<group>"; };
+		483DAE0B26B3F55C002DC26E /* TimeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		483DAE0E26B3F55C002DC26E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		483DAE1026B3F55C002DC26E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		483DAE1226B3F55C002DC26E /* TimeChoiseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeChoiseViewController.swift; sourceTree = "<group>"; };
+		483DAE1526B3F55C002DC26E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		483DAE1726B3F55F002DC26E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		483DAE1A26B3F55F002DC26E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		483DAE1C26B3F55F002DC26E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		483DAE2926B40353002DC26E /* TimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableViewController.swift; sourceTree = "<group>"; };
+		483DAE2C26B40656002DC26E /* TimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCell.swift; sourceTree = "<group>"; };
+		48508D972740182400DE3A71 /* Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
+		48508D9C274019AC00DE3A71 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		486AD93C27381F5A009C29AD /* EditingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingViewController.swift; sourceTree = "<group>"; };
+		48E6E9C6277B32B10025054B /* UIButton+Space.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Space.swift"; sourceTree = "<group>"; };
+		48FAA6BD27578FEB0013E126 /* ElementListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementListManager.swift; sourceTree = "<group>"; };
+		48FAA6BF2757BB310013E126 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		48FAA6C52757C2F40013E126 /* TimeTableViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableViewControllerDelegate.swift; sourceTree = "<group>"; };
+		51461D21EC8F90BCA7648A99 /* Pods-TimeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeApp.debug.xcconfig"; path = "Target Support Files/Pods-TimeApp/Pods-TimeApp.debug.xcconfig"; sourceTree = "<group>"; };
+		5D93701B1FDE0366E466B96F /* Pods_TimeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8383A468318CB87B8C5D1B3B /* Pods-TimeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeApp.release.xcconfig"; path = "Target Support Files/Pods-TimeApp/Pods-TimeApp.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		483DAE0826B3F55C002DC26E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73FA53AEF5F201844B3436A1 /* Pods_TimeApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F8B5EBE090282F1B4AA5AA3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D93701B1FDE0366E466B96F /* Pods_TimeApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		483DAE0226B3F55C002DC26E = {
+			isa = PBXGroup;
+			children = (
+				483DAE0D26B3F55C002DC26E /* TimeApp */,
+				483DAE0C26B3F55C002DC26E /* Products */,
+				CD3D8915354FCA6E9F95DCF7 /* Pods */,
+				0F8B5EBE090282F1B4AA5AA3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		483DAE0C26B3F55C002DC26E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				483DAE0B26B3F55C002DC26E /* TimeApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		483DAE0D26B3F55C002DC26E /* TimeApp */ = {
+			isa = PBXGroup;
+			children = (
+				483DAE0E26B3F55C002DC26E /* AppDelegate.swift */,
+				483DAE1026B3F55C002DC26E /* SceneDelegate.swift */,
+				48FAA6C12757BFD40013E126 /* Extensions */,
+				483DAE3226B41D0C002DC26E /* StoryBoards */,
+				48FAA6C42757C2E10013E126 /* Delegate */,
+				48508D9B2740199500DE3A71 /* Helpers */,
+				48FAA6BC27578FD00013E126 /* Managers */,
+				48508D95274017E800DE3A71 /* Models */,
+				483DAE3126B41CFE002DC26E /* Cells */,
+				483DAE3026B41CE8002DC26E /* ViewControllers */,
+				483DAE1726B3F55F002DC26E /* Assets.xcassets */,
+				483DAE1C26B3F55F002DC26E /* Info.plist */,
+				48FAA6BF2757BB310013E126 /* GoogleService-Info.plist */,
+			);
+			path = TimeApp;
+			sourceTree = "<group>";
+		};
+		483DAE3026B41CE8002DC26E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				483DAE1226B3F55C002DC26E /* TimeChoiseViewController.swift */,
+				483DAE2926B40353002DC26E /* TimeTableViewController.swift */,
+				486AD93C27381F5A009C29AD /* EditingViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		483DAE3126B41CFE002DC26E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				483DAE2C26B40656002DC26E /* TimeCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		483DAE3226B41D0C002DC26E /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				483DAE1426B3F55C002DC26E /* Main.storyboard */,
+				483DAE1926B3F55F002DC26E /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		48508D95274017E800DE3A71 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				48508D972740182400DE3A71 /* Element.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		48508D9B2740199500DE3A71 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				48508D9C274019AC00DE3A71 /* UserSettings.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		48FAA6BC27578FD00013E126 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				48FAA6BD27578FEB0013E126 /* ElementListManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		48FAA6C12757BFD40013E126 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4826836E275A7D8500DF42CB /* UIview+cornerRadius.swift */,
+				48E6E9C6277B32B10025054B /* UIButton+Space.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		48FAA6C42757C2E10013E126 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				48FAA6C52757C2F40013E126 /* TimeTableViewControllerDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		CD3D8915354FCA6E9F95DCF7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				51461D21EC8F90BCA7648A99 /* Pods-TimeApp.debug.xcconfig */,
+				8383A468318CB87B8C5D1B3B /* Pods-TimeApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		483DAE0A26B3F55C002DC26E /* TimeApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 483DAE1F26B3F55F002DC26E /* Build configuration list for PBXNativeTarget "TimeApp" */;
+			buildPhases = (
+				8A7DB021E587C8F63257603E /* [CP] Check Pods Manifest.lock */,
+				483DAE0726B3F55C002DC26E /* Sources */,
+				483DAE0826B3F55C002DC26E /* Frameworks */,
+				483DAE0926B3F55C002DC26E /* Resources */,
+				6FF4CB31B5B92F0A03D56DA6 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TimeApp;
+			productName = TimeApp;
+			productReference = 483DAE0B26B3F55C002DC26E /* TimeApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		483DAE0326B3F55C002DC26E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					483DAE0A26B3F55C002DC26E = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 483DAE0626B3F55C002DC26E /* Build configuration list for PBXProject "TimeApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 483DAE0226B3F55C002DC26E;
+			productRefGroup = 483DAE0C26B3F55C002DC26E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				483DAE0A26B3F55C002DC26E /* TimeApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		483DAE0926B3F55C002DC26E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				483DAE1B26B3F55F002DC26E /* LaunchScreen.storyboard in Resources */,
+				48FAA6C02757BB310013E126 /* GoogleService-Info.plist in Resources */,
+				483DAE1826B3F55F002DC26E /* Assets.xcassets in Resources */,
+				483DAE1626B3F55C002DC26E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6FF4CB31B5B92F0A03D56DA6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TimeApp/Pods-TimeApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TimeApp/Pods-TimeApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TimeApp/Pods-TimeApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A7DB021E587C8F63257603E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TimeApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		483DAE0726B3F55C002DC26E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48E6E9C7277B32B10025054B /* UIButton+Space.swift in Sources */,
+				483DAE1326B3F55C002DC26E /* TimeChoiseViewController.swift in Sources */,
+				486AD93D27381F5A009C29AD /* EditingViewController.swift in Sources */,
+				48508D982740182400DE3A71 /* Element.swift in Sources */,
+				48508D9D274019AC00DE3A71 /* UserSettings.swift in Sources */,
+				48FAA6BE27578FEB0013E126 /* ElementListManager.swift in Sources */,
+				483DAE0F26B3F55C002DC26E /* AppDelegate.swift in Sources */,
+				483DAE2A26B40353002DC26E /* TimeTableViewController.swift in Sources */,
+				483DAE2D26B40656002DC26E /* TimeCell.swift in Sources */,
+				48FAA6C62757C2F40013E126 /* TimeTableViewControllerDelegate.swift in Sources */,
+				483DAE1126B3F55C002DC26E /* SceneDelegate.swift in Sources */,
+				4826836F275A7D8500DF42CB /* UIview+cornerRadius.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		483DAE1426B3F55C002DC26E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				483DAE1526B3F55C002DC26E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		483DAE1926B3F55F002DC26E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				483DAE1A26B3F55F002DC26E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		483DAE1D26B3F55F002DC26E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		483DAE1E26B3F55F002DC26E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		483DAE2026B3F55F002DC26E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51461D21EC8F90BCA7648A99 /* Pods-TimeApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 683FFW2T3C;
+				INFOPLIST_FILE = TimeApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "developer-team.TimeApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		483DAE2126B3F55F002DC26E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8383A468318CB87B8C5D1B3B /* Pods-TimeApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 683FFW2T3C;
+				INFOPLIST_FILE = TimeApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "developer-team.TimeApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		483DAE0626B3F55C002DC26E /* Build configuration list for PBXProject "TimeApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				483DAE1D26B3F55F002DC26E /* Debug */,
+				483DAE1E26B3F55F002DC26E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		483DAE1F26B3F55F002DC26E /* Build configuration list for PBXNativeTarget "TimeApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				483DAE2026B3F55F002DC26E /* Debug */,
+				483DAE2126B3F55F002DC26E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 483DAE0326B3F55C002DC26E /* Project object */;
+}
