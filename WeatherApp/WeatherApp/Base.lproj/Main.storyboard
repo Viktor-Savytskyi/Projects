@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Weather View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WeatherViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5J5-Lv-TBd">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Djw-fR-qoC">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    </imageView>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JIo-NL-EDM">
+                                        <rect key="frame" x="10" y="36" width="394" height="818"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BeV-GJ-sew">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="JIo-NL-EDM" firstAttribute="leading" secondItem="5J5-Lv-TBd" secondAttribute="leading" constant="10" id="AkQ-bR-U4F"/>
+                                    <constraint firstAttribute="bottom" secondItem="JIo-NL-EDM" secondAttribute="bottom" constant="42" id="CnH-8V-7ly"/>
+                                    <constraint firstItem="Djw-fR-qoC" firstAttribute="top" secondItem="5J5-Lv-TBd" secondAttribute="top" id="Jow-qL-HgP"/>
+                                    <constraint firstAttribute="bottom" secondItem="Djw-fR-qoC" secondAttribute="bottom" id="Lxb-x4-Kfo"/>
+                                    <constraint firstItem="Djw-fR-qoC" firstAttribute="leading" secondItem="5J5-Lv-TBd" secondAttribute="leading" id="LzT-UF-i0B"/>
+                                    <constraint firstItem="JIo-NL-EDM" firstAttribute="top" secondItem="5J5-Lv-TBd" secondAttribute="top" constant="36" id="VCN-81-upM"/>
+                                    <constraint firstAttribute="trailing" secondItem="Djw-fR-qoC" secondAttribute="trailing" id="YW8-i1-tx4"/>
+                                    <constraint firstAttribute="trailing" secondItem="JIo-NL-EDM" secondAttribute="trailing" constant="10" id="zVZ-Ei-tqZ"/>
+                                </constraints>
+                            </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="DeJ-3I-z4F">
+                                <rect key="frame" x="83" y="329" width="248" height="248"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="DeJ-3I-z4F" secondAttribute="height" multiplier="1:1" id="N7d-bg-GBk"/>
+                                </constraints>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="5J5-Lv-TBd" secondAttribute="trailing" id="7Nm-zd-uVJ"/>
+                            <constraint firstItem="5J5-Lv-TBd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="GjH-ye-rRn"/>
+                            <constraint firstItem="5J5-Lv-TBd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Gwm-zn-0uK"/>
+                            <constraint firstItem="DeJ-3I-z4F" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Msq-Ap-Kel"/>
+                            <constraint firstItem="DeJ-3I-z4F" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="fPw-KI-ffX"/>
+                            <constraint firstItem="DeJ-3I-z4F" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="m30-uq-hWn"/>
+                            <constraint firstAttribute="bottom" secondItem="5J5-Lv-TBd" secondAttribute="bottom" id="ywn-h6-OAp"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="414" height="896"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="DeJ-3I-z4F" id="dJK-kM-ICG"/>
+                        <outlet property="backgroundImage" destination="Djw-fR-qoC" id="84y-Qq-rs6"/>
+                        <outlet property="weatherCollectionView" destination="JIo-NL-EDM" id="mCL-VZ-DYi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="39.508928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
