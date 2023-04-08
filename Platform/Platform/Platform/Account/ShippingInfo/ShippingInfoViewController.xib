@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShippingInfoViewController" customModule="Choosi" customModuleProvider="target">
+            <connections>
+                <outlet property="aptSuiteOtherTextFieldView" destination="QHn-3z-H46" id="NF6-DA-pGm"/>
+                <outlet property="cityTextFieldView" destination="oan-mC-nfG" id="rqU-FM-7LU"/>
+                <outlet property="saveChangesButton" destination="OIZ-vr-Iek" id="pUR-6t-Xid"/>
+                <outlet property="stateTextFieldView" destination="89R-S5-oP5" id="p6N-uR-IoO"/>
+                <outlet property="streetAddressTextFieldView" destination="cdE-OB-2e4" id="GEI-VQ-PB0"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="zipCodeTextFieldView" destination="hPY-fU-BHB" id="GnP-Xb-XVz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zlK-S1-Uce">
+                    <rect key="frame" x="20" y="140" width="353" height="300"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cdE-OB-2e4" customClass="AppTextFieldView" customModule="Choosi" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="353" height="60"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QHn-3z-H46" customClass="AppTextFieldView" customModule="Choosi" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="60" width="353" height="60"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oan-mC-nfG" customClass="AppTextFieldView" customModule="Choosi" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="120" width="353" height="60"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="89R-S5-oP5" customClass="AppTextFieldView" customModule="Choosi" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="180" width="353" height="60"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hPY-fU-BHB" customClass="AppTextFieldView" customModule="Choosi" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="240" width="353" height="60"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="sfa-t4-67e">
+                    <rect key="frame" x="20" y="665" width="353" height="80"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIZ-vr-Iek" customClass="AppButton" customModule="Choosi" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="353" height="33"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Save Changes"/>
+                            <connections>
+                                <action selector="saveChangesAction:" destination="-1" eventType="touchUpInside" id="zMM-Oh-YtR"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mvo-KM-meY" customClass="AppButton" customModule="Choosi" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="47" width="353" height="33"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Cancel"/>
+                            <connections>
+                                <action selector="cancelAction:" destination="-1" eventType="touchUpInside" id="ZdG-Bc-iPF"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="sfa-t4-67e" secondAttribute="bottom" constant="73" id="2eG-SA-7bC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sfa-t4-67e" secondAttribute="trailing" constant="20" id="MEe-vE-jNq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zlK-S1-Uce" secondAttribute="trailing" constant="20" id="f2Y-fK-D12"/>
+                <constraint firstItem="zlK-S1-Uce" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="glw-5a-PhF"/>
+                <constraint firstItem="sfa-t4-67e" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="vWI-4F-JUb"/>
+                <constraint firstItem="zlK-S1-Uce" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="83" id="wAa-x1-Hfq"/>
+            </constraints>
+            <point key="canvasLocation" x="65" y="20"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="Mvo-KM-meY">
+            <size key="intrinsicContentSize" width="56" height="33"/>
+        </designable>
+        <designable name="OIZ-vr-Iek">
+            <size key="intrinsicContentSize" width="115" height="33"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

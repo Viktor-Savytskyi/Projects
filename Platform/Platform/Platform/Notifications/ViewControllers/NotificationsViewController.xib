@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ABCMarfa-Regular-Trial.otf">
+            <string>ABCMarfaUnlicensedTrial-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NotificationsViewController" customModule="Choosi" customModuleProvider="target">
+            <connections>
+                <outlet property="noNotificationsLabel" destination="BM3-Q6-0A1" id="hY2-mz-DCd"/>
+                <outlet property="notificationsTableView" destination="5qD-Ud-PrM" id="lPI-Nu-fed"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5qD-Ud-PrM">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BM3-Q6-0A1">
+                    <rect key="frame" x="103" y="423" width="187" height="31.333333333333314"/>
+                    <fontDescription key="fontDescription" name="ABCMarfaUnlicensedTrial-Regular" family="ABC Marfa Unlicensed Trial" pointSize="25"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="background"/>
+            <constraints>
+                <constraint firstItem="5qD-Ud-PrM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5Bk-yY-iS0"/>
+                <constraint firstItem="5qD-Ud-PrM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="B6y-Nv-MF6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5qD-Ud-PrM" secondAttribute="trailing" id="Llz-iH-Ms7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="5qD-Ud-PrM" secondAttribute="bottom" id="a1I-Kr-RLW"/>
+                <constraint firstItem="BM3-Q6-0A1" firstAttribute="centerX" secondItem="5qD-Ud-PrM" secondAttribute="centerX" id="jea-IO-v61"/>
+                <constraint firstItem="BM3-Q6-0A1" firstAttribute="centerY" secondItem="5qD-Ud-PrM" secondAttribute="centerY" id="kYa-4i-LYA"/>
+            </constraints>
+            <point key="canvasLocation" x="-118" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="background">
+            <color red="0.93699997663497925" green="0.9179999828338623" blue="0.90200001001358032" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,24 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Platform' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  
+  pod 'FirebaseAuth'
+  pod 'Firebase'
+  pod 'FirebaseFirestore'
+  pod 'FirebaseFirestoreSwift'
+  pod 'IQKeyboardManagerSwift', '~> 6.5'
+  pod 'SDWebImage', '~> 5.13'
+  pod 'TOCropViewController'
+  pod 'FirebaseStorage'
+  pod 'SideMenu'
+  pod 'Zoomy'
+  pod 'DropDown'
+  pod 'Cosmos'
+  pod 'Mixpanel-swift'
+  pod 'SwiftLint'
+  # Pods for Platform
+
+end

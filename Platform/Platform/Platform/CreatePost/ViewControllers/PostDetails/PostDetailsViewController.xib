@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad12_9" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ABCMarfa-Bold-Trial.otf">
+            <string>ABCMarfaUnlicensedTrial-Bold</string>
+        </array>
+        <array key="ABCMarfa-Regular-Trial.otf">
+            <string>ABCMarfaUnlicensedTrial-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostDetailsViewController" customModule="Choosi" customModuleProvider="target">
+            <connections>
+                <outlet property="avatarImageView" destination="ZbN-Ei-WEM" id="mah-qX-AT6"/>
+                <outlet property="buttonsStackView" destination="l3Y-fL-iik" id="GMG-Vy-yrf"/>
+                <outlet property="buyItButton" destination="wxC-xP-HI7" id="apy-Ue-8fT"/>
+                <outlet property="closeButton" destination="jrw-Za-qf3" id="V1h-cE-eF9"/>
+                <outlet property="featureComingSoonWithArrow" destination="Chg-Pv-nAN" id="uva-yb-8hb"/>
+                <outlet property="forShippingLabel" destination="0Fu-DF-ReE" id="guX-Cr-abL"/>
+                <outlet property="heartImageView" destination="Six-8l-Ot4" id="ml0-SW-onU"/>
+                <outlet property="imagesCollectionView" destination="mUM-ef-xWN" id="RGh-RX-nqV"/>
+                <outlet property="infoForUserStackView" destination="JdI-0U-Hly" id="D1V-84-k69"/>
+                <outlet property="numberInsideHeartLabel" destination="fVT-tB-z2W" id="vxl-dF-E7X"/>
+                <outlet property="postDescriptionLabel" destination="gpN-76-PwG" id="gTM-Md-UkB"/>
+                <outlet property="postTitleLabel" destination="X1J-IQ-GnH" id="gDo-sS-uim"/>
+                <outlet property="priceLabel" destination="cRj-7B-Th6" id="D1S-dm-vMG"/>
+                <outlet property="priceStackView" destination="Xbr-kH-XAP" id="6nF-cM-LZx"/>
+                <outlet property="ratingView" destination="L7p-Q2-h3R" id="a5Z-lF-pSY"/>
+                <outlet property="saveToWishListOrEditPostButton" destination="tOV-iz-x6g" id="6XZ-db-CsX"/>
+                <outlet property="seeMoreOrLessButton" destination="hrU-Mn-2NS" id="CXS-jK-xQK"/>
+                <outlet property="shareImageView" destination="QjO-zZ-C3w" id="c4p-HD-xX4"/>
+                <outlet property="shippingInfoRequiredLabel" destination="2F3-Qp-Hf0" id="2x8-4Y-aLh"/>
+                <outlet property="shippingPriceLabel" destination="rhj-Mv-0lp" id="TAs-N2-oyZ"/>
+                <outlet property="shippingStackView" destination="spn-NT-6hH" id="2Jz-yH-n5F"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hA-Qa-coF">
+                    <rect key="frame" x="0.0" y="20" width="1024" height="1346"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b88-i3-bxD">
+                            <rect key="frame" x="0.0" y="0.0" width="1024" height="1534.5"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4KQ-X5-B1T">
+                                    <rect key="frame" x="17" y="10" width="990" height="48"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrw-Za-qf3">
+                                            <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="jrw-Za-qf3" secondAttribute="height" multiplier="1:1" id="7yY-rV-dhR"/>
+                                            </constraints>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="xButton" title=" "/>
+                                            <connections>
+                                                <action selector="backClick:" destination="-1" eventType="touchUpInside" id="n4q-CO-FUs"/>
+                                            </connections>
+                                        </button>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eq1-Yd-lk7">
+                                            <rect key="frame" x="358" y="0.0" width="221" height="48"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileWithAlpha" translatesAutoresizingMaskIntoConstraints="NO" id="ZbN-Ei-WEM">
+                                                    <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="ZbN-Ei-WEM" secondAttribute="height" multiplier="1:1" id="22H-4I-SqR"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L7p-Q2-h3R" customClass="RatingView" customModule="Choosi" customModuleProvider="target">
+                                                    <rect key="frame" x="53" y="0.0" width="168" height="48"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ujK-B1-Edz">
+                                            <rect key="frame" x="889" y="0.0" width="101" height="48"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="share" translatesAutoresizingMaskIntoConstraints="NO" id="QjO-zZ-C3w">
+                                                    <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="QjO-zZ-C3w" secondAttribute="height" multiplier="1:1" id="dT4-xM-wcE"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="Six-8l-Ot4">
+                                                    <rect key="frame" x="53" y="0.0" width="48" height="48"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Six-8l-Ot4" secondAttribute="height" multiplier="1:1" id="4F3-KF-LWl"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="G30-TC-cAD"/>
+                                        <constraint firstItem="eq1-Yd-lk7" firstAttribute="height" secondItem="4KQ-X5-B1T" secondAttribute="height" id="fjq-MS-C6T"/>
+                                    </constraints>
+                                </stackView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVT-tB-z2W">
+                                    <rect key="frame" x="983" y="34" width="0.0" height="0.0"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="fVT-tB-z2W" secondAttribute="height" multiplier="1:1" id="LYw-OP-iuf"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="ABCMarfaUnlicensedTrial-Regular" family="ABC Marfa Unlicensed Trial" pointSize="12"/>
+                                    <color key="textColor" red="1" green="0.88235294117647056" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="mUM-ef-xWN">
+                                    <rect key="frame" x="0.0" y="68" width="1024" height="952.5"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="mUM-ef-xWN" secondAttribute="height" multiplier="1:0.93" id="fZn-s9-7dZ"/>
+                                    </constraints>
+                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CDk-st-7Bx">
+                                        <size key="itemSize" width="128" height="128"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                </collectionView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="cJD-iq-uUT">
+                                    <rect key="frame" x="45" y="1045.5" width="934" height="385"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1J-IQ-GnH">
+                                            <rect key="frame" x="0.0" y="0.0" width="934" height="50"/>
+                                            <fontDescription key="fontDescription" name="ABCMarfaUnlicensedTrial-Bold" family="ABC Marfa Unlicensed Trial" pointSize="22"/>
+                                            <color key="textColor" name="text"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-6" translatesAutoresizingMaskIntoConstraints="NO" id="gIG-Co-auq">
+                                            <rect key="frame" x="0.0" y="64" width="934" height="128"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBA-yF-d1h">
+                                                    <rect key="frame" x="0.0" y="0.0" width="934" height="128"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpN-76-PwG" userLabel="Post Description" customClass="UILabelWithLinks" customModule="Choosi" customModuleProvider="target">
+                                                            <rect key="frame" x="467" y="0.0" width="0.0" height="128"/>
+                                                            <fontDescription key="fontDescription" name="ABCMarfaUnlicensedTrial-Regular" family="ABC Marfa Unlicensed Trial" pointSize="16"/>
+                                                            <color key="textColor" name="text"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="gpN-76-PwG" firstAttribute="centerX" secondItem="bBA-yF-d1h" secondAttribute="centerX" id="1PG-m1-HAz"/>
+                                                        <constraint firstItem="gpN-76-PwG" firstAttribute="width" relation="lessThanOrEqual" secondItem="bBA-yF-d1h" secondAttribute="width" id="Qv1-F8-35h"/>
+                                                        <constraint firstItem="gpN-76-PwG" firstAttribute="top" secondItem="bBA-yF-d1h" secondAttribute="top" id="cRz-cW-dJg"/>
+                                                        <constraint firstAttribute="bottom" secondItem="gpN-76-PwG" secondAttribute="bottom" id="esv-WD-hA6"/>
+                                                    </constraints>
+                                                </view>
+                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="247" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrU-Mn-2NS">
+                                                    <rect key="frame" x="0.0" y="0.0" width="934" height="0.0"/>
+                                                    <fontDescription key="fontDescription" name="ABCMarfaUnlicensedTrial-Bold" family="ABC Marfa Unlicensed Trial" pointSize="16"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="See more">
+                                                        <color key="titleColor" name="text"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="seeMoreOrLessClick:" destination="-1" eventType="touchUpInside" id="qGb-i9-kX4"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dq0-rS-aFu">
+                                            <rect key="frame" x="0.0" y="206" width="934" height="179"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Xbr-kH-XAP">
+                                                    <rect key="frame" x="442" y="0.0" width="50" height="50"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRj-7B-Th6">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <fontDescription key="fontDescription" name="ABCMarfaUnlicensedTrial-Bold" family="ABC Marfa Unlicensed Trial" pointSize="21"/>
+                                                            <color key="textColor" name="text"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="spn-NT-6hH">
+                                                    <rect key="frame" x="391.5" y="50" width="151" height="50"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhj-Mv-0lp">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <fontDescription key="fontDescription" name="ABCMarfaUnlicensedTrial-Bold" family="ABC Marfa Unlicensed Trial" pointSize="21"/>
+                                                            <color key="textColor" name="text"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="for shipping" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Fu-DF-ReE">
+                                                            <rect key="frame" x="55" y="14" width="96" height="21.5"/>
+                                                            <fontDescription key="fontDescription" name="ABCMarfaUnlicensedTrial-Regular" family="ABC Marfa Unlicensed Trial" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JdI-0U-Hly">
+                                                    <rect key="frame" x="319.5" y="100" width="295.5" height="79"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7e-4C-MHf">
+                                                            <rect key="frame" x="75.5" y="0.0" width="144" height="34"/>
+                                                            <fontDescription key="fontDescription" name="ABCMarfaUnlicensedTrial-Bold" family="ABC Marfa Unlicensed Trial" pointSize="27"/>
+                                                            <color key="textColor" name="text"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMc-YF-inC">
+                                                            <rect key="frame" x="0.0" y="39" width="295.5" height="40"/>
+                                                            <string key="text">A Choosii team member will reach
+ out ASAP to help complete your order!</string>
+                                                            <fontDescription key="fontDescription" name="ABCMarfaUnlicensedTrial-Regular" family="ABC Marfa Unlicensed Trial" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="featureComingSoonBigHeight" translatesAutoresizingMaskIntoConstraints="NO" id="vA3-0K-SSK">
+                                    <rect key="frame" x="428" y="10" width="168" height="48"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="featureComingSoonWithArrow" translatesAutoresizingMaskIntoConstraints="NO" id="Chg-Pv-nAN">
+                                    <rect key="frame" x="477" y="1455.5" width="193" height="74"/>
+                                </imageView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="l3Y-fL-iik">
+                                    <rect key="frame" x="17" y="1460.5" width="990" height="32"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wxC-xP-HI7" customClass="AppButton" customModule="Choosi" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="480" height="32"/>
+                                            <fontDescription key="fontDescription" name="ABCMarfaUnlicensedTrial-Bold" family="ABC Marfa Unlicensed Trial" pointSize="16"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="BUY IT"/>
+                                            <connections>
+                                                <action selector="buyItClick:" destination="-1" eventType="touchUpInside" id="ArZ-ZA-Ysl"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOV-iz-x6g" customClass="AppButton" customModule="Choosi" customModuleProvider="target">
+                                            <rect key="frame" x="510" y="0.0" width="480" height="32"/>
+                                            <fontDescription key="fontDescription" name="ABCMarfaUnlicensedTrial-Bold" family="ABC Marfa Unlicensed Trial" pointSize="16"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Save to wish list"/>
+                                            <connections>
+                                                <action selector="saveToWishListOrEditPostAction:" destination="-1" eventType="touchUpInside" id="uhg-nH-rQB"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shipping info required" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2F3-Qp-Hf0">
+                                    <rect key="frame" x="198.5" y="1443.5" width="117" height="14"/>
+                                    <fontDescription key="fontDescription" name="ABCMarfaUnlicensedTrial-Regular" family="ABC Marfa Unlicensed Trial" pointSize="11"/>
+                                    <color key="textColor" name="text"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="cJD-iq-uUT" secondAttribute="trailing" constant="45" id="2mK-4C-MO8"/>
+                                <constraint firstAttribute="trailing" secondItem="mUM-ef-xWN" secondAttribute="trailing" id="32S-81-KSR"/>
+                                <constraint firstItem="cJD-iq-uUT" firstAttribute="leading" secondItem="b88-i3-bxD" secondAttribute="leading" constant="45" id="4ZV-TH-T82"/>
+                                <constraint firstItem="fVT-tB-z2W" firstAttribute="centerX" secondItem="Six-8l-Ot4" secondAttribute="centerX" id="BYK-y5-tJ6"/>
+                                <constraint firstItem="vA3-0K-SSK" firstAttribute="top" secondItem="L7p-Q2-h3R" secondAttribute="top" id="HPe-K6-tSs"/>
+                                <constraint firstItem="mUM-ef-xWN" firstAttribute="leading" secondItem="b88-i3-bxD" secondAttribute="leading" id="IJh-Cq-KVx"/>
+                                <constraint firstItem="4KQ-X5-B1T" firstAttribute="top" secondItem="b88-i3-bxD" secondAttribute="top" constant="10" id="RFE-0r-tgg"/>
+                                <constraint firstItem="mUM-ef-xWN" firstAttribute="top" secondItem="4KQ-X5-B1T" secondAttribute="bottom" constant="10" id="S8E-0F-zeU"/>
+                                <constraint firstItem="vA3-0K-SSK" firstAttribute="bottom" secondItem="L7p-Q2-h3R" secondAttribute="bottom" id="Sd5-mM-a85"/>
+                                <constraint firstItem="vA3-0K-SSK" firstAttribute="leading" secondItem="L7p-Q2-h3R" secondAttribute="leading" id="Sme-PY-YB9"/>
+                                <constraint firstItem="4KQ-X5-B1T" firstAttribute="leading" secondItem="b88-i3-bxD" secondAttribute="leading" constant="17" id="UTy-rK-jKB"/>
+                                <constraint firstAttribute="trailing" secondItem="l3Y-fL-iik" secondAttribute="trailing" constant="17" id="VXO-DB-M7K"/>
+                                <constraint firstItem="Chg-Pv-nAN" firstAttribute="leading" secondItem="tOV-iz-x6g" secondAttribute="leading" constant="-50" id="Y4Q-q0-Ye6"/>
+                                <constraint firstItem="fVT-tB-z2W" firstAttribute="centerY" secondItem="Six-8l-Ot4" secondAttribute="centerY" id="Ya8-aF-dJN"/>
+                                <constraint firstItem="vA3-0K-SSK" firstAttribute="trailing" secondItem="L7p-Q2-h3R" secondAttribute="trailing" id="e28-F7-XNQ"/>
+                                <constraint firstItem="l3Y-fL-iik" firstAttribute="top" secondItem="cJD-iq-uUT" secondAttribute="bottom" constant="30" id="iAH-7f-q0z"/>
+                                <constraint firstItem="cJD-iq-uUT" firstAttribute="top" secondItem="mUM-ef-xWN" secondAttribute="bottom" constant="25" id="lUj-oj-U13"/>
+                                <constraint firstItem="wxC-xP-HI7" firstAttribute="top" secondItem="2F3-Qp-Hf0" secondAttribute="bottom" constant="3" id="mz8-eo-B4E"/>
+                                <constraint firstItem="l3Y-fL-iik" firstAttribute="leading" secondItem="b88-i3-bxD" secondAttribute="leading" constant="17" id="oyn-gg-QlC"/>
+                                <constraint firstAttribute="bottom" secondItem="l3Y-fL-iik" secondAttribute="bottom" constant="42" id="qjR-qy-AGS"/>
+                                <constraint firstItem="Chg-Pv-nAN" firstAttribute="centerY" secondItem="tOV-iz-x6g" secondAttribute="centerY" multiplier="2" id="rtO-0N-lIF"/>
+                                <constraint firstItem="2F3-Qp-Hf0" firstAttribute="centerX" secondItem="wxC-xP-HI7" secondAttribute="centerX" id="tsy-me-iY2"/>
+                                <constraint firstAttribute="trailing" secondItem="4KQ-X5-B1T" secondAttribute="trailing" constant="17" id="xeN-qy-Pcf"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="b88-i3-bxD" secondAttribute="trailing" id="7KM-H6-2wP"/>
+                        <constraint firstItem="b88-i3-bxD" firstAttribute="leading" secondItem="1hA-Qa-coF" secondAttribute="leading" id="H5I-ck-NkJ"/>
+                        <constraint firstAttribute="bottom" secondItem="b88-i3-bxD" secondAttribute="bottom" id="Pyv-Hi-wZ9"/>
+                        <constraint firstItem="b88-i3-bxD" firstAttribute="width" secondItem="1hA-Qa-coF" secondAttribute="width" id="m7x-b2-iAQ"/>
+                        <constraint firstItem="b88-i3-bxD" firstAttribute="top" secondItem="1hA-Qa-coF" secondAttribute="top" id="yj8-UN-mE1"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="1hA-Qa-coF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="DcY-PO-Xeo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1hA-Qa-coF" secondAttribute="trailing" id="FV1-uY-OLq"/>
+                <constraint firstItem="1hA-Qa-coF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ZW5-XZ-MGp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="1hA-Qa-coF" secondAttribute="bottom" id="cf8-89-Iv9"/>
+            </constraints>
+            <point key="canvasLocation" x="163.30935251798562" y="19.154676258992808"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="tOV-iz-x6g">
+            <size key="intrinsicContentSize" width="127" height="32"/>
+        </designable>
+        <designable name="wxC-xP-HI7">
+            <size key="intrinsicContentSize" width="56" height="32"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="featureComingSoonBigHeight" width="144" height="48"/>
+        <image name="featureComingSoonWithArrow" width="193" height="74"/>
+        <image name="heart" width="48" height="48"/>
+        <image name="profileWithAlpha" width="20" height="20"/>
+        <image name="share" width="48" height="48"/>
+        <image name="xButton" width="48" height="48"/>
+        <namedColor name="text">
+            <color red="0.21199999749660492" green="0.21199999749660492" blue="0.21199999749660492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

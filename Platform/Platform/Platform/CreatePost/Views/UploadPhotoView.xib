@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UploadPhotoView" customModule="Choosi" customModuleProvider="target">
+            <connections>
+                <outlet property="imgView" destination="azZ-ge-GIo" id="f68-jC-iKb"/>
+                <outlet property="waterMarkImageView" destination="uw0-HT-5lP" id="qkF-dT-tc0"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="105" height="112"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uploadPhotoFromCamera" translatesAutoresizingMaskIntoConstraints="NO" id="azZ-ge-GIo">
+                    <rect key="frame" x="10" y="10" width="85" height="92"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waterMark" translatesAutoresizingMaskIntoConstraints="NO" id="uw0-HT-5lP">
+                    <rect key="frame" x="67.5" y="74.5" width="25.5" height="25.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="uw0-HT-5lP" secondAttribute="height" multiplier="1:1" id="hwl-zd-a6r"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="uw0-HT-5lP" firstAttribute="width" secondItem="azZ-ge-GIo" secondAttribute="width" multiplier="0.3" id="0d5-5x-MsD"/>
+                <constraint firstItem="azZ-ge-GIo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="1iN-Qr-yew"/>
+                <constraint firstItem="azZ-ge-GIo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="6jX-Fc-slb"/>
+                <constraint firstItem="uw0-HT-5lP" firstAttribute="bottom" secondItem="azZ-ge-GIo" secondAttribute="bottom" constant="-2" id="CW6-dK-TPV"/>
+                <constraint firstItem="uw0-HT-5lP" firstAttribute="trailing" secondItem="azZ-ge-GIo" secondAttribute="trailing" constant="-2" id="YZm-eJ-6dg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="azZ-ge-GIo" secondAttribute="bottom" constant="10" id="k5k-uM-IJs"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="azZ-ge-GIo" secondAttribute="trailing" constant="10" id="laM-Ff-SCa"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-94.927536231884062" y="-320.08928571428572"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="uploadPhotoFromCamera" width="68" height="68"/>
+        <image name="waterMark" width="50" height="50"/>
+    </resources>
+</document>

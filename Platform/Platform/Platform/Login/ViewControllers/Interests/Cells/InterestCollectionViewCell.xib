@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="InterestCollectionViewCell" id="gTV-IL-0wX" customClass="InterestCollectionViewCell" customModule="Choosi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="239" height="64"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="239" height="64"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dw5-Qb-pwO">
+                        <rect key="frame" x="0.0" y="0.0" width="239" height="64"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1u-JH-wwp">
+                                <rect key="frame" x="10" y="10" width="219" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="P1u-JH-wwp" secondAttribute="bottom" constant="10" id="Xkc-yf-Rzp"/>
+                            <constraint firstAttribute="trailing" secondItem="P1u-JH-wwp" secondAttribute="trailing" constant="10" id="eCm-rf-Vn1"/>
+                            <constraint firstItem="P1u-JH-wwp" firstAttribute="leading" secondItem="dw5-Qb-pwO" secondAttribute="leading" constant="10" id="h5m-0C-m5D"/>
+                            <constraint firstItem="P1u-JH-wwp" firstAttribute="top" secondItem="dw5-Qb-pwO" secondAttribute="top" constant="10" id="hth-FW-zmj"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="dw5-Qb-pwO" secondAttribute="bottom" id="2ch-gz-Oto"/>
+                <constraint firstItem="dw5-Qb-pwO" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="3kM-xd-qZh"/>
+                <constraint firstAttribute="trailing" secondItem="dw5-Qb-pwO" secondAttribute="trailing" id="GxP-QH-V6p"/>
+                <constraint firstItem="dw5-Qb-pwO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="tyt-o5-TsC"/>
+            </constraints>
+            <size key="customSize" width="239" height="64"/>
+            <connections>
+                <outlet property="bgView" destination="dw5-Qb-pwO" id="jed-o1-NJm"/>
+                <outlet property="nameLabel" destination="P1u-JH-wwp" id="E7r-97-fjZ"/>
+            </connections>
+            <point key="canvasLocation" x="274.63768115942031" y="132.58928571428572"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

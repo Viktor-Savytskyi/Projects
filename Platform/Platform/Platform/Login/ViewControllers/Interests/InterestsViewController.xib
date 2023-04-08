@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ABCMarfa-Bold-Trial.otf">
+            <string>ABCMarfaUnlicensedTrial-Bold</string>
+        </array>
+        <array key="ABCMarfa-Regular-Trial.otf">
+            <string>ABCMarfaUnlicensedTrial-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InterestsViewController" customModule="Choosi" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButton" destination="lSe-7x-WBb" id="1bP-Z0-6GJ"/>
+                <outlet property="chooseButton" destination="LDV-GG-NRe" id="QGd-H7-7M0"/>
+                <outlet property="descriptionLabel" destination="Dx8-8R-AXZ" id="EOd-kS-9CK"/>
+                <outlet property="interestsSearchBar" destination="CbF-lC-1lo" id="nW2-02-Ys3"/>
+                <outlet property="noSearchResultLabel" destination="c3l-Xv-b6q" id="bMI-J7-wH7"/>
+                <outlet property="scrollView" destination="ybR-T9-ySM" id="zdU-iX-yuA"/>
+                <outlet property="stackView" destination="7Ul-HJ-zgP" id="6iE-mC-VoX"/>
+                <outlet property="topLabel" destination="ufb-mW-Xk8" id="sMQ-KR-df3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="What are you into?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufb-mW-Xk8">
+                    <rect key="frame" x="20" y="0.0" width="374" height="37.333333333333336"/>
+                    <fontDescription key="fontDescription" name="ABCMarfaUnlicensedTrial-Bold" family="ABC Marfa Unlicensed Trial" pointSize="30"/>
+                    <color key="textColor" name="text"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dx8-8R-AXZ">
+                    <rect key="frame" x="20" y="47.333333333333336" width="374" height="0.0"/>
+                    <fontDescription key="fontDescription" name="ABCMarfaUnlicensedTrial-Regular" family="ABC Marfa Unlicensed Trial" pointSize="17"/>
+                    <color key="textColor" name="text"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <searchBar contentMode="redraw" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="CbF-lC-1lo" customClass="CustomSearchBar" customModule="Choosi" customModuleProvider="target">
+                    <rect key="frame" x="12" y="52.333333333333343" width="390" height="56"/>
+                    <color key="tintColor" systemColor="tintColor"/>
+                    <color key="barTintColor" name="viewBackground"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Xla-ZU-w4i"/>
+                    </connections>
+                </searchBar>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ybR-T9-ySM">
+                    <rect key="frame" x="8" y="113.33333333333334" width="398" height="486.66666666666663"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ru7-uc-AGH">
+                            <rect key="frame" x="0.0" y="0.0" width="398" height="486.66666666666669"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7Ul-HJ-zgP">
+                                    <rect key="frame" x="0.0" y="0.0" width="398" height="50"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="ru7-uc-AGH" firstAttribute="top" secondItem="ybR-T9-ySM" secondAttribute="top" id="67O-k1-9Tr"/>
+                        <constraint firstItem="ru7-uc-AGH" firstAttribute="width" secondItem="ybR-T9-ySM" secondAttribute="width" id="9Qr-0Z-Zwr"/>
+                        <constraint firstItem="ru7-uc-AGH" firstAttribute="leading" secondItem="ybR-T9-ySM" secondAttribute="leading" id="DJO-xj-JNu"/>
+                        <constraint firstItem="ru7-uc-AGH" firstAttribute="height" secondItem="ybR-T9-ySM" secondAttribute="height" priority="999" id="VgY-xD-rAp"/>
+                        <constraint firstAttribute="bottom" secondItem="ru7-uc-AGH" secondAttribute="bottom" id="W1Z-Gq-DM9"/>
+                        <constraint firstAttribute="trailing" secondItem="ru7-uc-AGH" secondAttribute="trailing" id="f3K-jO-IHw"/>
+                    </constraints>
+                </scrollView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7eR-ht-nkx">
+                    <rect key="frame" x="20" y="620" width="374" height="76"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDV-GG-NRe" customClass="AppButton" customModule="Choosi" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="33"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Save"/>
+                            <connections>
+                                <action selector="chooseButtonClicked:" destination="-1" eventType="touchUpInside" id="UZh-0x-fKG"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSe-7x-WBb" customClass="AppButton" customModule="Choosi" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="43" width="374" height="33"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Cancel"/>
+                            <connections>
+                                <action selector="btnCancelClicked:" destination="-1" eventType="touchUpInside" id="dS4-VN-498"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No search result.  Please try again" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3l-Xv-b6q">
+                    <rect key="frame" x="136" y="335.66666666666669" width="142.33333333333337" height="42.333333333333314"/>
+                    <fontDescription key="fontDescription" name="ABCMarfaUnlicensedTrial-Regular" family="ABC Marfa Unlicensed Trial" pointSize="17"/>
+                    <color key="textColor" name="text"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="viewBckground"/>
+            <constraints>
+                <constraint firstItem="CbF-lC-1lo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="28k-TV-rKb"/>
+                <constraint firstItem="ufb-mW-Xk8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="2L5-xY-r9M"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CbF-lC-1lo" secondAttribute="trailing" constant="12" id="5Y9-p2-Aw5"/>
+                <constraint firstItem="ybR-T9-ySM" firstAttribute="top" secondItem="CbF-lC-1lo" secondAttribute="bottom" constant="5" id="9JP-zo-beo"/>
+                <constraint firstItem="c3l-Xv-b6q" firstAttribute="centerY" secondItem="ybR-T9-ySM" secondAttribute="centerY" id="DdD-N9-xn8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7eR-ht-nkx" secondAttribute="bottom" constant="40" id="E9m-H0-tOJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ybR-T9-ySM" secondAttribute="trailing" constant="8" id="L5p-sz-zLR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ufb-mW-Xk8" secondAttribute="trailing" constant="20" id="NAh-Ib-9gx"/>
+                <constraint firstItem="7eR-ht-nkx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="OxO-0Z-eF1"/>
+                <constraint firstItem="ybR-T9-ySM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="S2q-YA-dlo"/>
+                <constraint firstItem="c3l-Xv-b6q" firstAttribute="centerX" secondItem="ybR-T9-ySM" secondAttribute="centerX" id="UMa-MG-rg9"/>
+                <constraint firstItem="Dx8-8R-AXZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="clP-nk-vj2"/>
+                <constraint firstItem="Dx8-8R-AXZ" firstAttribute="top" secondItem="ufb-mW-Xk8" secondAttribute="bottom" constant="10" id="eDN-UD-GBk"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7eR-ht-nkx" secondAttribute="trailing" constant="20" id="fBc-hO-Fi2"/>
+                <constraint firstItem="7eR-ht-nkx" firstAttribute="top" secondItem="ybR-T9-ySM" secondAttribute="bottom" constant="20" id="i97-9B-FJP"/>
+                <constraint firstItem="CbF-lC-1lo" firstAttribute="top" secondItem="Dx8-8R-AXZ" secondAttribute="bottom" constant="5" id="lvD-Wj-fGl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Dx8-8R-AXZ" secondAttribute="trailing" constant="20" id="ly3-si-esq"/>
+                <constraint firstItem="ufb-mW-Xk8" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="sQq-XI-Hx2"/>
+            </constraints>
+            <point key="canvasLocation" x="128.98550724637681" y="88.858695652173921"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="LDV-GG-NRe">
+            <size key="intrinsicContentSize" width="40" height="33"/>
+        </designable>
+        <designable name="lSe-7x-WBb">
+            <size key="intrinsicContentSize" width="56" height="33"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="text">
+            <color red="0.21199999749660492" green="0.21199999749660492" blue="0.21199999749660492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="viewBackground">
+            <color red="0.97600001096725464" green="0.97600001096725464" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="viewBckground">
+            <color red="1" green="0.77999997138977051" blue="0.70599997043609619" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

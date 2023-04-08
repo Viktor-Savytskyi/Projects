@@ -1,0 +1,4 @@
+Device ID	Device Name	Device Platform
+00008030-00012CA601D8802E	Developer1	ios
+cf0f309e0ee8a39a87ab657ca13728a0c8b89d0b	Tester1	ios
+00008101-001905081143001E	Tester2	ios

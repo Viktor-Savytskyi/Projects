@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PreviewImageViewController" customModule="Choosi" customModuleProvider="target">
+            <connections>
+                <outlet property="postImageView" destination="hhQ-Fv-Iws" id="vRw-Dg-S2d"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" userLabel="View" customClass="Я">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0r-v2-QAU">
+                    <rect key="frame" x="325" y="57" width="48" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="S2A-O7-kwD"/>
+                        <constraint firstAttribute="width" secondItem="F0r-v2-QAU" secondAttribute="height" multiplier="1:1" id="XX0-ME-yor"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title=" " image="xButton"/>
+                    <connections>
+                        <action selector="closeClick:" destination="-1" eventType="touchUpInside" id="3XD-7x-1Ec"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hhQ-Fv-Iws">
+                    <rect key="frame" x="0.0" y="233.66666666666663" width="390" height="390"/>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="F0r-v2-QAU" secondAttribute="trailing" constant="17" id="C2E-S5-1oM"/>
+                <constraint firstItem="hhQ-Fv-Iws" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="EwE-wA-hF8"/>
+                <constraint firstItem="hhQ-Fv-Iws" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="e78-ya-c5d"/>
+                <constraint firstItem="hhQ-Fv-Iws" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="qkK-4h-NFp"/>
+                <constraint firstItem="F0r-v2-QAU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="wnE-8w-5Sp"/>
+                <constraint firstItem="hhQ-Fv-Iws" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="width" id="yRr-Ze-DOy"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="109" y="40"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="xButton" width="48" height="48"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

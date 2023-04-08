@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="UserPostsCollectionViewCell" customModule="Choosi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="186" height="179"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="186" height="179"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7ru-13-yo5">
+                        <rect key="frame" x="0.0" y="0.0" width="186" height="179"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forSaleMark" translatesAutoresizingMaskIntoConstraints="NO" id="L58-mh-zdT">
+                        <rect key="frame" x="8" y="8" width="11" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="4g1-Hd-P1P"/>
+                            <constraint firstAttribute="width" constant="11" id="TH8-ed-lxG"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="L58-mh-zdT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="2Ft-W2-zSc"/>
+                <constraint firstItem="7ru-13-yo5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="9bI-rF-bLf"/>
+                <constraint firstAttribute="bottom" secondItem="7ru-13-yo5" secondAttribute="bottom" id="Ele-pf-rQJ"/>
+                <constraint firstItem="L58-mh-zdT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="UaQ-fl-m21"/>
+                <constraint firstAttribute="trailing" secondItem="7ru-13-yo5" secondAttribute="trailing" id="q9Z-GF-amG"/>
+                <constraint firstItem="7ru-13-yo5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="wZz-7m-BUz"/>
+            </constraints>
+            <size key="customSize" width="186" height="179"/>
+            <connections>
+                <outlet property="markForSale" destination="L58-mh-zdT" id="mwa-Fr-xNq"/>
+                <outlet property="postImage" destination="7ru-13-yo5" id="aFq-cd-ZXP"/>
+            </connections>
+            <point key="canvasLocation" x="306.15384615384613" y="116.23222748815165"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="forSaleMark" width="11" height="15"/>
+    </resources>
+</document>

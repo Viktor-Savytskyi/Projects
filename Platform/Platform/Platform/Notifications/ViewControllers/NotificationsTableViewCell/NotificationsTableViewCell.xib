@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ABCMarfa-Bold-Trial.otf">
+            <string>ABCMarfaUnlicensedTrial-Bold</string>
+        </array>
+        <array key="ABCMarfa-Regular-Trial.otf">
+            <string>ABCMarfaUnlicensedTrial-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="82" id="KGk-i7-Jjw" customClass="NotificationsTableViewCell" customModule="Choosi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="82"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="390" height="82"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="gBd-We-Aex">
+                        <rect key="frame" x="18" y="10" width="349" height="62"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ywg-ZD-BKh">
+                                <rect key="frame" x="0.0" y="0.0" width="62" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="N3t-Mt-XxI"/>
+                                    <constraint firstAttribute="width" secondItem="ywg-ZD-BKh" secondAttribute="height" multiplier="1:1" id="OIz-Jk-cBf"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FC2-cI-EDG">
+                                <rect key="frame" x="71" y="14.333333333333332" width="191" height="33.666666666666671"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Cr7-oG-zGj">
+                                        <rect key="frame" x="0.0" y="0.0" width="191" height="33.666666666666664"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zqs-TI-egj">
+                                                <rect key="frame" x="0.0" y="0.0" width="191" height="18.666666666666668"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="ABCMarfaUnlicensedTrial-Bold" family="ABC Marfa Unlicensed Trial" pointSize="15"/>
+                                                <color key="textColor" name="text"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOV-Yv-92h">
+                                                <rect key="frame" x="0.0" y="18.666666666666668" width="191" height="15.000000000000004"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="ABCMarfaUnlicensedTrial-Regular" family="ABC Marfa Unlicensed Trial" pointSize="12"/>
+                                                <color key="textColor" name="text"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="isViewedBadge" translatesAutoresizingMaskIntoConstraints="NO" id="4ba-kw-ZZr">
+                                <rect key="frame" x="271" y="27.666666666666664" width="7" height="7"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="7" id="I6f-gQ-u4W"/>
+                                    <constraint firstAttribute="width" secondItem="4ba-kw-ZZr" secondAttribute="height" multiplier="1:1" id="NqV-ew-iSk"/>
+                                    <constraint firstAttribute="height" constant="7" id="uKu-BV-kb3"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5S-aX-Qzx">
+                                <rect key="frame" x="287" y="0.0" width="62" height="62"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="d5S-aX-Qzx" secondAttribute="height" multiplier="1:1" id="8Cm-D5-5nl"/>
+                                    <constraint firstAttribute="height" constant="62" id="rbM-8N-L8b"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title=" "/>
+                                <connections>
+                                    <action selector="rightButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="BUg-xq-tu9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="gBd-We-Aex" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="18" id="4vY-op-TZ6"/>
+                    <constraint firstAttribute="bottom" secondItem="gBd-We-Aex" secondAttribute="bottom" constant="10" id="PvS-RV-Cbt"/>
+                    <constraint firstAttribute="trailing" secondItem="gBd-We-Aex" secondAttribute="trailing" constant="23" id="VdS-8f-fy2"/>
+                    <constraint firstItem="gBd-We-Aex" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="YRR-NV-M4G"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="avatarImageView" destination="ywg-ZD-BKh" id="gat-eU-uID"/>
+                <outlet property="descriptionLabel" destination="gOV-Yv-92h" id="42W-yk-vpO"/>
+                <outlet property="isViewedBadge" destination="4ba-kw-ZZr" id="mqv-Yp-ck4"/>
+                <outlet property="rightButton" destination="d5S-aX-Qzx" id="BKN-6V-gGf"/>
+                <outlet property="userNameLabel" destination="Zqs-TI-egj" id="MvF-LP-N6l"/>
+            </connections>
+            <point key="canvasLocation" x="13.740458015267174" y="33.098591549295776"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="isViewedBadge" width="7" height="7"/>
+        <namedColor name="text">
+            <color red="0.21199999749660492" green="0.21199999749660492" blue="0.21199999749660492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
