@@ -286,7 +286,7 @@ class InterestsViewController: BaseViewController {
     }
     
     private func goToHome() {
-        Utils.window?.rootViewController = NavigationBuilder.shared.createTabBar()
+        Utils.window?.rootViewController = NavigationManager.shared.createTabBar()
     }
 }
 
@@ -316,8 +316,16 @@ extension InterestsViewController: UISearchBarDelegate {
     }
 }
 
-extension InterestsViewController: ImageUploadManagerDelegate {
-    var viewController: BaseViewController {
-        self
+extension InterestsViewController: UpdateScreenDelegate {
+    func showScreenLoader() {
+        showLoader()
+    }
+    
+    func showAlert(error: String) {
+        showMessage(message: error)
+    }
+    
+    func hideScreenLoader() {
+        hideLoader()
     }
 }

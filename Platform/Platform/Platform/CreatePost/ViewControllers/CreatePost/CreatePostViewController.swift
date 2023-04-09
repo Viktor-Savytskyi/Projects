@@ -387,7 +387,7 @@ class CreatePostViewController: BaseViewController {
 			ImageUploadManager.shared.uploadImages(post: existingPost,
                                                    editLocalImageFirst: editLocalImageFirst,
                                                    editLocalImageSecond: editLocalImageSecond,
-                                                   editLocalImageThird: editLocalImageThird) { [weak self] (error, bool)  in
+                                                   editLocalImageThird: editLocalImageThird) { [weak self] (error, _)  in
                     self?.showMessage(message: "Invalid second image format")
                 
 				guard let self = self else { return }
@@ -484,8 +484,16 @@ extension CreatePostViewController: UITextFieldDelegate {
     }
 }
 
-extension CreatePostViewController: ImageUploadManagerDelegate {
-	var viewController: BaseViewController {
-		self
-	}
+extension CreatePostViewController: UpdateScreenDelegate {
+    func showScreenLoader() {
+        showLoader()
+    }
+    
+    func showAlert(error: String) {
+        showMessage(message: error)
+    }
+    
+    func hideScreenLoader() {
+        hideLoader()
+    }
 }

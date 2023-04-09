@@ -34,7 +34,7 @@ class AccountManager {
                     self.authState = .notVerified
 				}
 			}
-            NavigationBuilder.shared.navigateUserBy(state: self.authState)
+            NavigationManager.shared.navigateUserBy(state: self.authState)
 		}
 	}
 	

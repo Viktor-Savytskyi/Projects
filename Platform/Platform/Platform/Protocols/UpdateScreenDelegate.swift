@@ -9,6 +9,6 @@ import Foundation
 
 protocol UpdateScreenDelegate: AnyObject {
     func showScreenLoader()
-    func showAlert(error: Error)
+    func showAlert(error: String)
     func hideScreenLoader()
 }

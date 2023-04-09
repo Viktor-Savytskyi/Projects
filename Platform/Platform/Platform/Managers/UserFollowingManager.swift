@@ -4,7 +4,6 @@ class UserFollowingManager {
     private var currentUser: CHUser?
     private var user: CHUser?
     var completion: ((CHUser) -> Void)?
-//    weak var baseViewController: BaseViewController?
     
     weak var updateScreenDelegat: UpdateScreenDelegate?
     
@@ -27,7 +26,7 @@ class UserFollowingManager {
 //                self.baseViewController?.hideLoader()
 //                self.baseViewController?.showMessage(message: error.localizedDescription)
                 self.updateScreenDelegat?.hideScreenLoader()
-                self.updateScreenDelegat?.showAlert(error: error)
+                self.updateScreenDelegat?.showAlert(error: error.localizedDescription)
             } else {
                 self.user = user
                 self.fetchCurrentUser()
@@ -43,7 +42,7 @@ class UserFollowingManager {
 //            self.baseViewController?.hideLoader()
 //            self.updateScreenDelegat?.hideScreenLoader()
             if let error = error {
-                self.updateScreenDelegat?.showAlert(error: error)
+                self.updateScreenDelegat?.showAlert(error: error.localizedDescription)
 //                self.baseViewController?.showMessage(message: error.localizedDescription)
             } else {
                 self.currentUser = currentUser
@@ -86,14 +85,14 @@ class UserFollowingManager {
 //                self.baseViewController?.hideLoader()
 //                self.baseViewController?.showMessage(message: error.localizedDescription)
                 self.updateScreenDelegat?.hideScreenLoader()
-                self.updateScreenDelegat?.showAlert(error: error)
+                self.updateScreenDelegat?.showAlert(error: error.localizedDescription)
             } else {
                 FirestoreAPI.shared.saveUserData(user: user) { error in
 //                    self.baseViewController?.hideLoader()
                     self.updateScreenDelegat?.hideScreenLoader()
                     if let error = error {
 //                        self.baseViewController?.showMessage(message: error.localizedDescription)
-                        self.updateScreenDelegat?.showAlert(error: error)
+                        self.updateScreenDelegat?.showAlert(error: error.localizedDescription)
 
                     } else {
                         let isFollowNewValue = (user.followersIds?.compactMap({ $0.userId }) ?? []).contains(currentUser.id)

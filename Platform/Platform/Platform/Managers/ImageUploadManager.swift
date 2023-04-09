@@ -1,15 +1,11 @@
 import Foundation
 import UIKit
 
-protocol ImageUploadManagerDelegate: AnyObject {
-    var viewController: BaseViewController { get }
-}
-
 class ImageUploadManager {
 	
 	static let shared = ImageUploadManager()
 	
-    weak var delegate: ImageUploadManagerDelegate?
+    weak var delegate: UpdateScreenDelegate?
     
     private init() { }
     
@@ -27,13 +23,14 @@ class ImageUploadManager {
         var uploadImageError: Error?
         for localImage in imagesArray {
             guard let imageData = localImage.image.compressTo() else {
-                delegate?.viewController.showMessage(message: "Invalid image format")
+//                delegate?.viewController.showMessage(message: "Invalid image format")
+                delegate?.showAlert(error: "Invalid image format")
                 return
             }
             
             uploadImagesGroup.enter()
             guard let delegate = delegate else { return }
-            delegate.viewController.showLoader()
+            delegate.showScreenLoader()
             StorageAPI.shared.uploadImage(imageData: imageData) { error, imageUrl in
                 if let url = imageUrl {
                     switch localImage.number {
@@ -53,7 +50,7 @@ class ImageUploadManager {
         }
         
         uploadImagesGroup.notify(queue: .main) {
-            self.delegate?.viewController.hideLoader()
+            self.delegate?.hideScreenLoader()
             completion(uploadImageError, uploadImageError != nil)
         }
     }

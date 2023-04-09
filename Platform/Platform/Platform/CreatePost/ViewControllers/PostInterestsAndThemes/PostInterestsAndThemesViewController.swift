@@ -189,8 +189,17 @@ extension PostInterestsAndThemesViewController: ThemeButtonDelegate {
     }
 }
 
-extension PostInterestsAndThemesViewController: ImageUploadManagerDelegate {
-    var viewController: BaseViewController {
-        self
+extension PostInterestsAndThemesViewController: UpdateScreenDelegate {
+    func showScreenLoader() {
+        showLoader()
+    }
+    
+    func showAlert(error: String) {
+        showMessage(message: error)
+    }
+    
+    func hideScreenLoader() {
+        hideLoader()
     }
 }
+

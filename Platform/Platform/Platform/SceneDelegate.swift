@@ -4,7 +4,6 @@ import FirebaseAuth
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
-	let deepLinkManager = DeepLinkManager.shared
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
@@ -22,9 +21,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		handleUserActivity(userActivity: userActivity)
 	}
 	
-	private func handleUserActivity(userActivity: NSUserActivity) {
-		if let url = userActivity.webpageURL, let deepLink = deepLinkManager.getDeepLink(universalUrl: url) {
-			deepLinkManager.followTheLink(link: deepLink)
-		}
-	}
+    private func handleUserActivity(userActivity: NSUserActivity) {
+        if let url = userActivity.webpageURL, let deepLink = DeepLinkManager.shared.getDeepLink(universalUrl: url) {
+            DeepLinkManager.shared.followTheLink(link: deepLink)
+        }
+    }
 }

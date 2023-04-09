@@ -55,7 +55,7 @@
 		48960E31291D166B00B06E91 /* UserPostsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48960E30291D166B00B06E91 /* UserPostsView.xib */; };
 		48960E35291D2BD900B06E91 /* UserPostsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48960E33291D2BD900B06E91 /* UserPostsCollectionViewCell.swift */; };
 		48960E36291D2BD900B06E91 /* UserPostsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48960E34291D2BD900B06E91 /* UserPostsCollectionViewCell.xib */; };
-		489657FD29E18D68003AEF17 /* NavigationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489657FC29E18D68003AEF17 /* NavigationBuilder.swift */; };
+		489657FD29E18D68003AEF17 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489657FC29E18D68003AEF17 /* NavigationManager.swift */; };
 		4896580129E2D026003AEF17 /* UpdateScreenDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4896580029E2D026003AEF17 /* UpdateScreenDelegate.swift */; };
 		48A3ED002912F1B60040164F /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A3ECFF2912F1B60040164F /* ReportViewController.swift */; };
 		48A3ED022912F1C50040164F /* ReportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48A3ED012912F1C50040164F /* ReportViewController.xib */; };
@@ -218,7 +218,7 @@
 		48960E30291D166B00B06E91 /* UserPostsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserPostsView.xib; sourceTree = "<group>"; };
 		48960E33291D2BD900B06E91 /* UserPostsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostsCollectionViewCell.swift; sourceTree = "<group>"; };
 		48960E34291D2BD900B06E91 /* UserPostsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserPostsCollectionViewCell.xib; sourceTree = "<group>"; };
-		489657FC29E18D68003AEF17 /* NavigationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBuilder.swift; sourceTree = "<group>"; };
+		489657FC29E18D68003AEF17 /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 		4896580029E2D026003AEF17 /* UpdateScreenDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateScreenDelegate.swift; sourceTree = "<group>"; };
 		48A3ECFF2912F1B60040164F /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		48A3ED012912F1C50040164F /* ReportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportViewController.xib; sourceTree = "<group>"; };
@@ -362,15 +362,6 @@
 				4819CD95291E7215001AB31D /* AppSegmentedControl.swift */,
 			);
 			path = SegmentControl;
-			sourceTree = "<group>";
-		};
-		4839460C28831486003904CB /* Reusable */ = {
-			isa = PBXGroup;
-			children = (
-				D8741A4D28FB112400201512 /* ViewControllers */,
-				4839460D288314BC003904CB /* ViewFromXib */,
-			);
-			path = Reusable;
 			sourceTree = "<group>";
 		};
 		4839460D288314BC003904CB /* ViewFromXib */ = {
@@ -788,6 +779,7 @@
 				48D0EF7F28D3488600C56599 /* Menu */,
 				F4F5728F2890F86C003CA2F9 /* Helpers */,
 				F4AA904A287DE8DA005A0DF8 /* Extensions */,
+				489657FE29E2D000003AEF17 /* Protocols */,
 				D8D6ABC628904C5E0041B324 /* Managers */,
 				D85872F828783105003FE888 /* Base */,
 				F42EA5852882C08C0013E31D /* LaunchScreen */,
@@ -845,7 +837,7 @@
 		D85872F828783105003FE888 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				4839460C28831486003904CB /* Reusable */,
+				4839460D288314BC003904CB /* ViewFromXib */,
 				D858730028786F3A003FE888 /* Components */,
 				D85872F928783112003FE888 /* ViewControllers */,
 			);
@@ -858,6 +850,8 @@
 				F42EA5952882D9260013E31D /* WebViewController.swift */,
 				F42EA5962882D9260013E31D /* WebViewController.xib */,
 				D85872FA28783135003FE888 /* BaseViewController.swift */,
+				D8741A4E28FB114000201512 /* SpinerViewController.swift */,
+				F469660D28A6C8C700991A03 /* ImagePickerController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -889,14 +883,6 @@
 				D86150A328BFDD3000A3C485 /* InterestManager.swift */,
 			);
 			path = Managers;
-			sourceTree = "<group>";
-		};
-		D8741A4D28FB112400201512 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				D8741A4E28FB114000201512 /* SpinerViewController.swift */,
-			);
-			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		D87872D7296AEA1A00FC11D7 /* Popup */ = {
@@ -984,8 +970,8 @@
 		D8C1B6B528B56D3000E75BDB /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8484F16328BB5E8600C8BE9E /* InterestSuperCategoryView.swift */,
 				8484F16528BB5E9400C8BE9E /* InterestSuperCategoryView.xib */,
+				8484F16328BB5E8600C8BE9E /* InterestSuperCategoryView.swift */,
 				D8C1B6BA28B56DCC00E75BDB /* InterestCategoryView.xib */,
 				D8C1B6BC28B56DD700E75BDB /* InterestCategoryView.swift */,
 			);
@@ -1027,9 +1013,7 @@
 			children = (
 				D8D51FC8288D23F20088F94D /* API */,
 				D8887A1428918FAF00FCF75E /* AccountManager.swift */,
-				489657FE29E2D000003AEF17 /* Protocols */,
-				489657FC29E18D68003AEF17 /* NavigationBuilder.swift */,
-				D8EBAB2E28C9226000B43A08 /* UIHelper.swift */,
+				489657FC29E18D68003AEF17 /* NavigationManager.swift */,
 				D890A52C28D71F5B00219D7C /* ImageUploadManager.swift */,
 				4888905229507E1B005B4047 /* BuildManager.swift */,
 				487DE549295D8F40007BA308 /* MixpanelManager.swift */,
@@ -1141,9 +1125,9 @@
 		F4F5728F2890F86C003CA2F9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				D8EBAB2E28C9226000B43A08 /* UIHelper.swift */,
 				D8887A17289190F500FCF75E /* Utils.swift */,
 				F4F572902890F88A003CA2F9 /* Validator.swift */,
-				F469660D28A6C8C700991A03 /* ImagePickerController.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1364,7 +1348,7 @@
 				48960E35291D2BD900B06E91 /* UserPostsCollectionViewCell.swift in Sources */,
 				D8C1B6BD28B56DD700E75BDB /* InterestCategoryView.swift in Sources */,
 				D85872FB28783135003FE888 /* BaseViewController.swift in Sources */,
-				489657FD29E18D68003AEF17 /* NavigationBuilder.swift in Sources */,
+				489657FD29E18D68003AEF17 /* NavigationManager.swift in Sources */,
 				485E4404295336270029EF5D /* PrivacyPolicyView.swift in Sources */,
 				48BC47B229017624008CC77F /* RatingView.swift in Sources */,
 				F4F8462128A1918B00A7955B /* RegisterWithEmailViewController.swift in Sources */,

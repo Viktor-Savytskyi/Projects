@@ -1,14 +1,8 @@
-//
-//  TabBarBuilder.swift
-//  Platform
-//
-//  Created by 12345 on 08.04.2023.
-//
-
 import UIKit
 
-class NavigationBuilder {
-    static let shared = NavigationBuilder()
+class NavigationManager {
+    static let shared = NavigationManager()
+    weak var rootNavigationVC: UINavigationController?
     
     private init() { }
     
@@ -50,10 +44,8 @@ class NavigationBuilder {
         return tabBar
     }
     
-    
     func navigateUserBy(state: AuthState) {
         let navigationController = UINavigationController()
-        
         switch state {
         case .authorized:
             Utils.window?.rootViewController = createTabBar()
@@ -66,5 +58,52 @@ class NavigationBuilder {
             navigationController.viewControllers = [accountVC]
         }
         Utils.window?.rootViewController = navigationController
+    }
+    
+    func setRootNavigationViewController(userAuthState: AuthState) {
+        switch userAuthState {
+        case .authorized:
+            let tabBarVC = Utils.window?.rootViewController as? UITabBarController
+            rootNavigationVC = tabBarVC?.viewControllers?[tabBarVC?.selectedIndex ?? 0] as? UINavigationController
+        case .unAuthorized:
+            rootNavigationVC = Utils.window?.rootViewController as? UINavigationController
+        case .notVerified:
+            break
+        }
+    }
+    
+    func openProfilePage(profileId: String) {
+        let profileVC = ProfilePageViewController()
+        profileVC.userId = profileId
+        rootNavigationVC?.pushViewController(profileVC, animated: true)
+    }
+    
+    func openPostDetailsScreen(post: Post) {
+        let postDetailsVC = PostDetailsViewController()
+        postDetailsVC.post = post
+        rootNavigationVC?.pushViewController(postDetailsVC, animated: true)
+    }
+    
+    func openRegistrationPage() {
+        rootNavigationVC?.pushViewController(RegisterWithEmailViewController(), animated: true)
+    }
+    
+    func openPostDetails(postId: String, isDeletedMessage: String, invalidLinkMessage: String) {
+        let topVC = rootNavigationVC?.topViewController as? BaseViewController
+        topVC?.showLoader()
+        FirestoreAPI.shared.getPostById(postId: postId) { post, error in
+            topVC?.hideLoader()
+            if let error = error {
+                topVC?.showMessage(message: error.localizedDescription)
+            } else if let post {
+                if post.isDeleted {
+                    topVC?.showMessage(message: isDeletedMessage)
+                    return
+                }
+                self.openPostDetailsScreen(post: post)
+            } else {
+                topVC?.showMessage(message: invalidLinkMessage)
+            }
+        }
     }
 }

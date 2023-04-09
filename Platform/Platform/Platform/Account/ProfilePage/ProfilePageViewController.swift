@@ -281,8 +281,8 @@ extension ProfilePageViewController: UpdateScreenDelegate {
         showLoader()
     }
     
-    func showAlert(error: Error) {
-        showMessage(message: error.localizedDescription)
+    func showAlert(error: String) {
+        showMessage(message: error)
     }
     
     func hideScreenLoader() {
