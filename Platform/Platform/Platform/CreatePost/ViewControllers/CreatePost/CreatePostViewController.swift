@@ -387,7 +387,9 @@ class CreatePostViewController: BaseViewController {
 			ImageUploadManager.shared.uploadImages(post: existingPost,
                                                    editLocalImageFirst: editLocalImageFirst,
                                                    editLocalImageSecond: editLocalImageSecond,
-                                                   editLocalImageThird: editLocalImageThird) { [weak self] (error, _)  in
+                                                   editLocalImageThird: editLocalImageThird) { [weak self] (error, bool)  in
+                    self?.showMessage(message: "Invalid second image format")
+                
 				guard let self = self else { return }
 				if let error = error {
 					self.showMessage(message: error.localizedDescription)

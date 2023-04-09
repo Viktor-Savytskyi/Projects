@@ -31,6 +31,7 @@ extension UIImage {
         if let data = imgData {
             if data.count < sizeInBytes {
                 return data
+//                return nil
             }
         }
         return nil
