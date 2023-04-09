@@ -9,6 +9,8 @@ class BuildManager {
     
     static let shared = BuildManager()
     
+    private init() { }
+    
 	var buildType: BuildType {
 		guard let buildNumber = Int(Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "") else { return .release }
 		if buildNumber % 2 == 0 {
@@ -20,12 +22,10 @@ class BuildManager {
 	
 	var firebaseConfigFileName: String {
 		switch buildType {
-		case .release: // GoogleService-Prod-Info      old GoogleService-Info
+		case .release:
 			return Bundle.main.path(forResource: "GoogleService-Prod-Info", ofType: "plist") ?? ""
-		case .dev: // GoogleService-Dev-Info       old GoogleService-Info-Dev
+		case .dev:
 			return Bundle.main.path(forResource: "GoogleService-Dev-Info", ofType: "plist") ?? ""
 		}
 	}
-    
-   private init() { }
 }

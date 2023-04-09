@@ -18,11 +18,11 @@ struct Constants {
     
     struct URLs {
         
-        static let privacyPolicy = "https://app.termly.io/document/privacy-policy/78771e12-62c0-48ac-b353-90a035461051"
-		static let termsOfUse = "https://app.termly.io/document/terms-of-use-for-online-marketplace/d8fb3533-441d-478b-b094-98d209d64f04"
+        static let privacyPolicy = ""
+		static let termsOfUse = ""
 		
-		static let productionServerUrl = "https://choosii-staging.vcdev.me"
-		static let devServerUrl = "https://choosii.vcdev.me"
+		static let productionServerUrl = ""
+		static let devServerUrl = ""
     }
     
     struct ErrorTitle {
@@ -48,6 +48,6 @@ struct Constants {
     }
     
     struct AppOwnerInfo {
-        static let id = "FrPITBNjbXT9kigW9s0bhDg4Grg1"
+        static let id = ""
     }
 }

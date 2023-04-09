@@ -27,7 +27,7 @@ class ImageUploadManager {
         var uploadImageError: Error?
         for localImage in imagesArray {
             guard let imageData = localImage.image.compressTo() else {
-                delegate?.viewController.showMessage(message: "Invalid second image format")
+                delegate?.viewController.showMessage(message: "Invalid image format")
                 return
             }
             

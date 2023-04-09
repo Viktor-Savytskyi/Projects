@@ -55,6 +55,8 @@
 		48960E31291D166B00B06E91 /* UserPostsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48960E30291D166B00B06E91 /* UserPostsView.xib */; };
 		48960E35291D2BD900B06E91 /* UserPostsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48960E33291D2BD900B06E91 /* UserPostsCollectionViewCell.swift */; };
 		48960E36291D2BD900B06E91 /* UserPostsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48960E34291D2BD900B06E91 /* UserPostsCollectionViewCell.xib */; };
+		489657FD29E18D68003AEF17 /* NavigationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489657FC29E18D68003AEF17 /* NavigationBuilder.swift */; };
+		4896580129E2D026003AEF17 /* UpdateScreenDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4896580029E2D026003AEF17 /* UpdateScreenDelegate.swift */; };
 		48A3ED002912F1B60040164F /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A3ECFF2912F1B60040164F /* ReportViewController.swift */; };
 		48A3ED022912F1C50040164F /* ReportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48A3ED012912F1C50040164F /* ReportViewController.xib */; };
 		48A5036228F94B7F006FDD23 /* TextFieldViewWithButtons.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48A5036128F94B7F006FDD23 /* TextFieldViewWithButtons.xib */; };
@@ -216,6 +218,8 @@
 		48960E30291D166B00B06E91 /* UserPostsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserPostsView.xib; sourceTree = "<group>"; };
 		48960E33291D2BD900B06E91 /* UserPostsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostsCollectionViewCell.swift; sourceTree = "<group>"; };
 		48960E34291D2BD900B06E91 /* UserPostsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserPostsCollectionViewCell.xib; sourceTree = "<group>"; };
+		489657FC29E18D68003AEF17 /* NavigationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBuilder.swift; sourceTree = "<group>"; };
+		4896580029E2D026003AEF17 /* UpdateScreenDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateScreenDelegate.swift; sourceTree = "<group>"; };
 		48A3ECFF2912F1B60040164F /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		48A3ED012912F1C50040164F /* ReportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportViewController.xib; sourceTree = "<group>"; };
 		48A5036128F94B7F006FDD23 /* TextFieldViewWithButtons.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldViewWithButtons.xib; sourceTree = "<group>"; };
@@ -535,6 +539,14 @@
 				48960E34291D2BD900B06E91 /* UserPostsCollectionViewCell.xib */,
 			);
 			path = UserPostsCell;
+			sourceTree = "<group>";
+		};
+		489657FE29E2D000003AEF17 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4896580029E2D026003AEF17 /* UpdateScreenDelegate.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		48A3ECFE2912F1850040164F /* SendReport */ = {
@@ -1015,6 +1027,8 @@
 			children = (
 				D8D51FC8288D23F20088F94D /* API */,
 				D8887A1428918FAF00FCF75E /* AccountManager.swift */,
+				489657FE29E2D000003AEF17 /* Protocols */,
+				489657FC29E18D68003AEF17 /* NavigationBuilder.swift */,
 				D8EBAB2E28C9226000B43A08 /* UIHelper.swift */,
 				D890A52C28D71F5B00219D7C /* ImageUploadManager.swift */,
 				4888905229507E1B005B4047 /* BuildManager.swift */,
@@ -1350,11 +1364,13 @@
 				48960E35291D2BD900B06E91 /* UserPostsCollectionViewCell.swift in Sources */,
 				D8C1B6BD28B56DD700E75BDB /* InterestCategoryView.swift in Sources */,
 				D85872FB28783135003FE888 /* BaseViewController.swift in Sources */,
+				489657FD29E18D68003AEF17 /* NavigationBuilder.swift in Sources */,
 				485E4404295336270029EF5D /* PrivacyPolicyView.swift in Sources */,
 				48BC47B229017624008CC77F /* RatingView.swift in Sources */,
 				F4F8462128A1918B00A7955B /* RegisterWithEmailViewController.swift in Sources */,
 				D8F82E61295E3CBD009D487F /* FirestoreAPI+Transactions.swift in Sources */,
 				487A5583297B0F60007A5397 /* NotificationsTimer.swift in Sources */,
+				4896580129E2D026003AEF17 /* UpdateScreenDelegate.swift in Sources */,
 				D8D4063A28C4B4400033573C /* FirestoreAPI+Users.swift in Sources */,
 				48D0EF7E28D3485B00C56599 /* MenuListController.swift in Sources */,
 				D8887A242892D65200FCF75E /* Enodable+Extension.swift in Sources */,

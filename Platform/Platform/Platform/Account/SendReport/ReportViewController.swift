@@ -39,7 +39,7 @@ class ReportViewController: BaseViewController {
         if MFMailComposeViewController.canSendMail() {
             let mailComposeVC = MFMailComposeViewController()
             mailComposeVC.mailComposeDelegate = self
-            mailComposeVC.setToRecipients(["shirley@choosii.us"])
+            mailComposeVC.setToRecipients(["vinilla2@ukr.net"])
             mailComposeVC.setSubject("Report")
             mailComposeVC.setMessageBody(descriptionTextView.text, isHTML: false)
             

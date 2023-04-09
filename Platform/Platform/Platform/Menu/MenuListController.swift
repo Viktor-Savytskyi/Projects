@@ -22,6 +22,7 @@ class MenuListController: BaseViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var menuTableView: UITableView!
     
+    //MARK: - Menu sections
     let sections = [Section(name: "Account", items: ["Profile Settings", "Personal Info", "Shipping Info", "Interests"]),
                     Section(name: "Support", items: ["Privacy Policy", "Terms of Service"]),
                     Section(name: "Actions", items: ["Contact Us", "Report a Concern", "Log out"])]
@@ -36,6 +37,7 @@ class MenuListController: BaseViewController {
     }
     
     func setTableViewConfigurations() {
+        //MARK: - nibName
         menuTableView.register(UINib(nibName: "RawTableViewCell", bundle: nil),
                                forCellReuseIdentifier: RawTableViewCell.identifier)
         menuTableView.register(UINib(nibName: "HeaderTableViewCell", bundle: nil),
@@ -91,6 +93,7 @@ extension MenuListController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //MARK: - replace switch
         switch indexPath.section {
         case 0:
             if indexPath.row == 0 {
@@ -112,7 +115,7 @@ extension MenuListController: UITableViewDataSource, UITableViewDelegate {
             navigationController?.pushViewController(webVC, animated: true)
         case 2:
             if indexPath.row == 0 {
-                if let url = URL(string: "mailto:team@choosii.us") {
+                if let url = URL(string: "vinilla2@ukr.net") {
                     UIApplication.shared.open(url)
                 }
             } else if indexPath.row == 1 {
