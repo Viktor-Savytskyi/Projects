@@ -38,6 +38,7 @@ class ProfilePageViewController: BaseViewController {
         super.viewWillAppear(animated)
         clearPostsLocalData()
         fetchUserData(needTrackProfileOpen: true)
+        setUpdateScreenDelegat()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -73,6 +74,11 @@ class ProfilePageViewController: BaseViewController {
             let shareBarButtonCustomView = createCustomViewForBarButton(imageName: "share", action: #selector(shareButtonImageViewTaped))
             navigationItem.rightBarButtonItem = UIBarButtonItem(customView: shareBarButtonCustomView)
         }
+    }
+    
+    private func setUpdateScreenDelegat() {
+        userFollowingManager.updateScreenDelegat = self
+
     }
     
     private func createShareButtonImageViewWithGesture() {
@@ -161,7 +167,7 @@ class ProfilePageViewController: BaseViewController {
                 return
             } else {
                 self.user = user
-                guard let user else { return }
+//                guard let user else { return }
                 if needTrackProfileOpen {
 //                    MixpanelManager.shared.trackEvent(.userProfile, value: CHAnalyticUser.initFromUser(user: user))
                 }
@@ -255,7 +261,7 @@ class ProfilePageViewController: BaseViewController {
     }
     
     private func followButtonAction() {
-        UserFollowingManager.shared.switchFollowState(userId: userId, baseViewController: self) { user in
+        UserFollowingManager.shared.switchFollowState(userId: userId) { user in
             self.user = user
             self.setupUserData()
         }
@@ -267,5 +273,19 @@ class ProfilePageViewController: BaseViewController {
     
     @IBAction func followButtonClicked(_ sender: Any) {
         followButtonAction()
+    }
+}
+
+extension ProfilePageViewController: UpdateScreenDelegate {
+    func showScreenLoader() {
+        showLoader()
+    }
+    
+    func showAlert(error: Error) {
+        showMessage(message: error.localizedDescription)
+    }
+    
+    func hideScreenLoader() {
+        hideLoader()
     }
 }

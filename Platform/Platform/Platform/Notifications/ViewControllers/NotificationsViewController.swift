@@ -23,6 +23,7 @@ class NotificationsViewController: BaseViewController {
 		notificationManager.getNotificationsData(showLoading: true)
 		notificationManager.hideTabItemBadge()
         setNavigationBarLargeTitle()
+        setUpdateScreenDelegat()
     }
 	
 	override func viewWillDisappear(_ animated: Bool) {
@@ -37,6 +38,11 @@ class NotificationsViewController: BaseViewController {
         navigationItem.title = "Notifications"
         refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
         notificationsTableView.addSubview(refreshControl)
+    }
+    
+    private func setUpdateScreenDelegat() {
+        userFollowingManager.updateScreenDelegat = self
+
     }
    
     private func prepateTableView() {
@@ -70,7 +76,7 @@ extension NotificationsViewController: UITableViewDataSource, UITableViewDelegat
                 self.navigationController?.pushViewController(postDetailsVC, animated: true)
             } else {
                 guard let user = notification.user else { return }
-                UserFollowingManager.shared.switchFollowState(userId: user.id, baseViewController: self) { _ in
+                UserFollowingManager.shared.switchFollowState(userId: user.id) { _ in
                     self.notificationManager.getNotificationsData()
                     self.notificationsTableView.reloadData()
                 }
@@ -89,5 +95,19 @@ extension NotificationsViewController: UITableViewDataSource, UITableViewDelegat
 extension NotificationsViewController: NotificationManagerDelegate {
     var viewController: NotificationsViewController {
         self
+    }
+}
+
+extension NotificationsViewController: UpdateScreenDelegate {
+    func showScreenLoader() {
+        showLoader()
+    }
+    
+    func showAlert(error: Error) {
+        showMessage(message: error.localizedDescription)
+    }
+    
+    func hideScreenLoader() {
+        hideLoader()
     }
 }

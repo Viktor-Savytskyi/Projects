@@ -286,7 +286,7 @@ class InterestsViewController: BaseViewController {
     }
     
     private func goToHome() {
-        Utils.window?.rootViewController = AccountManager.shared.createTabBar()
+        Utils.window?.rootViewController = NavigationBuilder.shared.createTabBar()
     }
 }
 
