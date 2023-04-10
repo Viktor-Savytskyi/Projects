@@ -264,7 +264,7 @@ class HomeViewController: BaseViewController, UITabBarControllerDelegate {
 					completion?()
 					return
 				}
-                self.usersStorage.featchUsers(baseViewController: self, completion: {
+                self.usersStorage.featchUsers(screenAlertDelegate: self, completion: {
                     self.postsTableView.reloadData()
                     self.hideLoader()
                     completion?()
@@ -466,5 +466,13 @@ extension HomeViewController: UISearchBarDelegate, UISearchTextFieldDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         onSearchTextChanged()
+    }
+}
+
+extension HomeViewController: ScreenAlertDelegate {
+    func showAlert(error: String, completion: (() -> Void)?) {
+        showMessage(message: error) { _ in
+            completion?()
+        }
     }
 }

@@ -1,10 +1,6 @@
 import Foundation
 import UIKit
 
-protocol NotificationManagerDelegate: AnyObject {
-    var viewController: NotificationsViewController { get }
-}
-
 class NotificationManager {
     
     static let shared = NotificationManager()
@@ -12,7 +8,10 @@ class NotificationManager {
     private var posts: [Post]?
     private var likeNotifications: [Notification] = []
     private var followingNotifications: [Notification] = []
-    weak var delegate: NotificationManagerDelegate?
+    weak var notificationDelegate: NotificationManagerDelegate?
+    weak var screenLoaderDelegate: ScreenLoaderDelegate?
+    weak var screenAlertDelegate: ScreenAlertDelegate?
+
 	
 	var allNotifications: [Notification] {
 		let result = followingNotifications + likeNotifications
@@ -30,10 +29,12 @@ class NotificationManager {
     private init() { }
     
     func getNotificationsData(showLoading: Bool = false) {
-        showLoading ? delegate?.viewController.showLoader() : nil
-		delegate?.viewController.noNotificationsLabel.isHidden = true
+//        showLoading ? delegate?.viewController.showLoader() : nil
+        showLoading ? screenLoaderDelegate?.showScreenLoader() : nil
+        notificationDelegate?.changeNotificationLabelVisible()
 		clearNotifications()
-		delegate?.viewController.notificationsTableView.reloadData()
+//		delegate?.viewController.notificationsTableView.reloadData()
+        notificationDelegate?.reloadData()
         getCurrentUser()
     }
 	
@@ -46,8 +47,10 @@ class NotificationManager {
         FirestoreAPI.shared.getUserData(userId: userId) { [weak self] _, error in
             guard let self else { return }
             if let error {
-                self.delegate?.viewController.hideLoader()
-                self.delegate?.viewController.showMessage(message: error.localizedDescription)
+//                self.delegate?.viewController.hideLoader()
+                self.screenLoaderDelegate?.hideScreenLoader()
+//                self.delegate?.viewController.showMessage(message: error.localizedDescription)
+                self.screenAlertDelegate?.showAlert(error: error.localizedDescription)
             } else {
                 self.getUserPosts()
             }
@@ -59,14 +62,18 @@ class NotificationManager {
         FirestoreAPI.shared.getPosts(usersIds: [userId]) { [weak self] posts, error in
             guard let self else { return }
             if let error {
-                self.delegate?.viewController.hideLoader()
-                self.delegate?.viewController.showMessage(message: error.localizedDescription)
+//                self.delegate?.viewController.hideLoader()
+                self.screenLoaderDelegate?.hideScreenLoader()
+//                self.delegate?.viewController.showMessage(message: error.localizedDescription)
+                self.screenAlertDelegate?.showAlert(error: error.localizedDescription)
             } else {
                 self.posts = posts
                 UsersStorage.shared
-                    .featchUsers(baseViewController: self.delegate?.viewController,
+                    .featchUsers(screenAlertDelegate: self.screenAlertDelegate,
                                  completion: {
-                        self.delegate?.viewController.hideLoader()
+//                        self.delegate?.viewController.hideLoader()
+                        self.screenLoaderDelegate?.hideScreenLoader()
+                        self.notificationDelegate?.changeNotificationLabelVisible()
                         self.fetchAllNotifications(posts: self.posts, users: UsersStorage.shared.users)
                     })
             }
@@ -106,9 +113,12 @@ class NotificationManager {
             }
         }
 		
-		if let delegate {
-			delegate.viewController.notificationsTableView.reloadData()
-            delegate.viewController.noNotificationsLabel.isHidden = !allNotifications.isEmpty
+		if let notificationDelegate {
+//			delegate.viewController.notificationsTableView.reloadData()
+            notificationDelegate.reloadData()
+//            delegate.viewController.noNotificationsLabel.isHidden = !allNotifications.isEmpty
+            notificationDelegate.changeNotificationLabelVisible(isHidden: !allNotifications.isEmpty)
+            
 			DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
 				self.setLastViewedNotificationsDateForCurrentUser()
 			}

@@ -17,18 +17,18 @@ class NotificationsViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 		noNotificationsLabel.isHidden = true
-		notificationManager.delegate = self
+		notificationManager.notificationDelegate = self
 		NotificationsTimer.shared.stopFetchingNotifications()
 		setNavigationVisible()
 		notificationManager.getNotificationsData(showLoading: true)
 		notificationManager.hideTabItemBadge()
         setNavigationBarLargeTitle()
-        setUpdateScreenDelegat()
+        setUpdateScreenDelegates()
     }
 	
 	override func viewWillDisappear(_ animated: Bool) {
 		super.viewWillDisappear(animated)
-		notificationManager.delegate = nil
+		notificationManager.notificationDelegate = nil
 		NotificationsTimer.shared.startFetchingNotifications()
         removeNavigationBarLargeTitle()
     }
@@ -40,8 +40,9 @@ class NotificationsViewController: BaseViewController {
         notificationsTableView.addSubview(refreshControl)
     }
     
-    private func setUpdateScreenDelegat() {
-        userFollowingManager.updateScreenDelegat = self
+    private func setUpdateScreenDelegates() {
+        userFollowingManager.screenAlertDelegate = self
+        userFollowingManager.screenLoaderDelegate = self
 
     }
    
@@ -92,22 +93,33 @@ extension NotificationsViewController: UITableViewDataSource, UITableViewDelegat
     }
 }
 
-extension NotificationsViewController: NotificationManagerDelegate {
-    var viewController: NotificationsViewController {
-        self
-    }
-}
-
-extension NotificationsViewController: UpdateScreenDelegate {
+extension NotificationsViewController: ScreenLoaderDelegate, ScreenAlertDelegate {
     func showScreenLoader() {
         showLoader()
     }
     
-    func showAlert(error: String) {
-        showMessage(message: error)
+    func showAlert(error: String, completion: (() -> Void)?) {
+        if completion == nil {
+            showMessage(message: error)
+        }
+        showMessage(message: error) { _ in
+            completion?()
+        }
     }
     
     func hideScreenLoader() {
         hideLoader()
     }
+}
+
+extension NotificationsViewController: NotificationManagerDelegate {
+    func reloadData() {
+        notificationsTableView.reloadData()
+
+    }
+
+    func changeNotificationLabelVisible(isHidden: Bool) {
+        noNotificationsLabel.isHidden = isHidden
+    }
+    
 }

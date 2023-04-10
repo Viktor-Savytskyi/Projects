@@ -6,13 +6,16 @@ class UsersStorage {
     
     private init () { }
     
-    func featchUsers(baseViewController: BaseViewController?, completion: (() -> Void)? = nil) {
+    func featchUsers(screenAlertDelegate: ScreenAlertDelegate?, completion: (() -> Void)? = nil) {
         FirestoreAPI.shared.getAllUsers { [weak self] users, error in
             guard let self = self else { return }
             if let error = error {
-                baseViewController?.showMessage(message: error.localizedDescription) { _ in
-                    self.featchUsers(baseViewController: baseViewController, completion: completion)
-                }
+                screenAlertDelegate?.showAlert(error: error.localizedDescription, completion: {
+                    self.featchUsers(screenAlertDelegate: screenAlertDelegate, completion: completion)
+                })
+//                baseViewController?.showMessage(message: error.localizedDescription) { _ in
+//                    self.featchUsers(baseViewController: baseViewController, completion: completion)
+//                }
             } else {
                 self.users = users
                 completion?()

@@ -32,6 +32,8 @@
 		487C13E629238876000D6FF7 /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487C13E529238876000D6FF7 /* CustomSearchBar.swift */; };
 		487DE54A295D8F40007BA308 /* MixpanelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487DE549295D8F40007BA308 /* MixpanelManager.swift */; };
 		48801D24293FE5D700A77D98 /* PostSaleStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48801D23293FE5D700A77D98 /* PostSaleStatus.swift */; };
+		48810CAC29E4007900043E55 /* NotificationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48810CAB29E4007900043E55 /* NotificationManagerDelegate.swift */; };
+		48810CAE29E4011E00043E55 /* ScreenAlertDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48810CAD29E4011E00043E55 /* ScreenAlertDelegate.swift */; };
 		48812F312976CBF9009634D6 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48812F302976CBF9009634D6 /* Notification.swift */; };
 		4883CAF728DB043A008F9B4A /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4883CAF528DB043A008F9B4A /* PersonalInfoViewController.swift */; };
 		4883CAF828DB043A008F9B4A /* PersonalInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4883CAF628DB043A008F9B4A /* PersonalInfoViewController.xib */; };
@@ -56,7 +58,7 @@
 		48960E35291D2BD900B06E91 /* UserPostsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48960E33291D2BD900B06E91 /* UserPostsCollectionViewCell.swift */; };
 		48960E36291D2BD900B06E91 /* UserPostsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48960E34291D2BD900B06E91 /* UserPostsCollectionViewCell.xib */; };
 		489657FD29E18D68003AEF17 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489657FC29E18D68003AEF17 /* NavigationManager.swift */; };
-		4896580129E2D026003AEF17 /* UpdateScreenDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4896580029E2D026003AEF17 /* UpdateScreenDelegate.swift */; };
+		4896580129E2D026003AEF17 /* ScreenLoaderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4896580029E2D026003AEF17 /* ScreenLoaderDelegate.swift */; };
 		48A3ED002912F1B60040164F /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A3ECFF2912F1B60040164F /* ReportViewController.swift */; };
 		48A3ED022912F1C50040164F /* ReportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48A3ED012912F1C50040164F /* ReportViewController.xib */; };
 		48A5036228F94B7F006FDD23 /* TextFieldViewWithButtons.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48A5036128F94B7F006FDD23 /* TextFieldViewWithButtons.xib */; };
@@ -195,6 +197,8 @@
 		487C13E529238876000D6FF7 /* CustomSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
 		487DE549295D8F40007BA308 /* MixpanelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixpanelManager.swift; sourceTree = "<group>"; };
 		48801D23293FE5D700A77D98 /* PostSaleStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostSaleStatus.swift; sourceTree = "<group>"; };
+		48810CAB29E4007900043E55 /* NotificationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManagerDelegate.swift; sourceTree = "<group>"; };
+		48810CAD29E4011E00043E55 /* ScreenAlertDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenAlertDelegate.swift; sourceTree = "<group>"; };
 		48812F302976CBF9009634D6 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		4883CAF528DB043A008F9B4A /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
 		4883CAF628DB043A008F9B4A /* PersonalInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalInfoViewController.xib; sourceTree = "<group>"; };
@@ -219,7 +223,7 @@
 		48960E33291D2BD900B06E91 /* UserPostsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostsCollectionViewCell.swift; sourceTree = "<group>"; };
 		48960E34291D2BD900B06E91 /* UserPostsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserPostsCollectionViewCell.xib; sourceTree = "<group>"; };
 		489657FC29E18D68003AEF17 /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
-		4896580029E2D026003AEF17 /* UpdateScreenDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateScreenDelegate.swift; sourceTree = "<group>"; };
+		4896580029E2D026003AEF17 /* ScreenLoaderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenLoaderDelegate.swift; sourceTree = "<group>"; };
 		48A3ECFF2912F1B60040164F /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		48A3ED012912F1C50040164F /* ReportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportViewController.xib; sourceTree = "<group>"; };
 		48A5036128F94B7F006FDD23 /* TextFieldViewWithButtons.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldViewWithButtons.xib; sourceTree = "<group>"; };
@@ -407,8 +411,6 @@
 		4879C6232979C978006B924A /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				4879C6212979C799006B924A /* NotificationManager.swift */,
-				487A5582297B0F60007A5397 /* NotificationsTimer.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -535,7 +537,9 @@
 		489657FE29E2D000003AEF17 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				4896580029E2D026003AEF17 /* UpdateScreenDelegate.swift */,
+				4896580029E2D026003AEF17 /* ScreenLoaderDelegate.swift */,
+				48810CAD29E4011E00043E55 /* ScreenAlertDelegate.swift */,
+				48810CAB29E4007900043E55 /* NotificationManagerDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -1015,6 +1019,8 @@
 				D8887A1428918FAF00FCF75E /* AccountManager.swift */,
 				489657FC29E18D68003AEF17 /* NavigationManager.swift */,
 				D890A52C28D71F5B00219D7C /* ImageUploadManager.swift */,
+				4879C6212979C799006B924A /* NotificationManager.swift */,
+				487A5582297B0F60007A5397 /* NotificationsTimer.swift */,
 				4888905229507E1B005B4047 /* BuildManager.swift */,
 				487DE549295D8F40007BA308 /* MixpanelManager.swift */,
 				4860803D29787C7000D83BC9 /* UserFollowingManager.swift */,
@@ -1354,7 +1360,7 @@
 				F4F8462128A1918B00A7955B /* RegisterWithEmailViewController.swift in Sources */,
 				D8F82E61295E3CBD009D487F /* FirestoreAPI+Transactions.swift in Sources */,
 				487A5583297B0F60007A5397 /* NotificationsTimer.swift in Sources */,
-				4896580129E2D026003AEF17 /* UpdateScreenDelegate.swift in Sources */,
+				4896580129E2D026003AEF17 /* ScreenLoaderDelegate.swift in Sources */,
 				D8D4063A28C4B4400033573C /* FirestoreAPI+Users.swift in Sources */,
 				48D0EF7E28D3485B00C56599 /* MenuListController.swift in Sources */,
 				D8887A242892D65200FCF75E /* Enodable+Extension.swift in Sources */,
@@ -1368,6 +1374,7 @@
 				4864DAF52965FFBC009C52FB /* DeepLinkManager.swift in Sources */,
 				487396A7299D1DAB00903619 /* OffensiveWords.swift in Sources */,
 				F469660E28A6C8C700991A03 /* ImagePickerController.swift in Sources */,
+				48810CAC29E4007900043E55 /* NotificationManagerDelegate.swift in Sources */,
 				48D0EF9528D37C2A00C56599 /* HeaderTableViewCell.swift in Sources */,
 				D87872D5296AE3AA00FC11D7 /* ConfirmationPopupViewController.swift in Sources */,
 				D85872DB28773DDB003FE888 /* SceneDelegate.swift in Sources */,
@@ -1409,6 +1416,7 @@
 				D8910A4228B0F6EB006F2BF7 /* CreatePostViewController.swift in Sources */,
 				48E0A35F28EAC11E0093886C /* SocialNetworkWebViewController.swift in Sources */,
 				D8ADC15F28CFB6FA001AA7BE /* UIImage+Extension.swift in Sources */,
+				48810CAE29E4011E00043E55 /* ScreenAlertDelegate.swift in Sources */,
 				488DA14729756550004B79F2 /* NotificationInfo.swift in Sources */,
 				F42EA5972882D9260013E31D /* WebViewController.swift in Sources */,
 				48E0A36228EAE8C60093886C /* AccountFlowEnums.swift in Sources */,

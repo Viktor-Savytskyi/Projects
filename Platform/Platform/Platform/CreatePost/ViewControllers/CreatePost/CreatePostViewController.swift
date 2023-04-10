@@ -381,7 +381,8 @@ class CreatePostViewController: BaseViewController {
         let shippingPrice = shippingPriceTextFieldView.textField.text!.doubleValue
 		existingPost.shippingPrice = shippingPrice
 		
-		ImageUploadManager.shared.delegate = self
+        ImageUploadManager.shared.setupDelegates(self)
+
 		let imagesArray = [editLocalImageFirst, editLocalImageSecond, editLocalImageThird].compactMap { $0 }
 		if !imagesArray.isEmpty {
 			ImageUploadManager.shared.uploadImages(post: existingPost,
@@ -484,7 +485,7 @@ extension CreatePostViewController: UITextFieldDelegate {
     }
 }
 
-extension CreatePostViewController: UpdateScreenDelegate {
+extension CreatePostViewController: ScreenLoaderDelegate, ScreenAlertDelegate {
     func showScreenLoader() {
         showLoader()
     }

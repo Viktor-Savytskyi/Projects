@@ -5,11 +5,17 @@ class UserFollowingManager {
     private var user: CHUser?
     var completion: ((CHUser) -> Void)?
     
-    weak var updateScreenDelegat: UpdateScreenDelegate?
+    weak var screenLoaderDelegate: ScreenLoaderDelegate?
+    weak var screenAlertDelegate: ScreenAlertDelegate?
     
     static let shared = UserFollowingManager()
     
     private init() { }
+    
+    func setupDelegates(_ viewController: BaseViewController) {
+        screenLoaderDelegate = viewController as? ScreenLoaderDelegate
+        screenAlertDelegate = viewController as? ScreenAlertDelegate
+    }
     
     func switchFollowState(userId: String, completion: ((CHUser) -> Void)?) {
 //        self.baseViewController = baseViewController
@@ -19,14 +25,14 @@ class UserFollowingManager {
     
     private func fetchUserData(userId: String) {
 //        baseViewController?.showLoader()
-        updateScreenDelegat?.showScreenLoader()
+        screenLoaderDelegate?.showScreenLoader()
         FirestoreAPI.shared.getUserData(userId: userId) { [weak self] user, error in
             guard let self = self else { return }
             if let error = error {
 //                self.baseViewController?.hideLoader()
 //                self.baseViewController?.showMessage(message: error.localizedDescription)
-                self.updateScreenDelegat?.hideScreenLoader()
-                self.updateScreenDelegat?.showAlert(error: error.localizedDescription)
+                self.screenLoaderDelegate?.hideScreenLoader()
+                self.screenAlertDelegate?.showAlert(error: error.localizedDescription)
             } else {
                 self.user = user
                 self.fetchCurrentUser()
@@ -42,7 +48,7 @@ class UserFollowingManager {
 //            self.baseViewController?.hideLoader()
 //            self.updateScreenDelegat?.hideScreenLoader()
             if let error = error {
-                self.updateScreenDelegat?.showAlert(error: error.localizedDescription)
+                self.screenAlertDelegate?.showAlert(error: error.localizedDescription)
 //                self.baseViewController?.showMessage(message: error.localizedDescription)
             } else {
                 self.currentUser = currentUser
@@ -84,15 +90,15 @@ class UserFollowingManager {
             if let error = error {
 //                self.baseViewController?.hideLoader()
 //                self.baseViewController?.showMessage(message: error.localizedDescription)
-                self.updateScreenDelegat?.hideScreenLoader()
-                self.updateScreenDelegat?.showAlert(error: error.localizedDescription)
+                self.screenLoaderDelegate?.hideScreenLoader()
+                self.screenAlertDelegate?.showAlert(error: error.localizedDescription)
             } else {
                 FirestoreAPI.shared.saveUserData(user: user) { error in
 //                    self.baseViewController?.hideLoader()
-                    self.updateScreenDelegat?.hideScreenLoader()
+                    self.screenLoaderDelegate?.hideScreenLoader()
                     if let error = error {
 //                        self.baseViewController?.showMessage(message: error.localizedDescription)
-                        self.updateScreenDelegat?.showAlert(error: error.localizedDescription)
+                        self.screenAlertDelegate?.showAlert(error: error.localizedDescription)
 
                     } else {
                         let isFollowNewValue = (user.followersIds?.compactMap({ $0.userId }) ?? []).contains(currentUser.id)

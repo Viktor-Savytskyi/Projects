@@ -121,7 +121,7 @@ class PostInterestsAndThemesViewController: BaseViewController {
         post.themes = selectedThemes
         post.updatedAt = Date()
         
-        ImageUploadManager.shared.delegate = self
+        ImageUploadManager.shared.setupDelegates(self)
         ImageUploadManager.shared.uploadImages(post: post,
                                                editLocalImageFirst: editLocalImageFirst,
                                                editLocalImageSecond: editLocalImageSecond,
@@ -189,7 +189,7 @@ extension PostInterestsAndThemesViewController: ThemeButtonDelegate {
     }
 }
 
-extension PostInterestsAndThemesViewController: UpdateScreenDelegate {
+extension PostInterestsAndThemesViewController: ScreenLoaderDelegate {
     func showScreenLoader() {
         showLoader()
     }

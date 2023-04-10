@@ -7,8 +7,7 @@
 
 import Foundation
 
-protocol UpdateScreenDelegate: AnyObject {
+protocol ScreenLoaderDelegate: AnyObject {
     func showScreenLoader()
-    func showAlert(error: String)
     func hideScreenLoader()
 }

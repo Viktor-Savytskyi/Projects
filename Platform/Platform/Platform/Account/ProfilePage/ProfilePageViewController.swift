@@ -38,7 +38,7 @@ class ProfilePageViewController: BaseViewController {
         super.viewWillAppear(animated)
         clearPostsLocalData()
         fetchUserData(needTrackProfileOpen: true)
-        setUpdateScreenDelegat()
+        userFollowingManager.setupDelegates(self)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -74,11 +74,6 @@ class ProfilePageViewController: BaseViewController {
             let shareBarButtonCustomView = createCustomViewForBarButton(imageName: "share", action: #selector(shareButtonImageViewTaped))
             navigationItem.rightBarButtonItem = UIBarButtonItem(customView: shareBarButtonCustomView)
         }
-    }
-    
-    private func setUpdateScreenDelegat() {
-        userFollowingManager.updateScreenDelegat = self
-
     }
     
     private func createShareButtonImageViewWithGesture() {
@@ -276,7 +271,7 @@ class ProfilePageViewController: BaseViewController {
     }
 }
 
-extension ProfilePageViewController: UpdateScreenDelegate {
+extension ProfilePageViewController: ScreenLoaderDelegate, ScreenAlertDelegate {
     func showScreenLoader() {
         showLoader()
     }

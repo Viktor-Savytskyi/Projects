@@ -5,9 +5,15 @@ class ImageUploadManager {
 	
 	static let shared = ImageUploadManager()
 	
-    weak var delegate: UpdateScreenDelegate?
+    weak var screenLoaderDelegate: ScreenLoaderDelegate?
+    weak var screenAlertDelegate: ScreenAlertDelegate?
     
     private init() { }
+    
+    func setupDelegates(_ viewController: BaseViewController) {
+        screenLoaderDelegate = viewController as? ScreenLoaderDelegate
+        screenAlertDelegate = viewController as? ScreenAlertDelegate
+    }
     
     func uploadImages(post: Post,
                       editLocalImageFirst: LocalImage?,
@@ -24,13 +30,13 @@ class ImageUploadManager {
         for localImage in imagesArray {
             guard let imageData = localImage.image.compressTo() else {
 //                delegate?.viewController.showMessage(message: "Invalid image format")
-                delegate?.showAlert(error: "Invalid image format")
+                screenAlertDelegate?.showAlert(error: "Invalid image format")
                 return
             }
             
             uploadImagesGroup.enter()
-            guard let delegate = delegate else { return }
-            delegate.showScreenLoader()
+            guard let screenLoaderDelegate else { return }
+            screenLoaderDelegate.showScreenLoader()
             StorageAPI.shared.uploadImage(imageData: imageData) { error, imageUrl in
                 if let url = imageUrl {
                     switch localImage.number {
@@ -50,7 +56,7 @@ class ImageUploadManager {
         }
         
         uploadImagesGroup.notify(queue: .main) {
-            self.delegate?.hideScreenLoader()
+            self.screenLoaderDelegate?.hideScreenLoader()
             completion(uploadImageError, uploadImageError != nil)
         }
     }

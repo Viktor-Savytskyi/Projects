@@ -181,7 +181,7 @@ class InterestsViewController: BaseViewController {
         post.interestCodes = interestManager.selectedCodes
         post.updatedAt = Date()
         
-        ImageUploadManager.shared.delegate = self
+        ImageUploadManager.shared.setupDelegates(self)
         ImageUploadManager.shared.uploadImages(post: post,
                                                editLocalImageFirst: editLocalImageFirst,
                                                editLocalImageSecond: editLocalImageSecond,
@@ -316,7 +316,7 @@ extension InterestsViewController: UISearchBarDelegate {
     }
 }
 
-extension InterestsViewController: UpdateScreenDelegate {
+extension InterestsViewController: ScreenLoaderDelegate {
     func showScreenLoader() {
         showLoader()
     }
