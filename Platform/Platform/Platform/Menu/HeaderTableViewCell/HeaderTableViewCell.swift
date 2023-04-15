@@ -6,7 +6,7 @@ class HeaderTableViewCell: UITableViewCell {
     
     static let identifier = "HeaderTableViewCell"
     
-    func fill(with data: Section) {
-        headerLabel.text = data.name
+    func fill(with name: String) {
+        headerLabel.text = name
     }
 }

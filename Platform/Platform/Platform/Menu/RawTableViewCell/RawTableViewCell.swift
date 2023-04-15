@@ -6,7 +6,7 @@ class RawTableViewCell: UITableViewCell {
     
     static let identifier = "RawTableViewCell"
     
-    func fill(with data: Section) {
-        categoryNameLabel.text = data.name
+    func fill(with data: String) {
+        categoryNameLabel.text = data
     }
 }

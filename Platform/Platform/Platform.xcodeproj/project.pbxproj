@@ -881,14 +881,6 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
-		D86150A228BFDCFB00A3C485 /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				D86150A328BFDD3000A3C485 /* InterestManager.swift */,
-			);
-			path = Managers;
-			sourceTree = "<group>";
-		};
 		D87872D7296AEA1A00FC11D7 /* Popup */ = {
 			isa = PBXGroup;
 			children = (
@@ -1026,6 +1018,8 @@
 				4860803D29787C7000D83BC9 /* UserFollowingManager.swift */,
 				4864DAF42965FFBC009C52FB /* DeepLinkManager.swift */,
 				488EF9FD2990528700BEC917 /* UsersStorage.swift */,
+				D86150A328BFDD3000A3C485 /* InterestManager.swift */,
+				D8C1B6C028B60AA200E75BDB /* Models */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -1033,8 +1027,6 @@
 		F41A80372899A6D4006754D2 /* Interests */ = {
 			isa = PBXGroup;
 			children = (
-				D86150A228BFDCFB00A3C485 /* Managers */,
-				D8C1B6C028B60AA200E75BDB /* Models */,
 				D8C1B6B528B56D3000E75BDB /* Views */,
 				D82DD76528A5A4E800EE447D /* Headers */,
 				F4539ACE289AF928004AE934 /* Layouts */,

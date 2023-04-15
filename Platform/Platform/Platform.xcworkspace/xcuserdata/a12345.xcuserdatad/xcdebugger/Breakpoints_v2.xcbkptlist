@@ -551,48 +551,64 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "635AC671-91B7-4F62-AAFC-C968DD4F978F"
+            uuid = "DB7DFE19-C7FA-4EBC-BE0D-FBCA8128F316"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Platform/Managers/UsersStorage.swift"
+            filePath = "Platform/Menu/MenuListController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
-            landmarkName = "featchUsers(screenAlertDelegate:completion:)"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "moveToScreenDependOf(indexPath:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "30DB575B-27D5-4DEE-91AB-40E2B3E32783"
+            uuid = "621B1EA9-3BDD-46C8-8BDA-BF5BD4D21A85"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Platform/Managers/UsersStorage.swift"
+            filePath = "Platform/Menu/MenuListController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "featchUsers(screenAlertDelegate:completion:)"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "moveToScreenDependOf(indexPath:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "EF372D2F-E758-437C-9A0E-A33275329E63"
+            uuid = "255FBE9F-6D20-4C45-85EB-9DF34EE4D2E2"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Platform/Managers/UsersStorage.swift"
+            filePath = "Platform/Menu/MenuListController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "featchUsers(screenAlertDelegate:completion:)"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "moveToScreenDependOf(indexPath:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4686AB77-3F3D-42B2-8476-29E10E7FB0BE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Platform/Menu/MenuListController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "moveToScreenDependOf(indexPath:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
