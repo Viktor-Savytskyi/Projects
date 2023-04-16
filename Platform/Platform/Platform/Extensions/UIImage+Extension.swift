@@ -12,8 +12,13 @@ extension UIImage {
         self.init(data: image.pngData()!)!
     }
     
+    private func convertToBytes(sizeInMb: Int) -> Int {
+        sizeInMb * 1024 * 2
+    }
+    
     func compressTo(expectedSizeInMb: Int = 5) -> Data? {
-        let sizeInBytes = expectedSizeInMb * 1024 * 1024
+        //MARK: 1024 * 2
+        let sizeInBytes = convertToBytes(sizeInMb: expectedSizeInMb)
         var needCompress = true
         var imgData: Data?
         var compressingValue: CGFloat = 1.0

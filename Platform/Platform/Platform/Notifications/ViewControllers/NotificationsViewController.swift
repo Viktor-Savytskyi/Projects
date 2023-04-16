@@ -47,8 +47,7 @@ class NotificationsViewController: BaseViewController {
     }
    
     private func prepateTableView() {
-        notificationsTableView.register(UINib(nibName: NotificationsTableViewCell.identifier, bundle: nil),
-                                        forCellReuseIdentifier: NotificationsTableViewCell.identifier)
+        notificationsTableView.register(UINib(nibName: NotificationsTableViewCell.getTheClassName(), bundle: nil), forCellReuseIdentifier: NotificationsTableViewCell.getTheClassName() )
         notificationsTableView.delegate = self
         notificationsTableView.dataSource = self
     }
@@ -65,7 +64,7 @@ extension NotificationsViewController: UITableViewDataSource, UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: NotificationsTableViewCell.identifier, for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: NotificationsTableViewCell.getTheClassName(), for: indexPath)
                 as? NotificationsTableViewCell else { return NotificationsTableViewCell() }
         
         let notification = notificationManager.allNotifications[indexPath.row]

@@ -32,7 +32,7 @@ class UserFollowingManager {
 //                self.baseViewController?.hideLoader()
 //                self.baseViewController?.showMessage(message: error.localizedDescription)
                 self.screenLoaderDelegate?.hideScreenLoader()
-                self.screenAlertDelegate?.showAlert(error: error.localizedDescription)
+                self.screenAlertDelegate?.showAlert(error: error.localizedDescription, completion: nil)
             } else {
                 self.user = user
                 self.fetchCurrentUser()
@@ -48,7 +48,7 @@ class UserFollowingManager {
 //            self.baseViewController?.hideLoader()
 //            self.updateScreenDelegat?.hideScreenLoader()
             if let error = error {
-                self.screenAlertDelegate?.showAlert(error: error.localizedDescription)
+                self.screenAlertDelegate?.showAlert(error: error.localizedDescription, completion: nil)
 //                self.baseViewController?.showMessage(message: error.localizedDescription)
             } else {
                 self.currentUser = currentUser
@@ -91,14 +91,14 @@ class UserFollowingManager {
 //                self.baseViewController?.hideLoader()
 //                self.baseViewController?.showMessage(message: error.localizedDescription)
                 self.screenLoaderDelegate?.hideScreenLoader()
-                self.screenAlertDelegate?.showAlert(error: error.localizedDescription)
+                self.screenAlertDelegate?.showAlert(error: error.localizedDescription, completion: nil)
             } else {
                 FirestoreAPI.shared.saveUserData(user: user) { error in
 //                    self.baseViewController?.hideLoader()
                     self.screenLoaderDelegate?.hideScreenLoader()
                     if let error = error {
 //                        self.baseViewController?.showMessage(message: error.localizedDescription)
-                        self.screenAlertDelegate?.showAlert(error: error.localizedDescription)
+                        self.screenAlertDelegate?.showAlert(error: error.localizedDescription, completion: nil)
 
                     } else {
                         let isFollowNewValue = (user.followersIds?.compactMap({ $0.userId }) ?? []).contains(currentUser.id)

@@ -39,7 +39,6 @@ class CreatePostViewController: BaseViewController {
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
-		
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -490,7 +489,7 @@ extension CreatePostViewController: ScreenLoaderDelegate, ScreenAlertDelegate {
         showLoader()
     }
     
-    func showAlert(error: String) {
+    func showAlert(error: String, completion: (() -> Void)?) {
         showMessage(message: error)
     }
     

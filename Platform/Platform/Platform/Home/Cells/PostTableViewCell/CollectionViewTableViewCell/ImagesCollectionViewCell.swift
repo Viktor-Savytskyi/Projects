@@ -2,8 +2,6 @@ import UIKit
 import SDWebImage
 
 class ImagesCollectionViewCell: UICollectionViewCell {
-
-    static let identifier = "ImagesCollectionViewCell"
     
     @IBOutlet weak var postImageView: UIImageView!
     @IBOutlet weak var isForSaleMark: UIImageView!

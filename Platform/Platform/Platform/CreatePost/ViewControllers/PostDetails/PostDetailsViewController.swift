@@ -132,7 +132,7 @@ class PostDetailsViewController: BaseViewController {
     }
 	
     private func setCollectionViewConfigurations() {
-        imagesCollectionView.register(UINib(nibName: PostDetailsCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: PostDetailsCollectionViewCell.identifier)
+        imagesCollectionView.register(UINib(nibName: PostDetailsCollectionViewCell.getTheClassName(), bundle: nil), forCellWithReuseIdentifier: PostDetailsCollectionViewCell.getTheClassName())
         imagesCollectionView.delegate = self
         imagesCollectionView.dataSource = self
         imagesCollectionView.collectionViewLayout = CustomCollectionViewLayout.createDetailsViewControllerCustomLayout()
@@ -392,7 +392,7 @@ extension PostDetailsViewController: UICollectionViewDataSource, UICollectionVie
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView
-            .dequeueReusableCell(withReuseIdentifier: PostDetailsCollectionViewCell.identifier,
+            .dequeueReusableCell(withReuseIdentifier: PostDetailsCollectionViewCell.getTheClassName(),
                                  for: indexPath)
                 as? PostDetailsCollectionViewCell else { return UICollectionViewCell() }
         

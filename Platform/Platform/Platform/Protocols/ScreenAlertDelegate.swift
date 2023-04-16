@@ -11,6 +11,6 @@ protocol ScreenAlertDelegate: AnyObject {
     func showAlert(error: String, completion: (() -> Void)?)
 }
 
-extension ScreenAlertDelegate {
-    func showAlert(error: String, completion: (() -> Void)? = nil) { }
-}
+//extension ScreenAlertDelegate {
+//    func showAlert(error: String, completion: (() -> Void)? = nil) { }
+//}

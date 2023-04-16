@@ -1,8 +1,6 @@
 import UIKit
 
 class InterestCell: UICollectionViewCell {
-
-    static let identifier = "InterestCell"
     
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var nameLabel: UILabel!

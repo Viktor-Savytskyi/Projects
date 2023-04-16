@@ -4,8 +4,6 @@ import SDWebImage
 
 class DropDownSearchListCell: UITableViewCell {
 
-    static let identifier = "DropDownSearchListCell"
-
     @IBOutlet weak var avatarImageView: UIImageView!    
     @IBOutlet weak var firstLastNamesLabel: UILabel!
     @IBOutlet weak var userNameLabel: UILabel!

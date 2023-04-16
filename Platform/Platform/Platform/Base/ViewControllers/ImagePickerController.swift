@@ -3,16 +3,15 @@ import PhotosUI
 import TOCropViewController
 import UIKit
 
-class ImagePickerControllerViewModel {
-  var chooseImage = "Choose image"
-  var cancel = "Cancel"
-  var camera = "Camera"
-  var photoroll = "Choose from library"
+enum ImagePickerSections: String {
+    case chooseImage = "Choose image"
+    case cancel = "Cancel"
+    case camera = "Camera"
+    case photoroll = "Choose from library"
 }
 
 class ImagePickerController: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate, PHPickerViewControllerDelegate {
     
-    var viewModel = ImagePickerControllerViewModel()
     var cropStyle: TOCropViewCroppingStyle?
     var picker = UIImagePickerController()
     var alert: UIAlertController!
@@ -24,18 +23,18 @@ class ImagePickerController: NSObject, UIImagePickerControllerDelegate, UINaviga
                    with cropStyle: TOCropViewCroppingStyle? = nil,
                    _ callback: @escaping (([UIImage], Bool) -> Void)) {
         
-        alert = UIAlertController(title: viewModel.chooseImage, message: nil, preferredStyle: .actionSheet)
+        alert = UIAlertController(title: ImagePickerSections.chooseImage.rawValue, message: nil, preferredStyle: .actionSheet)
         pickImagesCallback = callback
         self.cropStyle = cropStyle
         self.viewController = viewController
         
-        let cameraAction = UIAlertAction(title: viewModel.camera, style: .default) { [weak self] _ in
+        let cameraAction = UIAlertAction(title: ImagePickerSections.camera.rawValue, style: .default) { [weak self] _ in
             self?.openCamera()
         }
-        let galleryAction = UIAlertAction(title: viewModel.photoroll, style: .default) { [weak self] _ in
+        let galleryAction = UIAlertAction(title: ImagePickerSections.photoroll.rawValue, style: .default) { [weak self] _ in
 			self?.openGallery()
         }
-        let cancelAction = UIAlertAction(title: viewModel.cancel, style: .cancel) { _ in }
+        let cancelAction = UIAlertAction(title: ImagePickerSections.cancel.rawValue, style: .cancel) { _ in }
         
         picker.delegate = self
         alert.addAction(cameraAction)
@@ -89,7 +88,7 @@ class ImagePickerController: NSObject, UIImagePickerControllerDelegate, UINaviga
     func openGallery() {
 		isFromCamera = false
         alert?.dismiss(animated: true, completion: nil)
-        alert = UIAlertController(title: viewModel.chooseImage, message: nil, preferredStyle: .actionSheet)
+        alert = UIAlertController(title: ImagePickerSections.chooseImage.rawValue, message: nil, preferredStyle: .actionSheet)
         picker.modalPresentationStyle = .overFullScreen
         picker.sourceType = .photoLibrary
         viewController?.present(picker, animated: true, completion: nil)

@@ -48,6 +48,7 @@ class MenuListController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setTableViewConfigurations()
+        setScreenDelegate()
 
     }
     override func prepareUI() {
@@ -102,12 +103,16 @@ class MenuListController: BaseViewController {
         }
     }
     
+    private func setScreenDelegate() {
+        AccountManager.shared.screenAlertDelegate = self
+    }
+    
     func setTableViewConfigurations() {
-        //MARK: - nibName
-        menuTableView.register(UINib(nibName: RawTableViewCell.identifier, bundle: nil),
-                               forCellReuseIdentifier: RawTableViewCell.identifier)
-        menuTableView.register(UINib(nibName: HeaderTableViewCell.identifier, bundle: nil),
-                               forCellReuseIdentifier: HeaderTableViewCell.identifier)
+        //MARK: nibName
+        menuTableView.register(UINib(nibName: RawTableViewCell.getTheClassName(), bundle: nil),
+                               forCellReuseIdentifier: RawTableViewCell.getTheClassName())
+        menuTableView.register(UINib(nibName: HeaderTableViewCell.getTheClassName(), bundle: nil),
+                               forCellReuseIdentifier: HeaderTableViewCell.getTheClassName())
         menuTableView.dataSource = self
         menuTableView.delegate = self
     }
@@ -116,7 +121,7 @@ class MenuListController: BaseViewController {
 extension MenuListController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: RawTableViewCell.identifier, for: indexPath) as! RawTableViewCell // swiftlint:disable:this force_cast
+        let cell = tableView.dequeueReusableCell(withIdentifier: RawTableViewCell.getTheClassName(), for: indexPath) as! RawTableViewCell // swiftlint:disable:this force_cast
         cell.categoryNameLabel.text = MenuSections(rawValue: indexPath.section)?.items[indexPath.row]
         return cell
     }
@@ -138,13 +143,13 @@ extension MenuListController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerCell = tableView.dequeueReusableCell(withIdentifier: HeaderTableViewCell.identifier) as! HeaderTableViewCell // swiftlint:disable:this force_cast
+        let headerCell = tableView.dequeueReusableCell(withIdentifier: HeaderTableViewCell.getTheClassName()) as! HeaderTableViewCell // swiftlint:disable:this force_cast
         headerCell.fill(with: MenuSections(rawValue: section)!.title)
         return headerCell.contentView
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //MARK: - replace switch
+        //MARK:  replace switch
         moveToScreenDependOf(indexPath: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
 //        switch indexPath.section {
@@ -180,5 +185,11 @@ extension MenuListController: UITableViewDataSource, UITableViewDelegate {
 //        default:
 //            return
 //        }
+    }
+}
+
+extension MenuListController: ScreenAlertDelegate {
+    func showAlert(error: String, completion: (() -> Void)?) {
+        showMessage(message: error)
     }
 }

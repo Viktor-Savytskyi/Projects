@@ -52,7 +52,7 @@ class PostInterestsAndThemesViewController: BaseViewController {
     private func prepareCollectionViews() {
         interestsCollectionView.delegate = self
         interestsCollectionView.dataSource = self
-        interestsCollectionView.register(UINib(nibName: InterestCell.identifier, bundle: nil), forCellWithReuseIdentifier: InterestCell.identifier)
+        interestsCollectionView.register(UINib(nibName: InterestCell.getTheClassName(), bundle: nil), forCellWithReuseIdentifier: InterestCell.getTheClassName())
     }
     
     private func prepareInterests() {
@@ -166,7 +166,7 @@ extension PostInterestsAndThemesViewController: UICollectionViewDelegate, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: InterestCell.identifier, for: indexPath)
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: InterestCell.getTheClassName(), for: indexPath)
                 as? InterestCell else { return InterestCell() }
             let isSelected = selectedInterests.contains(interestsToShow[indexPath.row])
             cell.setup(name: interestsToShow[indexPath.row], isSelected: isSelected)
@@ -202,4 +202,3 @@ extension PostInterestsAndThemesViewController: ScreenLoaderDelegate {
         hideLoader()
     }
 }
-

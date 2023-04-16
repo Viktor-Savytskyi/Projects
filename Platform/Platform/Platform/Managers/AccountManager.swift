@@ -2,12 +2,14 @@ import UIKit
 import FirebaseAuth
 
 class AccountManager {
-	
+    //MARK: manager should not be responsible for creating the UI
 	static let shared = AccountManager()
 	
 	var currentUser: CHUser?
     var allUsers: [CHUser]?
     var authState: AuthState = .unAuthorized
+    let signOutString = "signing out: %@,"
+    weak var screenAlertDelegate: ScreenAlertDelegate?
 	
 	var user: User? {
 		return Auth.auth().currentUser
@@ -41,9 +43,9 @@ class AccountManager {
 	func logout() {
 		do {
             try Auth.auth().signOut()
+            AccountManager.shared.currentUser = nil
 		} catch let signOutError as NSError {
-			print("Error signing out: %@", signOutError)
+            screenAlertDelegate?.showAlert(error: "\(signOutString) \(signOutError)", completion: nil)
 		}
-        AccountManager.shared.currentUser = nil
 	}
 }

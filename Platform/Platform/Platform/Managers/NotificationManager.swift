@@ -50,7 +50,7 @@ class NotificationManager {
 //                self.delegate?.viewController.hideLoader()
                 self.screenLoaderDelegate?.hideScreenLoader()
 //                self.delegate?.viewController.showMessage(message: error.localizedDescription)
-                self.screenAlertDelegate?.showAlert(error: error.localizedDescription)
+                self.screenAlertDelegate?.showAlert(error: error.localizedDescription, completion: nil)
             } else {
                 self.getUserPosts()
             }
@@ -65,7 +65,7 @@ class NotificationManager {
 //                self.delegate?.viewController.hideLoader()
                 self.screenLoaderDelegate?.hideScreenLoader()
 //                self.delegate?.viewController.showMessage(message: error.localizedDescription)
-                self.screenAlertDelegate?.showAlert(error: error.localizedDescription)
+                self.screenAlertDelegate?.showAlert(error: error.localizedDescription, completion: nil)
             } else {
                 self.posts = posts
                 UsersStorage.shared

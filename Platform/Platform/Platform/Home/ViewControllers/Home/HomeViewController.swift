@@ -150,15 +150,15 @@ class HomeViewController: BaseViewController, UITabBarControllerDelegate {
     private func prepateTableViews() {
         postsTableView.delegate = self
         postsTableView.dataSource = self
-        postsTableView.register(UINib(nibName: PostTableViewCell.identifier, bundle: nil),
-                                forCellReuseIdentifier: PostTableViewCell.identifier)
+        postsTableView.register(UINib(nibName: PostTableViewCell.getTheClassName(), bundle: nil),
+                                forCellReuseIdentifier: PostTableViewCell.getTheClassName())
         
         searchDropDownTableView.layer.cornerRadius = 15
         searchDropDownTableView.backgroundColor = Constants.Colors.viewBackground
         searchDropDownTableView.delegate = self
         searchDropDownTableView.dataSource = self
-        searchDropDownTableView.register(UINib(nibName: DropDownSearchListCell.identifier, bundle: nil),
-                                         forCellReuseIdentifier: DropDownSearchListCell.identifier)
+        searchDropDownTableView.register(UINib(nibName: DropDownSearchListCell.getTheClassName(), bundle: nil),
+                                         forCellReuseIdentifier: DropDownSearchListCell.getTheClassName())
     }
     
     private func prepareButtons() {
@@ -390,7 +390,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         switch tableView {
         case postsTableView:
 			let postsForShow = postForCollection
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: PostTableViewCell.identifier)
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: PostTableViewCell.getTheClassName())
                     as? PostTableViewCell else { return PostTableViewCell() }
 			let user = usersStorage.users?.first(where: { $0.id == postsForShow[indexPath.row].userId })
 			cell.setup(with: postsForShow[indexPath.row],
@@ -400,7 +400,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 			}
 			return cell
         case searchDropDownTableView:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: DropDownSearchListCell.identifier)
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: DropDownSearchListCell.getTheClassName())
                     as? DropDownSearchListCell else { return DropDownSearchListCell() }
             if indexPath.row == 0 {
                 cell.setWithSearched(text: searchBar.text ?? "")

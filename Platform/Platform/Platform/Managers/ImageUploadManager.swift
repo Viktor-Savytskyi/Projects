@@ -30,7 +30,7 @@ class ImageUploadManager {
         for localImage in imagesArray {
             guard let imageData = localImage.image.compressTo() else {
 //                delegate?.viewController.showMessage(message: "Invalid image format")
-                screenAlertDelegate?.showAlert(error: "Invalid image format")
+                screenAlertDelegate?.showAlert(error: "Invalid image format", completion: nil)
                 return
             }
             

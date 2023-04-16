@@ -4,9 +4,7 @@ import FirebaseAuth
 import SDWebImage
 
 class PostTableViewCell: UITableViewCell {
-	
-	static let identifier = "PostTableViewCell"
-    
+	    
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var topTitleLabel: UILabel!
     @IBOutlet weak var imagesCollectionView: UICollectionView!
@@ -77,7 +75,7 @@ class PostTableViewCell: UITableViewCell {
     func prepareCollectionView() {
         imagesCollectionView.delegate = self
         imagesCollectionView.dataSource = self
-        imagesCollectionView.register(UINib(nibName: ImagesCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: ImagesCollectionViewCell.identifier)
+        imagesCollectionView.register(UINib(nibName: ImagesCollectionViewCell.getTheClassName(), bundle: nil), forCellWithReuseIdentifier: ImagesCollectionViewCell.getTheClassName())
         imagesCollectionView.collectionViewLayout = CustomCollectionViewLayout.createDetailsViewControllerCustomLayout { page in
             self.imagesPageControl.currentPage = page
         }
@@ -90,7 +88,7 @@ extension PostTableViewCell: UICollectionViewDataSource, UICollectionViewDelegat
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImagesCollectionViewCell.identifier,
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImagesCollectionViewCell.getTheClassName(),
                                                             for: indexPath)
                 as? ImagesCollectionViewCell else { return UICollectionViewCell() }
         cell.fill(with: arrayOfPhotos[indexPath.row], isForSale: post?.isForSale ?? false)

@@ -276,7 +276,7 @@ extension ProfilePageViewController: ScreenLoaderDelegate, ScreenAlertDelegate {
         showLoader()
     }
     
-    func showAlert(error: String) {
+    func showAlert(error: String, completion: (() -> Void)?) {
         showMessage(message: error)
     }
     

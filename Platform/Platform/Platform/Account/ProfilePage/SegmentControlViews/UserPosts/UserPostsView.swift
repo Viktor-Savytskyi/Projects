@@ -22,7 +22,7 @@ class UserPostsView: ViewFromXib {
     }
     
     private func setup() {
-        postsCollectionView.register(UINib(nibName: UserPostsCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: UserPostsCollectionViewCell.identifier)
+        postsCollectionView.register(UINib(nibName: UserPostsCollectionViewCell.getTheClassName(), bundle: nil), forCellWithReuseIdentifier: UserPostsCollectionViewCell.getTheClassName())
         postsCollectionView.delegate = self
         postsCollectionView.dataSource = self
         
@@ -50,7 +50,7 @@ extension UserPostsView: UICollectionViewDelegate, UICollectionViewDataSource, U
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UserPostsCollectionViewCell.identifier, for: indexPath)
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UserPostsCollectionViewCell.getTheClassName(), for: indexPath)
                 as? UserPostsCollectionViewCell else { return UserPostsCollectionViewCell() }
         cell.setup(with: posts[indexPath.item])
         return cell

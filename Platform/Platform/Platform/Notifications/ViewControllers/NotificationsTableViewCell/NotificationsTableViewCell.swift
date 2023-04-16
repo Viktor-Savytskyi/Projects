@@ -2,8 +2,6 @@ import UIKit
 import SDWebImage
 
 class NotificationsTableViewCell: UITableViewCell {
-
-    static let identifier = "NotificationsTableViewCell"
     
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!

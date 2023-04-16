@@ -1,8 +1,6 @@
 import UIKit
 
 class PostDetailsCollectionViewCell: UICollectionViewCell {
-
-    static let identifier = "PostDetailsCollectionViewCell"
     
     @IBOutlet weak var contentViewForImage: UIView!
     @IBOutlet weak var postImageView: UIImageView!
