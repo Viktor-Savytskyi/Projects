@@ -8,107 +8,75 @@
 import UIKit
 import MessageUI
 
-enum MenuSections: Int, CaseIterable {
-    case account
-    case support
-    case actions
-
-    var title: String {
-        switch self {
-        case .account:
-            return "Account"
-        case .support:
-            return "Support"
-        case .actions:
-            return "Actions"
-        }
-    }
-    var items: [String] {
-        switch self {
-        case .account:
-            return ["Profile Settings", "Personal Info", "Shipping Info", "Interests"]
-        case .support:
-            return ["Privacy Policy", "Terms of Service"]
-        case .actions:
-            return ["Contact Us", "Report a Concern", "Log out"]
-        }
-    }
-}
-
 class MenuListController: BaseViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var menuTableView: UITableView!
-        
-    let heightOfTableViewHeader: CGFloat = 40
-    let heightOfTableViewFooter: CGFloat = 20
-    let menuCornerRadius: CGFloat = 70
-    let email = "https://www.google.de/?hl=de"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setTableViewConfigurations()
-        setScreenDelegate()
-
     }
     override func prepareUI() {
-        view.setCorners(corners: [.layerMinXMaxYCorner, .layerMinXMinYCorner], radius: menuCornerRadius)
+        view.setCorners(corners: [.layerMinXMaxYCorner, .layerMinXMinYCorner], radius: Constants.MenuListController.menuCornerRadius)
     }
     
-    private func moveToWebViewContorller(index: Int) {
+    private func moveToSupportScreen(with item: MenuItems) {
+        guard let item = item as? SupportItems else { return }
         let webVC = WebViewController()
-        webVC.url = index == 0
-        ? Constants.URLs.privacyPolicy
-        : Constants.URLs.termsOfUse
+        webVC.setUrl(url: item == .privacyPolicy
+                        ? Constants.URLs.privacyPolicy
+                        : Constants.URLs.termsOfUse)
         navigationController?.pushViewController(webVC, animated: true)
     }
     
-    private func moveToInterestsViewController() {
-        let interestVC = InterestsViewController()
-        interestVC.state = .account
-        navigationController?.pushViewController(interestVC, animated: true)
+    private func moveToAccountScreen(with item: MenuItems) {
+        guard let item = item as? AccountItems else { return }
+        switch item {
+        case .profileSettings:
+            navigationController?.pushViewController(ProfileSettingsViewController(), animated: true)
+        case .personalInfo:
+            navigationController?.pushViewController(PersonalInfoViewController(), animated: true)
+        case .shippingInfo:
+            navigationController?.pushViewController(ShippingInfoViewController(), animated: true)
+        case .interests:
+            let interestVC = InterestsViewController()
+            interestVC.state = .account
+            navigationController?.pushViewController(interestVC, animated: true)
+        }
     }
     
-    private func moveToContactUsOrReportViewController(index: Int) {
-        if index == 0 {
-            guard let url = URL(string: email) else { return }
+    private func moveToActionsScreen(with item: MenuItems) {
+        guard let item = item as? ActionsItems else { return }
+        switch item {
+        case .contactUs:
+            guard let url = URL(string: Constants.MenuListController.contactUsUrl) else { return }
+            //MARK:
             UIApplication.shared.open(url)
-        } else if index == 1 {
+        case .reportAConcern:
             let reportVC = ReportViewController()
             navigationController?.pushViewController(reportVC, animated: true)
+        case .logOut:
+            AccountManager.shared.logout { error in
+                self.showMessage(message: error)
+            }
         }
     }
     
     private func moveToScreenDependOf(indexPath: IndexPath) {
         guard let section = MenuSections(rawValue: indexPath.section) else { return }
+        let item = section.items[indexPath.row]
         switch section {
         case .account:
-            if indexPath.row == 0 {
-                navigationController?.pushViewController(ProfileSettingsViewController(), animated: true)
-            } else if indexPath.row == 1 {
-                navigationController?.pushViewController(PersonalInfoViewController(), animated: true)
-            } else if indexPath.row == 2 {
-                navigationController?.pushViewController(ShippingInfoViewController(), animated: true)
-            } else if indexPath.row == 3 {
-                moveToInterestsViewController()
-            }
+            moveToAccountScreen(with: item)
         case .support:
-            moveToWebViewContorller(index: indexPath.row)
+            moveToSupportScreen(with: item)
         case .actions:
-            if indexPath.row == 2 {
-                AccountManager.shared.logout()
-            } else {
-                moveToContactUsOrReportViewController(index: indexPath.row)
-            }
+            moveToActionsScreen(with: item)
         }
     }
     
-    private func setScreenDelegate() {
-        AccountManager.shared.screenAlertDelegate = self
-    }
-    
     func setTableViewConfigurations() {
-        //MARK: nibName
         menuTableView.register(UINib(nibName: RawTableViewCell.getTheClassName(), bundle: nil),
                                forCellReuseIdentifier: RawTableViewCell.getTheClassName())
         menuTableView.register(UINib(nibName: HeaderTableViewCell.getTheClassName(), bundle: nil),
@@ -119,10 +87,10 @@ class MenuListController: BaseViewController {
 }
 
 extension MenuListController: UITableViewDataSource, UITableViewDelegate {
-    
+    //MARK: Use enum for section building
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: RawTableViewCell.getTheClassName(), for: indexPath) as! RawTableViewCell // swiftlint:disable:this force_cast
-        cell.categoryNameLabel.text = MenuSections(rawValue: indexPath.section)?.items[indexPath.row]
+        cell.categoryNameLabel.text = MenuSections(rawValue: indexPath.section)?.items[indexPath.row].title
         return cell
     }
     
@@ -135,11 +103,11 @@ extension MenuListController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        heightOfTableViewHeader
+        Constants.MenuListController.heightOfTableViewHeader
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        heightOfTableViewFooter
+        Constants.MenuListController.heightOfTableViewFooter
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -149,7 +117,6 @@ extension MenuListController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //MARK:  replace switch
         moveToScreenDependOf(indexPath: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
 //        switch indexPath.section {
@@ -185,11 +152,5 @@ extension MenuListController: UITableViewDataSource, UITableViewDelegate {
 //        default:
 //            return
 //        }
-    }
-}
-
-extension MenuListController: ScreenAlertDelegate {
-    func showAlert(error: String, completion: (() -> Void)?) {
-        showMessage(message: error)
     }
 }

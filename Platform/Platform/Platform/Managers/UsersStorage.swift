@@ -5,7 +5,7 @@ class UsersStorage {
     static let shared = UsersStorage()
     
     private init () { }
-    
+    //MARK: do not use UI layer in fetch like func parameter
     func featchUsers(screenAlertDelegate: ScreenAlertDelegate?, completion: (() -> Void)? = nil) {
         FirestoreAPI.shared.getAllUsers { [weak self] users, error in
             guard let self = self else { return }

@@ -1,5 +1,6 @@
 import UIKit
 
+//MARK: this is helper not Manager
 class UIHelper {
 	static func addWaterSign(original: UIImage) -> UIImage {
 		let watermarkImage = #imageLiteral(resourceName: "plus")

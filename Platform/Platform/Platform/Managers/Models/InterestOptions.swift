@@ -1,5 +1,5 @@
 import UIKit
-
+//MARK: use struct instead of class
 class Category: Equatable, Codable {
     var code: String
 	var children: [Category]?

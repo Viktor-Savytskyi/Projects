@@ -1,5 +1,25 @@
 import UIKit
 
+enum AppSegments: Int {
+    case profilePostsSelected
+    case bookSegmentSelected
+    case wishListSelected
+    case profile
+    
+    var selectedSegmentImageName: String {
+        switch self {
+        case .profilePostsSelected:
+            return "profilePostsSelected"
+        case .bookSegmentSelected:
+            return "bookSegmentSelected"
+        case .wishListSelected:
+            return "wishListSelected"
+        case .profile:
+            return "profile"
+        }
+    }
+}
+
 class AppSegmentedControl: UISegmentedControl {
     
     override init(frame: CGRect) {
@@ -28,17 +48,7 @@ class AppSegmentedControl: UISegmentedControl {
         setImage(UIImage(named: "wishList"), forSegmentAt: 2)
         setImage(UIImage(named: "profileWithAlpha"), forSegmentAt: 3)
         
-        switch selectedSegmentIndex {
-        case 0:
-            setImage(UIImage(named: "profilePostsSelected"), forSegmentAt: selectedSegmentIndex)
-        case 1:
-            setImage(UIImage(named: "bookSegmentSelected"), forSegmentAt: selectedSegmentIndex)
-        case 2:
-            setImage(UIImage(named: "wishListSelected"), forSegmentAt: selectedSegmentIndex)
-        case 3:
-            setImage(UIImage(named: "profile"), forSegmentAt: selectedSegmentIndex)
-        default:
-            break
-        }
+        guard let appSegment = AppSegments(rawValue: selectedSegmentIndex) else { return }
+        setImage(UIImage(named: appSegment.selectedSegmentImageName), forSegmentAt: selectedSegmentIndex)
     }
 }

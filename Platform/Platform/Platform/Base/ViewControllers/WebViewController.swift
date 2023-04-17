@@ -4,8 +4,8 @@ import WebKit
 class WebViewController: BaseViewController {
 
     @IBOutlet weak var webView: WKWebView!
-	
-	var url: String?
+    //MARK: should be private
+	private var url: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +23,10 @@ class WebViewController: BaseViewController {
 				self.navigationController?.popViewController(animated: true)
 			}
 		}
+    }
+    
+    func setUrl(url: String) {
+        self.url = url
     }
 }
 

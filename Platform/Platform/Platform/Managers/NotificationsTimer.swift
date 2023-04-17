@@ -10,7 +10,7 @@ class NotificationsTimer {
             timer?.invalidate()
             timer = nil
         }
-        timer = Timer.scheduledTimer(timeInterval: 180, target: self, selector: #selector(getNotificationsData), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: Constants.NotificationTimer.timeInterval, target: self, selector: #selector(getNotificationsData), userInfo: nil, repeats: true)
         timer?.fire()
     }
     

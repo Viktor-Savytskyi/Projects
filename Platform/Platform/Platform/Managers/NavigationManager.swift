@@ -11,28 +11,28 @@ class NavigationManager {
         
         let home = HomeViewController()
         home.tabBarItem = UITabBarItem(
-            title: "",
-            image: UIImage(named: "home"),
-            selectedImage: UIImage(named: "home"))
+            title: Constants.NavigationManager.tabBarTitleName,
+            image: UIImage(named: Constants.NavigationManager.tabBarImageNameHome),
+            selectedImage: UIImage(named: Constants.NavigationManager.tabBarImageNameHome))
         
         let createPostVC = CreatePostViewController()
         createPostVC.tabBarItem = UITabBarItem(
-            title: "",
-            image: UIImage(named: "add"),
-            selectedImage: UIImage(named: "add"))
+            title: Constants.NavigationManager.tabBarTitleName,
+            image: UIImage(named: Constants.NavigationManager.tabBarImageNameCreatePost),
+            selectedImage: UIImage(named: Constants.NavigationManager.tabBarImageNameCreatePost))
         
         let notificationsVC = NotificationsViewController()
         notificationsVC.tabBarItem = UITabBarItem(
-            title: "",
-            image: UIImage(named: "notifications"),
-            selectedImage: UIImage(named: "notifications")
+            title: Constants.NavigationManager.tabBarTitleName,
+            image: UIImage(named: Constants.NavigationManager.tabBarImageNameNotifications),
+            selectedImage: UIImage(named: Constants.NavigationManager.tabBarImageNameNotifications)
         )
         
         let account = ProfilePageViewController()
         account.tabBarItem = UITabBarItem(
-            title: "",
-            image: UIImage(named: "profile"),
-            selectedImage: UIImage(named: "profile"))
+            title: Constants.NavigationManager.tabBarTitleName,
+            image: UIImage(named: Constants.NavigationManager.tabBarImageNameProfile),
+            selectedImage: UIImage(named: Constants.NavigationManager.tabBarImageNameProfile))
         
         tabBar.viewControllers = [UINavigationController(rootViewController: home),
                                   UINavigationController(rootViewController: createPostVC),

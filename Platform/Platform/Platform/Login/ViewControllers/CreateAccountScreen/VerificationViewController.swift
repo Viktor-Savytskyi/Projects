@@ -16,7 +16,9 @@ class VerificationViewController: BaseViewController {
     }
     
     @objc private func moveBack() {
-        AccountManager.shared.logout()
+        AccountManager.shared.logout { error in
+            self.showMessage(message: error)
+        }
         dismiss(animated: true)
     }
     

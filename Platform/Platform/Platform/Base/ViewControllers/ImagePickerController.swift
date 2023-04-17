@@ -3,6 +3,7 @@ import PhotosUI
 import TOCropViewController
 import UIKit
 
+//MARK: use enum
 enum ImagePickerSections: String {
     case chooseImage = "Choose image"
     case cancel = "Cancel"

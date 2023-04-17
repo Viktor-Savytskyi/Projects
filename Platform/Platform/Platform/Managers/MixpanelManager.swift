@@ -1,50 +1,20 @@
 //import Mixpanel
-//
-//enum TrackingEvents {
-//	case signUp
-//	case login
-//	case createPost
-//	case updatePost
-//	case markedForSale
-//	case likePost
-//	case buyIt
-//	case buyEvent
-//	case follow
-//	case updateProfile
-//	case userProfile
-//    case shareItem
-//    case shareProfile
-//	
-//    var title: String {
-//        switch self {
-//        case .login:
-//            return "Login"
-//        case .signUp:
-//            return "Sign Up"
-//        case .createPost:
-//            return "Create Post"
-//        case .updatePost:
-//            return "Update Post"
-//        case .markedForSale:
-//            return "Mark for sale"
-//        case .likePost:
-//            return "Like Post"
-//        case .buyIt:
-//            return "Buy It"
-//        case .buyEvent:
-//            return "Buy"
-//        case .follow:
-//            return "Follow"
-//        case .updateProfile:
-//            return "Update Profile"
-//        case .userProfile:
-//            return "User Profile"
-//        case .shareItem:
-//            return "Share Item"
-//        case .shareProfile:
-//            return "Share Profile"
-//        }
-//    }
+
+//MARK: use inferitance from String instead of title parameter
+//enum TrackingEvents: String {
+//	case signUp = "Sign Up"
+//	case login = "Login"
+//	case createPost = "Create Post"
+//	case updatePost = "Update Post"
+//	case markedForSale = "Mark for sale"
+//	case likePost = "Like Post"
+//	case buyIt = "Buy It"
+//	case buyEvent = "Buy"
+//	case follow = "Follow"
+//	case updateProfile = "Update Profile"
+//	case userProfile = "User Profile"
+//  case shareItem = "Share Item"
+//  case shareProfile = "Share Profile"
 //}
 //
 //class MixpanelManager {
@@ -52,12 +22,13 @@
 //    static let shared = MixpanelManager()
 //    
 //    private init () { }
-//	
+//
+//MARK: use constant for the key strings
 //	private var applicationToken: String {
 //		if BuildManager.shared.buildType == .dev {
-//			return "01be9e9e389d22b5ce8372243dd87efa"
+//            return Constants.MixPanel.devTypeBuild
 //		}
-//		return "bb59be2d198b83ad45a316d8058ebf27"
+//		return Constants.MixPanel.releaseTypeBuild
 //	}
 //    
 //    func setup() {

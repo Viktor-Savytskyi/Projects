@@ -43,19 +43,17 @@ let demoResponse = InterestResponse(categories:
 )
 
 class InterestManager {
-	
 	var interestsTree: InterestResponse?
-    
     var customInterestsTree: InterestResponse?
-	
 	var selectedCodes = [String]()
-    	
 	static let shared = InterestManager()
 	
 	private init() { }
 	
 	func stateOf(category: Category) -> SelectionState {
 		guard let itemFromTree = getItemByCode(code: category.code) else { return .none }
+        print(selectedCodes)
+        print(itemFromTree.code)
 		if selectedCodes.contains(itemFromTree.code) {
 			return .selected
 		}

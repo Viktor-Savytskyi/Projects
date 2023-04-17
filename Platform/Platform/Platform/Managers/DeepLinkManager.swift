@@ -56,8 +56,8 @@ class DeepLinkManager {
                 NavigationManager.shared.openProfilePage(profileId: link.value)
 			case .post:
                 NavigationManager.shared.openPostDetails(postId: link.value,
-                                                         isDeletedMessage: "The post has been removed",
-                                                         invalidLinkMessage: "Invalid post link")
+                                                         isDeletedMessage: Constants.DeepLinkManager.deletedPostMessage,
+                                                         invalidLinkMessage: Constants.DeepLinkManager.invalidPostLinkMessage)
 			}
         case .unAuthorized:
             NavigationManager.shared.openRegistrationPage()

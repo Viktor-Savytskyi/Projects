@@ -12,7 +12,6 @@ class NotificationManager {
     weak var screenLoaderDelegate: ScreenLoaderDelegate?
     weak var screenAlertDelegate: ScreenAlertDelegate?
 
-	
 	var allNotifications: [Notification] {
 		let result = followingNotifications + likeNotifications
 		return result.sorted { $0.notificationInfo?.date ?? Date() > $1.notificationInfo?.date ?? Date() }
@@ -132,7 +131,7 @@ class NotificationManager {
     }
     
     private func showTabItemBadge() {
-		notificationTabItem?.badgeValue = "●"
+        notificationTabItem?.badgeValue = Constants.NotificationManager.badgeValue
 		notificationTabItem?.badgeColor = .clear
 		notificationTabItem?.setBadgeTextAttributes([.foregroundColor: Constants.Colors.green], for: .normal)
 	}

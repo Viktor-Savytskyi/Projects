@@ -8,7 +8,6 @@ class AccountManager {
 	var currentUser: CHUser?
     var allUsers: [CHUser]?
     var authState: AuthState = .unAuthorized
-    let signOutString = "signing out: %@,"
     weak var screenAlertDelegate: ScreenAlertDelegate?
 	
 	var user: User? {
@@ -40,12 +39,15 @@ class AccountManager {
 		}
 	}
 	
-	func logout() {
-		do {
-            try Auth.auth().signOut()
-            AccountManager.shared.currentUser = nil
-		} catch let signOutError as NSError {
-            screenAlertDelegate?.showAlert(error: "\(signOutString) \(signOutError)", completion: nil)
-		}
+    func logout(completion: ((String) -> Void)?) {
+        completion?("\(Constants.AccountManager.signOutString)")
+
+//		do {
+//            try Auth.auth().signOut()
+//            AccountManager.shared.currentUser = nil
+//		} catch let signOutError as NSError {
+//            completion?("\(signOutString) \(signOutError)")
+////            screenAlertDelegate?.showAlert(error: "\(signOutString) \(signOutError)", completion: nil)
+//		}
 	}
 }

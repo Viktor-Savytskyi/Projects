@@ -3,8 +3,8 @@ import UIKit
 
 extension UIFont {
     
-	static let regularFont = UIFont(name: "ABC Marfa Unlicensed Trial", size: 1)
-	static let boldFont = UIFont(name: "ABC Marfa Unlicensed Trial Bold", size: 1)
+    static let regularFont = UIFont(name: Constants.Font.regularFont, size: 1)
+	static let boldFont = UIFont(name: Constants.Font.boldFont, size: 1)
 	
 	static let title = regularFont?.withSize(30)
     static let subtitle = boldFont?.withSize(26)

@@ -51,6 +51,7 @@
 		488DA14529754736004B79F2 /* NotificationsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 488DA14329754736004B79F2 /* NotificationsTableViewCell.xib */; };
 		488DA14729756550004B79F2 /* NotificationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488DA14629756550004B79F2 /* NotificationInfo.swift */; };
 		488EF9FE2990528700BEC917 /* UsersStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488EF9FD2990528700BEC917 /* UsersStorage.swift */; };
+		488F4EA929ED82B70036937F /* MenuListControllerEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488F4EA829ED82B70036937F /* MenuListControllerEnum.swift */; };
 		48960E29291CED9700B06E91 /* ProfileInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48960E28291CED9700B06E91 /* ProfileInfoView.swift */; };
 		48960E2B291CEE8F00B06E91 /* ProfileInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48960E2A291CEE8F00B06E91 /* ProfileInfoView.xib */; };
 		48960E2F291D165D00B06E91 /* UserPostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48960E2E291D165D00B06E91 /* UserPostsView.swift */; };
@@ -216,6 +217,7 @@
 		488DA14329754736004B79F2 /* NotificationsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationsTableViewCell.xib; sourceTree = "<group>"; };
 		488DA14629756550004B79F2 /* NotificationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationInfo.swift; sourceTree = "<group>"; };
 		488EF9FD2990528700BEC917 /* UsersStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersStorage.swift; sourceTree = "<group>"; };
+		488F4EA829ED82B70036937F /* MenuListControllerEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListControllerEnum.swift; sourceTree = "<group>"; };
 		48960E28291CED9700B06E91 /* ProfileInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoView.swift; sourceTree = "<group>"; };
 		48960E2A291CEE8F00B06E91 /* ProfileInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileInfoView.xib; sourceTree = "<group>"; };
 		48960E2E291D165D00B06E91 /* UserPostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostsView.swift; sourceTree = "<group>"; };
@@ -636,6 +638,7 @@
 		48D0EF7F28D3488600C56599 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				488F4EA829ED82B70036937F /* MenuListControllerEnum.swift */,
 				48D0EF7D28D3485B00C56599 /* MenuListController.swift */,
 				48D0EF8D28D3681700C56599 /* MenuListController.xib */,
 				48D0EF8B28D34F5900C56599 /* HeaderTableViewCell */,
@@ -1416,6 +1419,7 @@
 				D82DD76028A561FB00EE447D /* UIImageView+Extension.swift in Sources */,
 				4843CB1C28809AC400F224D6 /* EmailLoginViewController.swift in Sources */,
 				D86150A128BFD82600A3C485 /* InterestOptions.swift in Sources */,
+				488F4EA929ED82B70036937F /* MenuListControllerEnum.swift in Sources */,
 				D8439559295F27B8003FC7B4 /* BuyIt.swift in Sources */,
 				D83CD26C295F8EB3009DAC3F /* LoginModel.swift in Sources */,
 				D8D51FCA288D24470088F94D /* LoginAPI.swift in Sources */,

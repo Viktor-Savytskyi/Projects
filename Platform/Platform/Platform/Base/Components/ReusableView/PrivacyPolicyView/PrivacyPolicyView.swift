@@ -3,16 +3,16 @@ import UIKit
 class PrivacyPolicyView: ViewFromXib {
     
     @IBOutlet weak var privacyPolicyLabel: UILabelWithLinks!
-    
+    //MARK: view should not contain the navigation as parameter
     func prepareLink(navigationController: UINavigationController?) {
         let privacyPolicyCallback: (() -> Void)? = {
             let webVC = WebViewController()
-            webVC.url = Constants.URLs.privacyPolicy
+            webVC.setUrl(url: Constants.URLs.privacyPolicy)
             navigationController?.pushViewController(webVC, animated: true)
         }
         let termsCallback: (() -> Void)? = {
             let webVC = WebViewController()
-            webVC.url = Constants.URLs.termsOfUse
+            webVC.setUrl(url: Constants.URLs.termsOfUse)
             navigationController?.pushViewController(webVC, animated: true)
         }
 

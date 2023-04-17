@@ -4,7 +4,7 @@ import UIKit
 class ImageUploadManager {
 	
 	static let shared = ImageUploadManager()
-	
+    //MARK: delegate and managers should not be responsible for UI
     weak var screenLoaderDelegate: ScreenLoaderDelegate?
     weak var screenAlertDelegate: ScreenAlertDelegate?
     
@@ -30,7 +30,7 @@ class ImageUploadManager {
         for localImage in imagesArray {
             guard let imageData = localImage.image.compressTo() else {
 //                delegate?.viewController.showMessage(message: "Invalid image format")
-                screenAlertDelegate?.showAlert(error: "Invalid image format", completion: nil)
+                screenAlertDelegate?.showAlert(error: Constants.ImageUploadManager.imageFormatError, completion: nil)
                 return
             }
             
