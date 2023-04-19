@@ -40,14 +40,11 @@ class AccountManager {
 	}
 	
     func logout(completion: ((String) -> Void)?) {
-        completion?("\(Constants.AccountManager.signOutString)")
-
-//		do {
-//            try Auth.auth().signOut()
-//            AccountManager.shared.currentUser = nil
-//		} catch let signOutError as NSError {
-//            completion?("\(signOutString) \(signOutError)")
-////            screenAlertDelegate?.showAlert(error: "\(signOutString) \(signOutError)", completion: nil)
-//		}
+		do {
+            try Auth.auth().signOut()
+            AccountManager.shared.currentUser = nil
+		} catch let signOutError as NSError {
+            completion?("Error signing out: %@ \(signOutError)")
+		}
 	}
 }

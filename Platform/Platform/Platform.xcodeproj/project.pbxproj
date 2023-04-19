@@ -23,6 +23,7 @@
 		485E4404295336270029EF5D /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485E4403295336270029EF5D /* PrivacyPolicyView.swift */; };
 		485E44062953363A0029EF5D /* PrivacyPolicyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 485E44052953363A0029EF5D /* PrivacyPolicyView.xib */; };
 		485EED4128D062D20019C39E /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485EED4028D062D20019C39E /* UILabel+Extension.swift */; };
+		485F371F29EF014700A4F2BC /* CredentialsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485F371E29EF014700A4F2BC /* CredentialsController.swift */; };
 		4860803E29787C7000D83BC9 /* UserFollowingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4860803D29787C7000D83BC9 /* UserFollowingManager.swift */; };
 		4864DAF52965FFBC009C52FB /* DeepLinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4864DAF42965FFBC009C52FB /* DeepLinkManager.swift */; };
 		487396A7299D1DAB00903619 /* OffensiveWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487396A6299D1DAB00903619 /* OffensiveWords.swift */; };
@@ -189,6 +190,7 @@
 		485E4403295336270029EF5D /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
 		485E44052953363A0029EF5D /* PrivacyPolicyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrivacyPolicyView.xib; sourceTree = "<group>"; };
 		485EED4028D062D20019C39E /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		485F371E29EF014700A4F2BC /* CredentialsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsController.swift; sourceTree = "<group>"; };
 		4860803D29787C7000D83BC9 /* UserFollowingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFollowingManager.swift; sourceTree = "<group>"; };
 		4864DAF42965FFBC009C52FB /* DeepLinkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkManager.swift; sourceTree = "<group>"; };
 		487396A6299D1DAB00903619 /* OffensiveWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffensiveWords.swift; sourceTree = "<group>"; };
@@ -1129,6 +1131,7 @@
 				D8EBAB2E28C9226000B43A08 /* UIHelper.swift */,
 				D8887A17289190F500FCF75E /* Utils.swift */,
 				F4F572902890F88A003CA2F9 /* Validator.swift */,
+				485F371E29EF014700A4F2BC /* CredentialsController.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1332,6 +1335,7 @@
 				D8ADC15C28CBA93B001AA7BE /* PostTableViewCell.swift in Sources */,
 				4879C6222979C799006B924A /* NotificationManager.swift in Sources */,
 				4886E37C293A1EF4006A1862 /* CustomCollectionViewLayout.swift in Sources */,
+				485F371F29EF014700A4F2BC /* CredentialsController.swift in Sources */,
 				F42EA5832882B54E0013E31D /* CreateAccountViewController.swift in Sources */,
 				48A5036428F94B92006FDD23 /* TextFieldViewWithButtons.swift in Sources */,
 				D82EA66B289C4BD600B6D6D2 /* HomeViewController.swift in Sources */,

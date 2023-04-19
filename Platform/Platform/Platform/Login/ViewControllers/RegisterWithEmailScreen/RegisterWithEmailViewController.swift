@@ -67,19 +67,19 @@ class RegisterWithEmailViewController: BaseViewController {
     
     private func validate() {
         var error = false
-        
+
         let emailError = Validator.shared.validatedEmail(emailTextFieldView.textField.text!)
         if emailError != nil {
             emailTextFieldView.errorText = emailError
             error = true
         }
-        
+
         let passwordError = Validator.shared.passwordValidated(passwordTextFieldView.textField.text!)
         if passwordError != nil {
             passwordTextFieldView.errorText = passwordError
             error = true
         }
-        
+
         let confirmPasswordError = Validator.shared.confirmPasswordValidated(passwordTextFieldView.textField.text!, confirmPasswordTextFieldView.textField.text!)
         if confirmPasswordError != nil {
             confirmPasswordTextFieldView.errorText = confirmPasswordError
@@ -90,6 +90,7 @@ class RegisterWithEmailViewController: BaseViewController {
             checkExistingEmail()
         }
     }
+    
     private func moveToCreateAccountVc() {
         let createAccountViewController = CreateAccountViewController()
         createAccountViewController.email = self.emailTextFieldView.textField.text!

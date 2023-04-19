@@ -66,7 +66,7 @@ class Validator {
     func passwordValidated(_ value: String) -> String? {
         guard value.count > 0 else { return Constants.ErrorTitle.requiredFieldError }
         let range = NSRange(location: 0, length: value.utf16.count)
-        let regex = try? NSRegularExpression(pattern: "?=.*[A-Za-z])(?=.*[0-9])[A-Za-z0-9]{6,100}")
+        let regex = try? NSRegularExpression(pattern: "(?=.*[A-Za-z])(?=.*[0-9])[A-Za-z0-9]{6,100}")
         if regex?.firstMatch(in: value, options: [], range: range) != nil {
             return nil
         } else {
