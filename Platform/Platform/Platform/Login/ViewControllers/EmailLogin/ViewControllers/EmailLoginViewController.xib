@@ -18,15 +18,13 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmailLoginViewController" customModule="Choosi" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmailLoginViewController" customModule="Platform" customModuleProvider="target">
             <connections>
                 <outlet property="descriptionLabel" destination="L1z-Mh-zWj" id="GSm-n9-WqJ"/>
                 <outlet property="emailAppTextField" destination="u53-Jq-kJb" id="UPT-je-6xy"/>
-                <outlet property="emailOrUserNameReuseView" destination="u53-Jq-kJb" id="q9b-0M-3LO"/>
                 <outlet property="logInButton" destination="Ar0-AE-cQB" id="ab3-Ct-nWs"/>
                 <outlet property="logInwithoutPasswordButton" destination="TDP-m3-5SI" id="r57-R9-UsX"/>
                 <outlet property="passwordAppTextField" destination="zqd-jA-KCi" id="TSL-yc-DgV"/>
-                <outlet property="passwordReusebleView" destination="zqd-jA-KCi" id="bs8-rd-Ti9"/>
                 <outlet property="titleLabel" destination="RK0-RY-H47" id="Z3J-Hy-Rz3"/>
                 <outlet property="view" destination="QpG-ak-VIV" id="2hD-Km-gOo"/>
             </connections>
@@ -56,11 +54,11 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="XQJ-Gd-ieF">
                     <rect key="frame" x="20" y="153.5" width="374" height="186"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u53-Jq-kJb" customClass="AppTextFieldView" customModule="Choosi" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u53-Jq-kJb" customClass="AppTextFieldView" customModule="Platform" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="374" height="93"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zqd-jA-KCi" customClass="AppTextFieldView" customModule="Choosi" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zqd-jA-KCi" customClass="AppTextFieldView" customModule="Platform" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="93" width="374" height="93"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
@@ -69,7 +67,7 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Q5v-hx-cdy">
                     <rect key="frame" x="20" y="419.5" width="374" height="33"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ar0-AE-cQB" customClass="AppButton" customModule="Choosi" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ar0-AE-cQB" customClass="AppButton" customModule="Platform" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="374" height="33"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>

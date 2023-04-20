@@ -33,7 +33,6 @@ enum CredentialsError: Error {
     }
 }
 
-
 //MARK: - Maby create custom credentials controller instead of validate func inside many classes
 class CredentialsController {
     var credentials: Credentials
@@ -55,7 +54,7 @@ class CredentialsController {
         guard let password = credentials.password else { return }
         guard password.count > 0 else { throw CredentialsError.requiredFieldError }
         let range = NSRange(location: 0, length: password.utf16.count)
-        let regex = try? NSRegularExpression(pattern: "?=.*[A-Za-z])(?=.*[0-9])[A-Za-z0-9]{6,100}")
+        let regex = try? NSRegularExpression(pattern: "(?=.*[A-Za-z])(?=.*[0-9])[A-Za-z0-9]{6,100}")
         if regex?.firstMatch(in: password, options: [], range: range) == nil {
             throw CredentialsError.passwordError
         }

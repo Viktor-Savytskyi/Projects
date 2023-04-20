@@ -25,6 +25,7 @@
 		485EED4128D062D20019C39E /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485EED4028D062D20019C39E /* UILabel+Extension.swift */; };
 		485F371F29EF014700A4F2BC /* CredentialsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485F371E29EF014700A4F2BC /* CredentialsController.swift */; };
 		4860803E29787C7000D83BC9 /* UserFollowingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4860803D29787C7000D83BC9 /* UserFollowingManager.swift */; };
+		4861FB7429F07544001140C5 /* EmailLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4861FB7329F07544001140C5 /* EmailLoginViewModel.swift */; };
 		4864DAF52965FFBC009C52FB /* DeepLinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4864DAF42965FFBC009C52FB /* DeepLinkManager.swift */; };
 		487396A7299D1DAB00903619 /* OffensiveWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487396A6299D1DAB00903619 /* OffensiveWords.swift */; };
 		48780C6C28EC9BFF009E7D0F /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48780C6B28EC9BFF009E7D0F /* UIButton+Extension.swift */; };
@@ -192,6 +193,7 @@
 		485EED4028D062D20019C39E /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		485F371E29EF014700A4F2BC /* CredentialsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsController.swift; sourceTree = "<group>"; };
 		4860803D29787C7000D83BC9 /* UserFollowingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFollowingManager.swift; sourceTree = "<group>"; };
+		4861FB7329F07544001140C5 /* EmailLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginViewModel.swift; sourceTree = "<group>"; };
 		4864DAF42965FFBC009C52FB /* DeepLinkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkManager.swift; sourceTree = "<group>"; };
 		487396A6299D1DAB00903619 /* OffensiveWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffensiveWords.swift; sourceTree = "<group>"; };
 		48780C6B28EC9BFF009E7D0F /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
@@ -410,6 +412,23 @@
 				485E44052953363A0029EF5D /* PrivacyPolicyView.xib */,
 			);
 			path = PrivacyPolicyView;
+			sourceTree = "<group>";
+		};
+		4861FB7129F07519001140C5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4861FB7329F07544001140C5 /* EmailLoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4861FB7229F07528001140C5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D87B33BF288413CC005E477C /* EmailLoginViewController.xib */,
+				4843CB1A28809AC400F224D6 /* EmailLoginViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		4879C6232979C978006B924A /* Managers */ = {
@@ -898,8 +917,8 @@
 		D87B33BD288413B0005E477C /* EmailLogin */ = {
 			isa = PBXGroup;
 			children = (
-				D87B33BF288413CC005E477C /* EmailLoginViewController.xib */,
-				4843CB1A28809AC400F224D6 /* EmailLoginViewController.swift */,
+				4861FB7229F07528001140C5 /* ViewControllers */,
+				4861FB7129F07519001140C5 /* ViewModel */,
 			);
 			path = EmailLogin;
 			sourceTree = "<group>";
@@ -1397,6 +1416,7 @@
 				48C44F0328E5D10100B4C08E /* ProfilePageViewController.swift in Sources */,
 				484F5236292FAE4D0007420B /* InterestCell.swift in Sources */,
 				48AD7B6E292FA512006AF91E /* PostInterestsAndThemesViewController.swift in Sources */,
+				4861FB7429F07544001140C5 /* EmailLoginViewModel.swift in Sources */,
 				D858730328786F89003FE888 /* AppButton.swift in Sources */,
 				488DA13F297542CC004B79F2 /* NotificationsViewController.swift in Sources */,
 				D8887A1528918FAF00FCF75E /* AccountManager.swift in Sources */,
