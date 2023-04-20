@@ -7,16 +7,11 @@
 
 import Foundation
 
-protocol LoginValidationDelegate: AnyObject {
-    func showEmailError(error: String?)
-    func showPasswordError(error: String?)
-}
-
 class EmailLoginViewModel {
     var credentials: Credentials
-    weak var loginValidationDelegate: LoginValidationDelegate?
+    weak var emailAndPasswordValidationDelegate: EmailAndPasswordValidationDelegate?
     weak var screenLoaderDelegate: ScreenLoaderDelegate?
-    var showMessageDelegate: ScreenAlertDelegate?
+    weak var showMessageDelegate: ScreenAlertDelegate?
     var errorResult = false
     var credentialsController: CredentialsController!
     
@@ -38,7 +33,7 @@ class EmailLoginViewModel {
         do {
             try credentialsController.validatedEmail()
         } catch {
-            loginValidationDelegate?.showEmailError(error: ((error as? CredentialsError)?.description))
+            emailAndPasswordValidationDelegate?.showEmailError(error: ((error as? CredentialsError)?.description))
             errorResult = true
         }
     }
@@ -47,7 +42,7 @@ class EmailLoginViewModel {
         do {
             try credentialsController.passwordValidated()
         } catch {
-            loginValidationDelegate?.showPasswordError(error: ((error as? CredentialsError)?.description))
+            emailAndPasswordValidationDelegate?.showPasswordError(error: ((error as? CredentialsError)?.description))
             errorResult = true
         }
     }

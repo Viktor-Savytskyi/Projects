@@ -25,6 +25,8 @@
 		485EED4128D062D20019C39E /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485EED4028D062D20019C39E /* UILabel+Extension.swift */; };
 		485F371F29EF014700A4F2BC /* CredentialsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485F371E29EF014700A4F2BC /* CredentialsController.swift */; };
 		4860803E29787C7000D83BC9 /* UserFollowingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4860803D29787C7000D83BC9 /* UserFollowingManager.swift */; };
+		4861775029F18B5D00FBF6C2 /* RegisterWithEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4861774F29F18B5D00FBF6C2 /* RegisterWithEmailViewModel.swift */; };
+		4861775229F18BCC00FBF6C2 /* EmailEndPasswordValidationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4861775129F18BCC00FBF6C2 /* EmailEndPasswordValidationDelegate.swift */; };
 		4861FB7429F07544001140C5 /* EmailLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4861FB7329F07544001140C5 /* EmailLoginViewModel.swift */; };
 		4864DAF52965FFBC009C52FB /* DeepLinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4864DAF42965FFBC009C52FB /* DeepLinkManager.swift */; };
 		487396A7299D1DAB00903619 /* OffensiveWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487396A6299D1DAB00903619 /* OffensiveWords.swift */; };
@@ -193,6 +195,8 @@
 		485EED4028D062D20019C39E /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		485F371E29EF014700A4F2BC /* CredentialsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsController.swift; sourceTree = "<group>"; };
 		4860803D29787C7000D83BC9 /* UserFollowingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFollowingManager.swift; sourceTree = "<group>"; };
+		4861774F29F18B5D00FBF6C2 /* RegisterWithEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWithEmailViewModel.swift; sourceTree = "<group>"; };
+		4861775129F18BCC00FBF6C2 /* EmailEndPasswordValidationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailEndPasswordValidationDelegate.swift; sourceTree = "<group>"; };
 		4861FB7329F07544001140C5 /* EmailLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginViewModel.swift; sourceTree = "<group>"; };
 		4864DAF42965FFBC009C52FB /* DeepLinkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkManager.swift; sourceTree = "<group>"; };
 		487396A6299D1DAB00903619 /* OffensiveWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffensiveWords.swift; sourceTree = "<group>"; };
@@ -414,6 +418,23 @@
 			path = PrivacyPolicyView;
 			sourceTree = "<group>";
 		};
+		4861774D29F1873000FBF6C2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F4F8461F28A1918B00A7955B /* RegisterWithEmailViewController.swift */,
+				F4F8462028A1918B00A7955B /* RegisterWithEmailViewController.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4861774E29F1873D00FBF6C2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4861774F29F18B5D00FBF6C2 /* RegisterWithEmailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		4861FB7129F07519001140C5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -563,6 +584,7 @@
 				4896580029E2D026003AEF17 /* ScreenLoaderDelegate.swift */,
 				48810CAD29E4011E00043E55 /* ScreenAlertDelegate.swift */,
 				48810CAB29E4007900043E55 /* NotificationManagerDelegate.swift */,
+				4861775129F18BCC00FBF6C2 /* EmailEndPasswordValidationDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -1158,8 +1180,8 @@
 		F4F8461E28A1912800A7955B /* RegisterWithEmailScreen */ = {
 			isa = PBXGroup;
 			children = (
-				F4F8461F28A1918B00A7955B /* RegisterWithEmailViewController.swift */,
-				F4F8462028A1918B00A7955B /* RegisterWithEmailViewController.xib */,
+				4861774E29F1873D00FBF6C2 /* ViewModel */,
+				4861774D29F1873000FBF6C2 /* ViewControllers */,
 			);
 			path = RegisterWithEmailScreen;
 			sourceTree = "<group>";
@@ -1374,6 +1396,7 @@
 				D85872FB28783135003FE888 /* BaseViewController.swift in Sources */,
 				489657FD29E18D68003AEF17 /* NavigationManager.swift in Sources */,
 				485E4404295336270029EF5D /* PrivacyPolicyView.swift in Sources */,
+				4861775029F18B5D00FBF6C2 /* RegisterWithEmailViewModel.swift in Sources */,
 				48BC47B229017624008CC77F /* RatingView.swift in Sources */,
 				F4F8462128A1918B00A7955B /* RegisterWithEmailViewController.swift in Sources */,
 				D8F82E61295E3CBD009D487F /* FirestoreAPI+Transactions.swift in Sources */,
@@ -1398,6 +1421,7 @@
 				D85872DB28773DDB003FE888 /* SceneDelegate.swift in Sources */,
 				4860803E29787C7000D83BC9 /* UserFollowingManager.swift in Sources */,
 				488EF9FE2990528700BEC917 /* UsersStorage.swift in Sources */,
+				4861775229F18BCC00FBF6C2 /* EmailEndPasswordValidationDelegate.swift in Sources */,
 				483946132883162C003904CB /* AppTextFieldView.swift in Sources */,
 				4886E379293A1B55006A1862 /* ImagesCollectionViewCell.swift in Sources */,
 				485EED4128D062D20019C39E /* UILabel+Extension.swift in Sources */,

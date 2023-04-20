@@ -3,13 +3,13 @@ import FirebaseAuth
 extension FirestoreAPI {
 	
 	func saveUserData(user: CHUser, completion: ((Error?) -> Void)?) {
-		let docRef = db.collection("Users").document("\(user.id)")
+        let docRef = db.collection(Constants.Firebase.usersCollectionName).document("\(user.id)")
 		
 		docRef.setData(user.dictionary ?? [:], completion: completion)
 	}
 	
 	func getUserData(userId: String, completion: ((CHUser?, Error?) -> Void)?) {
-		let docRef = db.collection("Users").document("\(userId)")
+		let docRef = db.collection(Constants.Firebase.usersCollectionName).document("\(userId)")
 		
 		docRef.getDocument { snapshot, error in
 			if let user = try? snapshot?.data(as: CHUser.self) {
@@ -25,7 +25,7 @@ extension FirestoreAPI {
 	}
     
 	func getUserByIds(ids: [String], completion: (([CHUser], Error?) -> Void)?) {
-		let docRef = db.collection("Users").whereField("id", in: ids)
+        let docRef = db.collection(Constants.Firebase.usersCollectionName).whereField(Constants.Firebase.idFieldName, in: ids)
         docRef.getDocuments { snapshot, error in
             var results = [CHUser]()
             snapshot?.documents.forEach({ document in
@@ -42,7 +42,7 @@ extension FirestoreAPI {
     }
 	
 	func getAllUsers(completion: (([CHUser]?, Error?) -> Void)?) {
-		let docRef = db.collection("Users")
+		let docRef = db.collection(Constants.Firebase.usersCollectionName)
 		docRef.getDocuments { snapshot, error in
 			var results = [CHUser]()
 			snapshot?.documents.forEach({ document in
@@ -59,7 +59,7 @@ extension FirestoreAPI {
 	}
 	
 	func getInterests(completion: ((InterestResponse?, Error?) -> Void)?) {
-		let docRef = db.collection("InterestNew").document("Interests")
+        let docRef = db.collection(Constants.Firebase.interestNewCollectionName).document(Constants.Firebase.interestsDocumentName)
 		
 		docRef.getDocument { snapshot, error in
 			if let resp = try? snapshot?.data(as: InterestResponse?.self) {
@@ -73,14 +73,14 @@ extension FirestoreAPI {
 //	 Need for set interest on firebase
 	func setInterests(interest: InterestResponse) {
 		do {
-			try db.collection("InterestNew").document("Interests").setData(from: interest)
+			try db.collection(Constants.Firebase.interestNewCollectionName).document(Constants.Firebase.interestsDocumentName).setData(from: interest)
 		} catch {
 			print(error)
 		}
 	}
 	
     func checkUserData(localFieldText: String, userFieldName: String, completion: @escaping (Bool, Error?) -> Void) {
-        let collectionRef = db.collection("Users")
+        let collectionRef = db.collection(Constants.Firebase.usersCollectionName)
         collectionRef.whereField(userFieldName, isEqualTo: localFieldText).getDocuments { (snapshot, err) in
             if let err = err {
                 completion(false, err)

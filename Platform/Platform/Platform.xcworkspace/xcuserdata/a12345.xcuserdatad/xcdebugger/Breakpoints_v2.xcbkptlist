@@ -965,22 +965,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6DE2F551-CC69-430D-B899-A7AE2095B5CF"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Platform/Managers/NavigationManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "navigateUserBy(state:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "8EF5CBB6-2993-43AF-AB41-1B79CF0435C7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -988,8 +972,8 @@
             filePath = "Platform/Login/ViewControllers/EmailLogin/ViewModel/EmailLoginViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "login()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1004,13 +988,13 @@
             filePath = "Platform/Login/ViewControllers/EmailLogin/ViewModel/EmailLoginViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "login()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "0A6BDE1A-4218-4DFD-BA9B-FAE85EBB0425 - 91be8b5cd359d27f"
+                  uuid = "0A6BDE1A-4218-4DFD-BA9B-FAE85EBB0425 - 91be8b5cd359d2d4"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1020,12 +1004,12 @@
                   urlString = "file:///Users/a12345/Projects/Platform/Platform/Platform/Login/ViewControllers/EmailLogin/ViewModel/EmailLoginViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "58"
-                  endingLineNumber = "58"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
                   offsetFromSymbolStart = "362">
                </Location>
                <Location
-                  uuid = "0A6BDE1A-4218-4DFD-BA9B-FAE85EBB0425 - 91be8b5cd359d27f"
+                  uuid = "0A6BDE1A-4218-4DFD-BA9B-FAE85EBB0425 - 91be8b5cd359d2d4"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1035,12 +1019,12 @@
                   urlString = "file:///Users/a12345/Projects/Platform/Platform/Platform/Login/ViewControllers/EmailLogin/ViewModel/EmailLoginViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "58"
-                  endingLineNumber = "58"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
                   offsetFromSymbolStart = "438">
                </Location>
                <Location
-                  uuid = "0A6BDE1A-4218-4DFD-BA9B-FAE85EBB0425 - 91be8b5cd359d27f"
+                  uuid = "0A6BDE1A-4218-4DFD-BA9B-FAE85EBB0425 - 91be8b5cd359d2d4"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1050,8 +1034,8 @@
                   urlString = "file:///Users/a12345/Projects/Platform/Platform/Platform/Login/ViewControllers/EmailLogin/ViewModel/EmailLoginViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "58"
-                  endingLineNumber = "58"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
                   offsetFromSymbolStart = "776">
                </Location>
             </Locations>
@@ -1067,8 +1051,8 @@
             filePath = "Platform/Login/ViewControllers/EmailLogin/ViewModel/EmailLoginViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "login()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1083,8 +1067,8 @@
             filePath = "Platform/Login/ViewControllers/EmailLogin/ViewModel/EmailLoginViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "login()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1099,8 +1083,8 @@
             filePath = "Platform/Login/ViewControllers/EmailLogin/ViewControllers/EmailLoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "hideScreenLoader()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1115,8 +1099,8 @@
             filePath = "Platform/Login/ViewControllers/EmailLogin/ViewControllers/EmailLoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "showScreenLoader()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1131,8 +1115,8 @@
             filePath = "Platform/Login/ViewControllers/EmailLogin/ViewControllers/EmailLoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "showAlert(error:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1147,8 +1131,8 @@
             filePath = "Platform/Login/ViewControllers/EmailLogin/ViewControllers/EmailLoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "showAlert(error:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1163,8 +1147,8 @@
             filePath = "Platform/Login/ViewControllers/EmailLogin/ViewModel/EmailLoginViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "login()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1179,13 +1163,13 @@
             filePath = "Platform/Login/ViewControllers/EmailLogin/ViewModel/EmailLoginViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "login()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "72A38463-3ACB-4372-8A0C-C25074360B45 - 91be8b5cd359d23d"
+                  uuid = "72A38463-3ACB-4372-8A0C-C25074360B45 - 91be8b5cd359d29a"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1195,12 +1179,12 @@
                   urlString = "file:///Users/a12345/Projects/Platform/Platform/Platform/Login/ViewControllers/EmailLogin/ViewModel/EmailLoginViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
                   offsetFromSymbolStart = "531">
                </Location>
                <Location
-                  uuid = "72A38463-3ACB-4372-8A0C-C25074360B45 - e733c1ab1cde4d2f"
+                  uuid = "72A38463-3ACB-4372-8A0C-C25074360B45 - e733c1ab1cde4d88"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1210,8 +1194,8 @@
                   urlString = "file:///Users/a12345/Projects/Platform/Platform/Platform/Login/ViewControllers/EmailLogin/ViewModel/EmailLoginViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
                   offsetFromSymbolStart = "127">
                </Location>
             </Locations>
@@ -1227,8 +1211,8 @@
             filePath = "Platform/Login/ViewControllers/EmailLogin/ViewModel/EmailLoginViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "validateFileds()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1243,8 +1227,8 @@
             filePath = "Platform/Login/ViewControllers/EmailLogin/ViewModel/EmailLoginViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "validateFileds()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1259,8 +1243,8 @@
             filePath = "Platform/Login/ViewControllers/EmailLogin/ViewModel/EmailLoginViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "validateFileds()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1275,8 +1259,8 @@
             filePath = "Platform/Login/ViewControllers/EmailLogin/ViewModel/EmailLoginViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "emailErrorHendle()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1291,9 +1275,25 @@
             filePath = "Platform/Login/ViewControllers/EmailLogin/ViewModel/EmailLoginViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "passwordErrorHendle()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4F7153DD-A909-47BF-9ABA-5760C14A3506"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Platform/Managers/NavigationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "createTabBar()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

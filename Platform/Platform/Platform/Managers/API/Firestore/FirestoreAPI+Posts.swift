@@ -28,12 +28,12 @@ extension FirestoreAPI {
         
         query = usersIds.isEmpty
         ? db.collection(postCollectionName)
-            .whereField("isDeleted", isEqualTo: false)
-            .order(by: "updatedAt", descending: true)
+            .whereField(Constants.Firebase.isDeletedFieldName, isEqualTo: false)
+            .order(by: Constants.Firebase.updatedAtFieldName, descending: true)
         : db.collection(postCollectionName)
-            .whereField("userId", in: usersIds)
-            .whereField("isDeleted", isEqualTo: false)
-            .order(by: "updatedAt", descending: true)
+            .whereField(Constants.Firebase.userIdFieldName, in: usersIds)
+            .whereField(Constants.Firebase.isDeletedFieldName, isEqualTo: false)
+            .order(by: Constants.Firebase.updatedAtFieldName, descending: true)
         
         query.getDocuments { (snapshot, error) in
             if let snapshot = snapshot {

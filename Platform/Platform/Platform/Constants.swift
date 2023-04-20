@@ -75,16 +75,14 @@ struct Constants {
     
     struct AccountManager {
        static let signOutString = "signing out: %@,"
-
     }
     
     struct NavigationManager {
         static let tabBarTitleName = ""
         static let tabBarImageNameHome = "home"
-        static let tabBarImageNameNotifications = "add"
-        static let tabBarImageNameCreatePost = "notifications"
+        static let tabBarImageNameCreatePost = "add"
+        static let tabBarImageNameNotifications = "notifications"
         static let tabBarImageNameProfile = "profile"
-
     }
 
     struct ImageUploadManager {
@@ -116,4 +114,22 @@ struct Constants {
         static let invalidPostLinkMessage = "Invalid post link"
     }
     
+    struct Firebase {
+        //FireStore
+        static let usersCollectionName = "Users"
+        static let interestNewCollectionName = "InterestNew"
+        static let transactionCollectionName = "Transaction"
+        
+        static let interestsDocumentName = "Interests"
+
+        static let emailFieldName = "email"
+        static let idFieldName = "id"
+        static let isDeletedFieldName = "isDeleted"
+        static let updatedAtFieldName = "updatedAt"
+        static let userIdFieldName = "userId"
+        
+        //Storage
+        static let avatarsStorageKey = "avatars"
+        static let postsStorageKey = "posts"
+    }
 }

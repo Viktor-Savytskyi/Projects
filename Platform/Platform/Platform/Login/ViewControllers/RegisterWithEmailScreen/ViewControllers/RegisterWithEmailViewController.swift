@@ -11,6 +11,7 @@ class RegisterWithEmailViewController: BaseViewController {
     
     private var textFieldViewsArray = [AppTextFieldView]()
     private var placeholdersArray = [String]()
+    private var registerWithEmailViewModel: RegisterWithEmailViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,45 +50,21 @@ class RegisterWithEmailViewController: BaseViewController {
         textFieldViewsArray.map { $0.textField }.forEach { $0.returnKeyType = .next }
         confirmPasswordTextFieldView.textField.returnKeyType = .done
     }
-  
-    private func checkExistingEmail() {
-        showLoader()
-        FirestoreAPI.shared.checkUserData(localFieldText: emailTextFieldView.textField.text!, userFieldName: "email") { [weak self] (isExist, fbError) in
-            guard let self else { return }
-            self.hideLoader()
-            if let fbError {
-                self.showToast(message: fbError.localizedDescription)
-            } else if isExist {
-                self.emailTextFieldView.errorText = Constants.ErrorTitle.emailExistError
-            } else {
-                self.moveToCreateAccountVc()
-            }
-        }
+    
+    private func setRegisterWithEmailViewModel() {
+        registerWithEmailViewModel = RegisterWithEmailViewModel(credentials: Credentials(email: emailTextFieldView.textField.text!,
+                                                                                         password: passwordTextFieldView.textField.text!,
+                                                                                         confirmPassword: confirmPasswordTextFieldView.textField.text!))
+        registerWithEmailViewModel.showMessageDelegate = self
+        registerWithEmailViewModel.screenLoaderDelegate = self
+        registerWithEmailViewModel.emailAndPasswordValidationDelegate = self
+        registerWithEmailViewModel.confirmPasswordValidationDelegate = self
     }
     
     private func validate() {
-        var error = false
-
-        let emailError = Validator.shared.validatedEmail(emailTextFieldView.textField.text!)
-        if emailError != nil {
-            emailTextFieldView.errorText = emailError
-            error = true
-        }
-
-        let passwordError = Validator.shared.passwordValidated(passwordTextFieldView.textField.text!)
-        if passwordError != nil {
-            passwordTextFieldView.errorText = passwordError
-            error = true
-        }
-
-        let confirmPasswordError = Validator.shared.confirmPasswordValidated(passwordTextFieldView.textField.text!, confirmPasswordTextFieldView.textField.text!)
-        if confirmPasswordError != nil {
-            confirmPasswordTextFieldView.errorText = confirmPasswordError
-            error = true
-        }
-        
-        if !error {
-            checkExistingEmail()
+        setRegisterWithEmailViewModel()
+        registerWithEmailViewModel.validateFileds { [weak self] in
+            self?.moveToCreateAccountVc()
         }
     }
     
@@ -112,12 +89,14 @@ class RegisterWithEmailViewController: BaseViewController {
 }
 
 extension RegisterWithEmailViewController: UITextFieldDelegate {
-   
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if let nextField = textField.superview?.superview?.superview?.superview?.viewWithTag(textField.tag + 1) as? UITextField {
-            nextField.becomeFirstResponder()
-        } else {
-            textField.resignFirstResponder()
+        switch textField {
+        case emailTextFieldView.textField:
+            passwordTextFieldView.textField.becomeFirstResponder()
+        case passwordTextFieldView.textField:
+            confirmPasswordTextFieldView.textField.becomeFirstResponder()
+        default:
+            view.endEditing(true)
         }
         return false
     }
@@ -129,5 +108,37 @@ extension RegisterWithEmailViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         clearError()
         return true
+    }
+}
+
+extension RegisterWithEmailViewController: EmailAndPasswordValidationDelegate {
+    func showEmailError(error: String?) {
+        emailTextFieldView.errorText = error
+    }
+    
+    func showPasswordError(error: String?) {
+        passwordTextFieldView.errorText = error
+    }
+}
+
+extension RegisterWithEmailViewController: ConfirmPasswordValidationDelegate {
+    func showConfirmPasswordError(error: String?) {
+        confirmPasswordTextFieldView.errorText = error
+    }
+}
+
+extension RegisterWithEmailViewController: ScreenLoaderDelegate {
+    func showScreenLoader() {
+        showLoader()
+    }
+    
+    func hideScreenLoader() {
+        hideLoader()
+    }
+}
+
+extension RegisterWithEmailViewController: ScreenAlertDelegate {
+    func showAlert(error: String, completion: (() -> Void)?) {
+        showToast(message: error)
     }
 }

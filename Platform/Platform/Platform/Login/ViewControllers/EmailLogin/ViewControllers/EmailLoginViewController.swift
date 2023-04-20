@@ -28,11 +28,16 @@ class EmailLoginViewController: BaseViewController {
         emailAppTextField.textField.keyboardType = .emailAddress
     }
     
-    private func validate() {
-        emailValidationViewModel = EmailLoginViewModel(credentials: Credentials(email: emailAppTextField.textField.text!, password: passwordAppTextField.textField.text!))
-        emailValidationViewModel.loginValidationDelegate = self
+    private func setEmailLoginViewModel() {
+        emailValidationViewModel = EmailLoginViewModel(credentials: Credentials(email: emailAppTextField.textField.text!,
+                                                                                password: passwordAppTextField.textField.text!))
+        emailValidationViewModel.emailAndPasswordValidationDelegate = self
         emailValidationViewModel.screenLoaderDelegate = self
         emailValidationViewModel.showMessageDelegate = self
+    }
+    
+    private func validate() {
+        setEmailLoginViewModel()
         emailValidationViewModel.validateFileds()
     }
 	
@@ -61,7 +66,7 @@ extension EmailLoginViewController: UITextFieldDelegate {
 	}
 }
 
-extension EmailLoginViewController: LoginValidationDelegate {
+extension EmailLoginViewController: EmailAndPasswordValidationDelegate {
     func showEmailError(error: String?) {
         emailAppTextField.errorText = error
     }
