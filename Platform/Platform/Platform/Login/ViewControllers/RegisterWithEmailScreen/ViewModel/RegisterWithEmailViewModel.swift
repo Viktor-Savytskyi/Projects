@@ -8,17 +8,17 @@
 import Foundation
 
 class RegisterWithEmailViewModel {
-    var credentials: Credentials
+    var email: String?
     weak var emailAndPasswordValidationDelegate: EmailAndPasswordValidationDelegate?
     weak var confirmPasswordValidationDelegate: ConfirmPasswordValidationDelegate?
     weak var screenLoaderDelegate: ScreenLoaderDelegate?
-    var showMessageDelegate: ScreenAlertDelegate?
+    weak var showMessageDelegate: ScreenAlertDelegate?
     var errorResult = false
     var credentialsController: CredentialsController!
     var moveToAccountVcCompletion: (() -> Void)?
     
-    init(credentials: Credentials) {
-        self.credentials = credentials
+    init(credentials: CredentialsModel) {
+        self.email = credentials.email
         credentialsController = CredentialsController(credentials: credentials)
     }
     
@@ -35,7 +35,7 @@ class RegisterWithEmailViewModel {
         do {
             try credentialsController.validatedEmail()
         } catch {
-            emailAndPasswordValidationDelegate?.showEmailError(error: ((error as? CredentialsError)?.description))
+            emailAndPasswordValidationDelegate?.showEmailError(error: getError(error))
             errorResult = true
         }
     }
@@ -44,7 +44,7 @@ class RegisterWithEmailViewModel {
         do {
             try credentialsController.passwordValidated()
         } catch {
-            emailAndPasswordValidationDelegate?.showPasswordError(error: ((error as? CredentialsError)?.description))
+            emailAndPasswordValidationDelegate?.showPasswordError(error: getError(error))
             errorResult = true
         }
     }
@@ -53,13 +53,17 @@ class RegisterWithEmailViewModel {
         do {
             try credentialsController.confirmPasswordValidated()
         } catch {
-            confirmPasswordValidationDelegate?.showConfirmPasswordError(error: ((error as? CredentialsError)?.description))
+            confirmPasswordValidationDelegate?.showConfirmPasswordError(error: getError(error))
             errorResult = true
         }
     }
     
+    private func getError(_ error: Error) -> String? {
+        return (error as? CredentialsError)?.description
+    }
+    
     private func checkExistingEmail(completion: (() -> Void)?) {
-        guard let email = credentials.email else { return }
+        guard let email else { return }
         screenLoaderDelegate?.showScreenLoader()
         FirestoreAPI.shared.checkUserData(localFieldText: email, userFieldName: Constants.Firebase.emailFieldName) { [weak self] (isExist, fbError) in
             guard let self else { return }

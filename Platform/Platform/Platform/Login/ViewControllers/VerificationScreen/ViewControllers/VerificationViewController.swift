@@ -4,9 +4,23 @@ class VerificationViewController: BaseViewController {
 
     @IBOutlet weak var backButtonImage: UIImageView!
     
+    var verificationViewModel = VerificationViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addGesture()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        verificationViewModel.setupTimer()
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        verificationViewModel.cancelTimer()
+        navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     private func addGesture() {
@@ -16,10 +30,9 @@ class VerificationViewController: BaseViewController {
     }
     
     @objc private func moveBack() {
-        AccountManager.shared.logout { error in
-            self.showMessage(message: error)
+        verificationViewModel.logOut { [weak self] error in
+            self?.showMessage(message: error)
         }
-        dismiss(animated: true)
     }
     
     @IBAction func btnResendClicked(_ sender: Any) {

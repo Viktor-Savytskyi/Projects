@@ -8,14 +8,14 @@
 import Foundation
 
 class EmailLoginViewModel {
-    var credentials: Credentials
+    var credentials: CredentialsModel
     weak var emailAndPasswordValidationDelegate: EmailAndPasswordValidationDelegate?
     weak var screenLoaderDelegate: ScreenLoaderDelegate?
     weak var showMessageDelegate: ScreenAlertDelegate?
     var errorResult = false
     var credentialsController: CredentialsController!
     
-    init(credentials: Credentials) {
+    init(credentials: CredentialsModel) {
         self.credentials = credentials
         credentialsController = CredentialsController(credentials: credentials)
     }

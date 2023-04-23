@@ -35,6 +35,7 @@ struct Constants {
         static let zipCodeError = "Zip code should contain 5 numbers"
         static let userNameError = "Username should contain at least 3 symbols and maximum 100"
         static let passwordError = "Password should contain at least 6 characters at least one number and letter and maximum 100 symbols"
+        static let userNameAlreadyExist = "User name already exist"
         static let confirmPasswordError = "Passwords must match"
 		static let invalidUrl = "Invalid url"
         static let streetAddressError = "Street address must contain at least 2 symbols and maximum 255"

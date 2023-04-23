@@ -52,7 +52,7 @@ class RegisterWithEmailViewController: BaseViewController {
     }
     
     private func setRegisterWithEmailViewModel() {
-        registerWithEmailViewModel = RegisterWithEmailViewModel(credentials: Credentials(email: emailTextFieldView.textField.text!,
+        registerWithEmailViewModel = RegisterWithEmailViewModel(credentials: CredentialsModel(email: emailTextFieldView.textField.text!,
                                                                                          password: passwordTextFieldView.textField.text!,
                                                                                          confirmPassword: confirmPasswordTextFieldView.textField.text!))
         registerWithEmailViewModel.showMessageDelegate = self

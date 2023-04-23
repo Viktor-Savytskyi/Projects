@@ -54,7 +54,7 @@ class NavigationManager {
             let loginViewController = RootLoginViewController()
             navigationController.viewControllers = [loginViewController]
         case .notVerified:
-            let accountVC = CreateAccountViewController()
+            let accountVC = VerificationViewController()
             navigationController.viewControllers = [accountVC]
         }
         Utils.window?.rootViewController = navigationController
@@ -105,5 +105,13 @@ class NavigationManager {
                 topVC?.showMessage(message: invalidLinkMessage)
             }
         }
+    }
+    
+    func openInterestsAsRootViewController() {
+        let navigationController = UINavigationController()
+        let iterests = InterestsViewController()
+        iterests.state = .register
+        navigationController.viewControllers = [iterests]
+        Utils.window?.rootViewController = navigationController
     }
 }
