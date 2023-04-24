@@ -17,7 +17,6 @@ struct Constants {
     }
     
     struct URLs {
-        
         static let privacyPolicy = ""
 		static let termsOfUse = ""
 		
@@ -26,7 +25,6 @@ struct Constants {
     }
     
     struct ErrorTitle {
-        
         static let emailError = "Invalid email address"
         static let emailExistError = "This email is already connected to an account.\nPlease log in to your account"
         static let phoneNumberError = "Invalid phone number"
@@ -129,8 +127,23 @@ struct Constants {
         static let updatedAtFieldName = "updatedAt"
         static let userIdFieldName = "userId"
         
-        //Storage
+        // Storage
         static let avatarsStorageKey = "avatars"
         static let postsStorageKey = "posts"
+    }
+    
+    struct InterestsScreen {
+        static let searchBarPlaceholder = "Search Categories"
+        // register secreen state
+        static let topLabelTitleForRegisterState = "Create account"
+        static let descriptionForRegisterState = "Tell us what your obsessions are!\nWe’ll be able to show you more of what love."
+        // account secreen state
+        static let topLabelTitleForAccountState = "What’s your obsession?"
+        static let descriptionForAccountState = "Tell us the things you love!"
+        static let titleForAccountState = "Interests"
+        // create post screen state
+        static let topLabelTitleForcCreatePostState = "Where does this go?"
+        static let descriptionForCreatePostState = "Tell us what category your item belongs to."
+        static let titleForCreatePostState = "Add to Collection"
     }
 }

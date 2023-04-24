@@ -42,25 +42,25 @@ class InterestsViewController: BaseViewController {
     override func prepareUI() {
         super.prepareUI()
         scrollView.contentSize = stackView.frame.size
-        interestsSearchBar.prepareSearchBar(plaseholder: "Search Categories")
+        interestsSearchBar.prepareSearchBar(plaseholder: Constants.InterestsScreen.searchBarPlaceholder)
         interestsSearchBar.delegate = self
         noSearchResultLabel.isHidden = true
         
         cancelButton.isHidden = state != .postCreate
         switch state {
         case .register:
-            topLabel.text = "Create account"
-            descriptionLabel.text = "Tell us what your obsessions are!\nWe’ll be able to show you more of what love."
+            topLabel.text = Constants.InterestsScreen.topLabelTitleForRegisterState
+            descriptionLabel.text = Constants.InterestsScreen.descriptionForRegisterState
             chooseButton.setTitle("Finish", for: .normal)
 
         case .account:
-            topLabel.text = "What’s your obsession?"
-            descriptionLabel.text = "Tell us the things you love!"
-            title = "Interests"
+            topLabel.text =  Constants.InterestsScreen.topLabelTitleForAccountState
+            descriptionLabel.text = Constants.InterestsScreen.descriptionForAccountState
+            title = Constants.InterestsScreen.titleForAccountState
         case .postCreate:
-            topLabel.text = "Where does this go?"
-            descriptionLabel.text = "Tell us what category your item belongs to."
-            title = "Add to Collection"
+            topLabel.text = Constants.InterestsScreen.topLabelTitleForcCreatePostState
+            descriptionLabel.text = Constants.InterestsScreen.topLabelTitleForcCreatePostState
+            title = Constants.InterestsScreen.titleForCreatePostState
         }
         drawInterestTree()
         if state == .register {

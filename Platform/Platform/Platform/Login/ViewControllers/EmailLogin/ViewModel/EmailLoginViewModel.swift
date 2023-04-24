@@ -8,16 +8,15 @@
 import Foundation
 
 class EmailLoginViewModel {
-    var credentials: CredentialsModel
     weak var emailAndPasswordValidationDelegate: EmailAndPasswordValidationDelegate?
     weak var screenLoaderDelegate: ScreenLoaderDelegate?
     weak var showMessageDelegate: ScreenAlertDelegate?
     var errorResult = false
     var credentialsController: CredentialsController!
     
-    init(credentials: CredentialsModel) {
-        self.credentials = credentials
-        credentialsController = CredentialsController(credentials: credentials)
+    init(email: String, password: String) {
+        credentialsController = CredentialsController(credentials: CredentialsModel(email: email,
+                                                                                    password: password))
     }
     
     func validateFileds() {
@@ -49,8 +48,8 @@ class EmailLoginViewModel {
     
     private func login() {
         screenLoaderDelegate?.showScreenLoader()
-        guard let email = credentials.email,
-              let password = credentials.password else { return }
+        guard let email = credentialsController.credentials.email,
+              let password = credentialsController.credentials.password else { return }
         let emailText = email.trim()
         LoginAPI.shared.login(email: emailText, password: password) {[weak self] _, error in
             self?.screenLoaderDelegate?.hideScreenLoader()

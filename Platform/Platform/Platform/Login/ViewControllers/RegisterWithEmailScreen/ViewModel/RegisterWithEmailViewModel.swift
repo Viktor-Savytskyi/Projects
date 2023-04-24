@@ -17,9 +17,10 @@ class RegisterWithEmailViewModel {
     var credentialsController: CredentialsController!
     var moveToAccountVcCompletion: (() -> Void)?
     
-    init(credentials: CredentialsModel) {
-        self.email = credentials.email
-        credentialsController = CredentialsController(credentials: credentials)
+    init(email: String, password: String, confirmPassword: String) {
+        credentialsController = CredentialsController(credentials: CredentialsModel(email: email, password: password, confirmPassword: confirmPassword))
+        self.email = credentialsController.credentials.email
+
     }
     
     func validateFileds(completion: (() -> Void)?) {

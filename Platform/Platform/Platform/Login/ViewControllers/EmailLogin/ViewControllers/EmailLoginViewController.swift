@@ -29,8 +29,7 @@ class EmailLoginViewController: BaseViewController {
     }
     
     private func setEmailLoginViewModel() {
-        emailValidationViewModel = EmailLoginViewModel(credentials: CredentialsModel(email: emailAppTextField.textField.text!,
-                                                                                password: passwordAppTextField.textField.text!))
+        emailValidationViewModel = EmailLoginViewModel(email: emailAppTextField.textField.text!, password: passwordAppTextField.textField.text!)
         emailValidationViewModel.emailAndPasswordValidationDelegate = self
         emailValidationViewModel.screenLoaderDelegate = self
         emailValidationViewModel.showMessageDelegate = self

@@ -1010,7 +1010,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "0C3D26CE-DDD4-45B7-886E-38B1FD3D8D47 - 83d07b7f11815b8c"
+                  uuid = "0C3D26CE-DDD4-45B7-886E-38B1FD3D8D47 - 83d07b7f11815f83"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1020,12 +1020,12 @@
                   urlString = "file:///Users/a12345/Projects/Platform/Platform/Platform/Login/ViewControllers/CreateAccountScreen/ViewControllers/CreateAccountViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "115"
-                  endingLineNumber = "115"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
                   offsetFromSymbolStart = "69">
                </Location>
                <Location
-                  uuid = "0C3D26CE-DDD4-45B7-886E-38B1FD3D8D47 - 83d07b7f11815b8c"
+                  uuid = "0C3D26CE-DDD4-45B7-886E-38B1FD3D8D47 - 83d07b7f11815f83"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1035,8 +1035,8 @@
                   urlString = "file:///Users/a12345/Projects/Platform/Platform/Platform/Login/ViewControllers/CreateAccountScreen/ViewControllers/CreateAccountViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "115"
-                  endingLineNumber = "115"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
                   offsetFromSymbolStart = "121">
                </Location>
             </Locations>
@@ -1218,7 +1218,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "EB94B8E6-A539-4F05-A038-F0F5D062923F - 3a39b75571dcb615"
+                  uuid = "EB94B8E6-A539-4F05-A038-F0F5D062923F - 3a39b75571dcba16"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1228,12 +1228,12 @@
                   urlString = "file:///Users/a12345/Projects/Platform/Platform/Platform/Login/ViewControllers/CreateAccountScreen/ViewControllers/CreateAccountViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "129"
-                  endingLineNumber = "129"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
                   offsetFromSymbolStart = "3963">
                </Location>
                <Location
-                  uuid = "EB94B8E6-A539-4F05-A038-F0F5D062923F - 85f8fa4ff7150201"
+                  uuid = "EB94B8E6-A539-4F05-A038-F0F5D062923F - 85f8fa4ff7150e02"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1243,8 +1243,8 @@
                   urlString = "file:///Users/a12345/Projects/Platform/Platform/Platform/Login/ViewControllers/CreateAccountScreen/ViewControllers/CreateAccountViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "129"
-                  endingLineNumber = "129"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
                   offsetFromSymbolStart = "34">
                </Location>
             </Locations>
@@ -1645,7 +1645,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "33"
                   endingLineNumber = "33"
-                  offsetFromSymbolStart = "77">
+                  offsetFromSymbolStart = "74">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1792,6 +1792,38 @@
                   offsetFromSymbolStart = "617">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1F5041EB-91C7-484C-9565-C5D36F335589"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Platform/Login/ViewControllers/VerificationScreen/ViewModel/VerificationViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "checkUserDataUpdate()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EA5163FA-0B93-4E4E-AE73-666C408C634E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Platform/Login/ViewControllers/VerificationScreen/ViewModel/VerificationViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "checkUserDataUpdate()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
