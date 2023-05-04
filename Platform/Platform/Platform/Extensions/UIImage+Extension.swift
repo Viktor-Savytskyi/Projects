@@ -13,11 +13,13 @@ extension UIImage {
     }
     
     private func convertToBytes(sizeInMb: Int) -> Int {
-        sizeInMb * 1024 * 2
+        let toKilobytes = sizeInMb * 1024
+        let toBytes = toKilobytes * 1024
+        return toBytes
     }
     
     func compressTo(expectedSizeInMb: Int = 5) -> Data? {
-        //MARK: 1024 * 2
+        //MARK: 1024 * 1024
         let sizeInBytes = convertToBytes(sizeInMb: expectedSizeInMb)
         var needCompress = true
         var imgData: Data?
@@ -36,7 +38,6 @@ extension UIImage {
         if let data = imgData {
             if data.count < sizeInBytes {
                 return data
-//                return nil
             }
         }
         return nil

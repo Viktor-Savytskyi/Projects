@@ -15,7 +15,7 @@ class UserInfoController {
     }
     
     func phoneValidated() throws {
-        //MARK: use constant instead
+        // MARK: use constant instead
         guard let userInfo,
               let value = userInfo.phone else { return }
         guard value.count > 0 else { throw UserInfoError.requiredField }
@@ -25,7 +25,7 @@ class UserInfoController {
     }
     
     func firstNameValidated() throws {
-        //MARK: use constant instead
+        // MARK: use constant instead
         guard let userInfo,
               let value = userInfo.firstName else { return }
         guard value.count > 0 else { throw UserInfoError.requiredField }
@@ -36,7 +36,7 @@ class UserInfoController {
     }
     
     func lastNameValidated() throws {
-        //MARK: use constant instead
+        // MARK: use constant instead
         guard let userInfo,
               let value = userInfo.lastName else { return }
         guard value.count > 0 else { throw UserInfoError.requiredField }
@@ -47,7 +47,7 @@ class UserInfoController {
     }
     
     func zipCodeValidated() throws {
-        //MARK: use constant instead
+        // MARK: use constant instead
         guard let userInfo,
               let value = userInfo.zipCode else { return }
         guard value.count > 0 else { throw UserInfoError.requiredField }
@@ -57,7 +57,7 @@ class UserInfoController {
     }
     
     func userNameValidated() throws {
-        //MARK: use constant instead
+        // MARK: use constant instead
         guard let userInfo,
               let value = userInfo.userName else { return }
         guard value.count > 0 else { throw UserInfoError.requiredField }

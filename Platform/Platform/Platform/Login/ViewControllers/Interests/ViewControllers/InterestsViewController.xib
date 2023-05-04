@@ -18,7 +18,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InterestsViewController" customModule="Choosi" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InterestsViewController" customModule="Platform" customModuleProvider="target">
             <connections>
                 <outlet property="cancelButton" destination="lSe-7x-WBb" id="1bP-Z0-6GJ"/>
                 <outlet property="chooseButton" destination="LDV-GG-NRe" id="QGd-H7-7M0"/>
@@ -48,7 +48,7 @@
                     <color key="textColor" name="text"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <searchBar contentMode="redraw" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="CbF-lC-1lo" customClass="CustomSearchBar" customModule="Choosi" customModuleProvider="target">
+                <searchBar contentMode="redraw" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="CbF-lC-1lo" customClass="CustomSearchBar" customModule="Platform" customModuleProvider="target">
                     <rect key="frame" x="12" y="52.333333333333343" width="390" height="56"/>
                     <color key="tintColor" systemColor="tintColor"/>
                     <color key="barTintColor" name="viewBackground"/>
@@ -83,7 +83,7 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7eR-ht-nkx">
                     <rect key="frame" x="20" y="620" width="374" height="76"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDV-GG-NRe" customClass="AppButton" customModule="Choosi" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDV-GG-NRe" customClass="AppButton" customModule="Platform" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="374" height="33"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -92,7 +92,7 @@
                                 <action selector="chooseButtonClicked:" destination="-1" eventType="touchUpInside" id="UZh-0x-fKG"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSe-7x-WBb" customClass="AppButton" customModule="Choosi" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSe-7x-WBb" customClass="AppButton" customModule="Platform" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="43" width="374" height="33"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>

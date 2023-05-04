@@ -139,6 +139,6 @@ extension RegisterWithEmailViewController: ScreenLoaderDelegate {
 
 extension RegisterWithEmailViewController: ScreenAlertDelegate {
     func showAlert(error: String, completion: (() -> Void)?) {
-        showToast(message: error)
+        showMessage(message: error)
     }
 }

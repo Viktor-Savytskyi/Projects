@@ -114,4 +114,13 @@ class NavigationManager {
         navigationController.viewControllers = [iterests]
         Utils.window?.rootViewController = navigationController
     }
+    
+    func returnToHomeScreenAfterPostCreating() {
+        //            if let createPostVC = self.rootNavigationVC?.viewControllers.first as? CreatePostViewController {
+        //                createPostVC.cleanFields()
+        //            }
+        //            tabBarController?.selectedIndex = 0
+        //            navigationController?.popToRootViewController(animated: true)
+        //        }
+    }
 }

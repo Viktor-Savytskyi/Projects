@@ -90,6 +90,7 @@ class CreateAccountViewController: BaseViewController {
     }
 
     private func validate() {
+        view.endEditing(true)
         createAccountViewModel.setUserInfoForViewModel(userInfoModel: UserInfoModel(phone: phoneNumberTextFieldView.textField.text!,
                                                                                                    firstName: firstNameTextFieldView.textField.text!,
                                                                                                    lastName: lastNameTextFieldView.textField.text!,
@@ -98,7 +99,6 @@ class CreateAccountViewController: BaseViewController {
         createAccountViewModel.validateFiels { [weak self] in
             self?.moveToVerificationScreen()
         }
-        view.endEditing(true)
     }
     
     private func clearError() {
