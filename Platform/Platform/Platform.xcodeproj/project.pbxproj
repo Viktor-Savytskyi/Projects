@@ -794,6 +794,7 @@
 		48B1D9A728D86F5000C80E9A /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				48D0EF7F28D3488600C56599 /* Menu */,
 				48E0A36128EAE8C50093886C /* AccountFlowEnums.swift */,
 				48C44F0028E5D08400B4C08E /* ProfilePage */,
 				48B1D9A828D86F8600C80E9A /* ProfileSettings */,
@@ -982,7 +983,6 @@
 				D85872D828773DDB003FE888 /* AppDelegate.swift */,
 				D85872DA28773DDB003FE888 /* SceneDelegate.swift */,
 				D85872F628775757003FE888 /* Constants.swift */,
-				48D0EF7F28D3488600C56599 /* Menu */,
 				F4F5728F2890F86C003CA2F9 /* Helpers */,
 				F4AA904A287DE8DA005A0DF8 /* Extensions */,
 				489657FE29E2D000003AEF17 /* Protocols */,
