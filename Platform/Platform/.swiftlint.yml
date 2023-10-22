@@ -4,10 +4,8 @@ disabled_rules:
  - file_length
 excluded:
  - Pods
- - /Users/a12345/Projects/Platform/Platform/Platform/Managers/API/Models/OffensiveWords.swift
 line_length:
- - 200 # warning
- - 250 # error
+ - 250 # warning
 identifier_name:
  min_length:
    warning: 2
